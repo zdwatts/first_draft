@@ -1,8 +1,8 @@
-from app.models import db, Story
+from app.models import db, Story, User
 
 def seed_stories():
 
-    demo = Story(title='Title Demo', body='This is a Body Demo', author_id=1)
+    demo = Story(title='Title Demo', body='This is a Body Demo', author_id=User.query.filter_by(username='Demo').first().id)
 
     db.session.add(demo)
 
