@@ -51,6 +51,26 @@ a {
     border: none;
 }
 
+.demo_button {
+    color: white;
+    background-color: black;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 4px;
+    border: none;
+}
+
+
+.demo_button:hover {
+    background-color: rgb(44, 44, 44);
+}
+
+.logout_button:hover {
+    background-color: rgb(44, 44, 44);
+}
+
 .demo_button_text {
     font-family: 'Open Sans', sans-serif;
     text-decoration: none;

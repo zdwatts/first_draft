@@ -8,7 +8,7 @@ const DemoButton = ({ setAuthenticated, authenticated }) => {
     setAuthenticated(true);
   };
 
-  return authenticated ? "" : < button className="logout_button" onClick={demoPress} >Login as a Demo User</button >;
+  return authenticated ? "" : < button className="demo_button" onClick={demoPress} >Login as a Demo User</button >;
 };
 
 export default DemoButton;
