@@ -77,4 +77,20 @@ label {
 
 .form-title {
 	text-align: center;
+	font-weight: 700;
+	font-size: 60px;
+	margin: 0;
+	padding: 0;
+	font-family: "Source Serif Pro", serif;
+}
+
+.form-sub {
+	text-align: center;
+	font-weight: 400;
+	font-size: 30px;
+	margin: 0;
+	padding: 0;
+	padding-bottom: 20px;
+	color: rgb(85, 88, 92);
+	font-family: "Open Sans", sans-serif;
 }
