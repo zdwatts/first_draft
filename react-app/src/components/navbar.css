@@ -91,11 +91,19 @@ a:hover {
 
 .main-logo {
 	display: flex;
-	margin: 0;
+	margin: 0 !important;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
 }
 
 .logo {
+	font-family: "Source Serif Pro", serif;
+	font-weight: 800;
 }
 
 .logo-text {
+	font-size: 40px;
+	margin: 0;
+	font-family: "Source Serif Pro", serif;
 }

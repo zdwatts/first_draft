@@ -7,10 +7,10 @@ import "./navbar.css";
 const NavBar = ({ setAuthenticated, authenticated }) => {
 	return (
 		<nav>
-			<span className="main-logo">
+			<div className="main-logo">
 				<h1 className="logo">{"</>"}</h1>
 				<h1 className="logo-text">Medium</h1>
-			</span>
+			</div>
 			<ul className="nav_links">
 				<li>
 					<NavLink to="/" exact={true} activeClassName="active">
