@@ -14,7 +14,7 @@
 	display: flex;
 	background-color: white;
 	justify-content: space-around;
-	border-bottom: 1px solid black;
+	border: none;
 }
 
 .logo_text {

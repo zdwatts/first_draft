@@ -5,15 +5,18 @@ import DemoButton from "./auth/DemoButton";
 import "./navbar.css";
 
 const NavBar = ({ setAuthenticated, authenticated, authenticate }) => {
-	const [user, setUser] = useState("");
-
-	useEffect(() => {
-		(async () => {
-			const response = await authenticate();
-			const username = response.username;
-			setUser(username);
-		})();
-	}, []);
+	const greeting = () => {
+		let greeting;
+		let time = new Date().getHours();
+		if (time < 10) {
+			greeting = "Good morning";
+		} else if (time < 20) {
+			greeting = "Good afternoon";
+		} else {
+			greeting = "Good evening";
+		}
+		return greeting;
+	};
 
 	let navTheme;
 	if (authenticated) {
@@ -26,8 +29,8 @@ const NavBar = ({ setAuthenticated, authenticated, authenticate }) => {
 		<nav className={navTheme}>
 			<div className="main-logo">
 				<h1 className="logo">{"</>"}</h1>
-				<h1 className="logo-text">Medium</h1>
-				<h1 className="welcome-message">{`Hello, ${user}`}</h1>
+				<h1 className="logo-text">Medium</h1>{" "}
+				{authenticated ? <h1 className="welcome-message">{greeting()}</h1> : ""}
 			</div>
 			<ul className="nav_links">
 				<li>
