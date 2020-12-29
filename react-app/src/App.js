@@ -35,7 +35,7 @@ function App() {
 				setAuthenticated={setAuthenticated}
 				authenticated={authenticated}
 			/>
-			<DefaultHeader authenticated={authenticated} className="header" />
+
 			<Switch>
 				<Route path="/login" exact={true}>
 					<LoginForm
@@ -62,15 +62,11 @@ function App() {
 				>
 					<User />
 				</ProtectedRoute>
-				<ProtectedRoute
-					path="/"
-					exact={true}
-					authenticated={authenticated}
-				></ProtectedRoute>
-				<Route path="/stories/:id" component={Story} />
-				<Route path="/stories">
-					<CreateStory authenticate={authenticate} />
+				<Route path="/" exact={true}>
+					<DefaultHeader authenticated={authenticated} className="header" />
 				</Route>
+				<Route path="/stories/:id" component={Story} />
+
 			</Switch>
 		</BrowserRouter>
 	);

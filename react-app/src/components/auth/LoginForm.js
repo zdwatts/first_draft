@@ -31,36 +31,52 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
 	}
 
 	return (
-		<form onSubmit={onLogin} className="login-form">
-			<div>
-				{errors.map((error) => (
-					<div>{error}</div>
-				))}
-			</div>
-			<div>
-				<input
-					className="input"
-					name="email"
-					type="text"
-					placeholder="Email"
-					value={email}
-					onChange={updateEmail}
-				/>
-			</div>
-			<div>
-				<input
-					className="input"
-					name="password"
-					type="password"
-					placeholder="Password"
-					value={password}
-					onChange={updatePassword}
-				/>
-			</div>
-			<button type="submit" className="login-button">
-				Login
-			</button>
-		</form>
+
+		<div className="login-form-div h-100vh pattern-cross-dots-xl yellow-light bg-yellow flex justify-center items-center bg-fixed">
+			<form
+				onSubmit={onLogin}
+				className="login-form animate__animated animate__bounceInUp"
+			>
+				<div>
+					{errors.map((error) => (
+						<div className="errors">
+							<p>{error}</p>
+						</div>
+					))}
+				</div>
+				<div className="input-wrapper">
+					<h1 className="form-title">Medium</h1>
+					<h3 className="form-sub">Login</h3>
+					<label>Email</label>
+					<input
+						className="input"
+						name="email"
+						type="text"
+						value={email}
+						onChange={updateEmail}
+					/>
+				</div>
+				<div className="input-wrapper">
+					<label>Password</label>
+					<input
+						className="input"
+						name="password"
+						type="password"
+						value={password}
+						onChange={updatePassword}
+					/>
+				</div>
+				<button type="submit" className="login-button">
+					Login
+				</button>
+				<p className="cta-p">
+					Not a member?{" "}
+					<a className="cta-a" href="/sign-up">
+						Register here
+					</a>
+				</p>
+			</form>
+		</div>
 	);
 };
 

@@ -1,14 +1,136 @@
 .login-form {
-  border: 1px solid black;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10px;
-  border-radius: 5px;
-  width: 200px;
+	border: none;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	align-self: center;
+	padding: 10px;
+	border-radius: 10px;
+	height: 600px;
+	width: 400px;
+	background-color: white;
+	box-shadow: 0 50px 100px -20px rgba(50, 50, 93, 0.25),
+		0 30px 60px -30px rgba(0, 0, 0, 0.3),
+		inset 0 -2px 6px 0 rgba(10, 37, 64, 0.35);
 }
 
 .input {
-  padding: 2px;
-  margin: 2px;
+	padding: 2px;
+	margin: 2px;
+	border-bottom: 2px solid black;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	font-weight: 600;
+}
+
+.input:hover {
+	border-bottom: 2px solid #fec017;
+}
+
+.input:focus {
+	outline: none;
+}
+
+.login-form-div {
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-self: center;
+}
+
+.bg-yellow {
+	background-color: #fec017;
+}
+
+.input-wrapper {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 15px;
+	width: 80%;
+}
+
+label {
+	font-family: "Open Sans", sans-serif;
+	font-weight: 600;
+}
+
+.login-button {
+	color: white;
+	background-color: black;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-radius: 4px;
+	width: 80%;
+	border: none;
+}
+
+.login-button:hover {
+	background-color: #fec017;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	cursor: pointer;
+	color: black;
+}
+
+.form-title {
+	text-align: center;
+	font-weight: 700;
+	font-size: 60px;
+	margin: 0;
+	padding: 0;
+	font-family: "Source Serif Pro", serif;
+}
+
+.form-sub {
+	text-align: center;
+	font-weight: 400;
+	font-size: 30px;
+	margin: 0;
+	padding: 0;
+	padding-bottom: 20px;
+	color: rgb(85, 88, 92);
+	font-family: "Open Sans", sans-serif;
+}
+
+.cta-p {
+	font-size: 12px;
+	margin-top: 20px;
+	font-weight: 600;
+	font-family: "Open Sans", sans-serif;
+}
+
+.cta-a {
+	margin-top: 20px;
+	font-size: 12px;
+	font-weight: 600;
+	font-family: "Open Sans", sans-serif;
+	color: rgb(85, 88, 92);
+}
+
+.cta-p:hover {
+	font-size: 12px;
+	text-shadow: none;
+}
+
+.cta-a:hover {
+	font-size: 12px;
+}
+
+.errors {
+	background-color: #dca7a6;
+	border: 1px solid #471517;
+	color: #471517;
+	font-family: "Open Sans", sans-serif;
+	font-size: 12px;
+	margin-bottom: 5px;
+	border-radius: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
+	font-weight: 600;
+	text-align: center;
 }
