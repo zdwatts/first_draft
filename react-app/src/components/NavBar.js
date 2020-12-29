@@ -6,7 +6,10 @@ import "./navbar.css";
 const NavBar = ({ setAuthenticated }) => {
 	return (
 		<nav>
-			<ul>
+			<h1>
+				Medium
+			</h1>
+			<ul className="nav_links">
 				<li>
 					<NavLink to="/" exact={true} activeClassName="active">
 						Home

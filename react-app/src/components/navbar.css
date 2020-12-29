@@ -4,3 +4,7 @@ nav {
     background-color: blue;
     margin: 0;
 }
+
+.nav_links {
+    list-style: none;
+}
