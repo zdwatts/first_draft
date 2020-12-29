@@ -10,6 +10,7 @@ import DefaultHeader from "./components/DefaultHeader";
 import "./index.css";
 import Story from "./components/Page/Story";
 import CreateStory from "./components/Page/CreateStory";
+import MostRecent from "./components/MostRecent";
 
 function App() {
 	const [authenticated, setAuthenticated] = useState(false);
@@ -65,6 +66,7 @@ function App() {
 				</ProtectedRoute>
 				<Route path="/" exact={true}>
 					<DefaultHeader authenticated={authenticated} className="header" />
+					<MostRecent />
 				</Route>
 				<Route path="/stories/:id" component={Story} />
 				<Route path="/stories">
