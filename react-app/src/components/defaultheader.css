@@ -12,3 +12,10 @@
 .header_image{
     height: 400px;
 }
+
+.header_title {
+    font-size: 70px;
+    font-weight: 400;
+    font-family: 'Source Serif Pro', serif;
+}
+

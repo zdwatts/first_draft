@@ -7,7 +7,7 @@ const DefaultHome = ({ setAuthenticated, authenticated }) => {
     ) : (
       <div className="Logged_out_header">
         <div>
-          <h1>Explore new perspectives</h1>
+          <h1 className="header_title">Explore new perspectives</h1>
           <p>
             Read and share ideas from independent voices, world-class
             publications, and experts from around the globe. Everyone's welcome.
