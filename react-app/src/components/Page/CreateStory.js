@@ -21,11 +21,8 @@ function CreateStory({ authenticate }) {
 	const titleChange = (e) => {
 		setTitle(e.target.value);
 	};
-	// const bodyChange = (e) => {
-	// 	setBody(e.target.value);
-	// };
+
 	const handleEditorChange = (content, editor) => {
-		// console.log("Content was updated:", content);
 		setBody(content);
 	};
 
@@ -50,18 +47,15 @@ function CreateStory({ authenticate }) {
 			const storyId = data.id;
 			history.push(`/stories/${storyId}`);
 		}
-		// <Redirect to="/story/" />;
 	};
 
 	return (
 		<div>
 			<form onSubmit={handleSubmit}>
 				<input type="text" placeholder="title" onChange={titleChange} />
-				{/* <input type="text" placeholder="body" onChange={bodyChange} /> */}
 				<Editor
 					apiKey={apiKey}
 					plugins="wordcount"
-					// onChange={bodyChange}
 					onEditorChange={handleEditorChange}
 				/>
 				<button type="submit">Submit</button>

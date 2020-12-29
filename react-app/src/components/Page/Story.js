@@ -22,43 +22,13 @@ function Story() {
 		<Container>
 			<Inner>
 				<Title>{story.title}</Title>
-
-				{/* <Subtitle>
-          This is hard coded, because I don't know where to start, I just fill
-          it in, that's how we do it!
-        </Subtitle> */}
 				<Author>
-					<div>
-						{author.username}
-						{/* <span>, 20 hours ago - 3 min reads</span> */}
-					</div>
+					<div>{author.username}</div>
 				</Author>
 
 				<Body>
 					{/* <div>{story.body}</div> */}
 					<div>{story.body && parse(story.body)}</div>
-
-					{/* <div>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-            nisl eros, pulvinar facilisis justo mollis, auctor consequat urna.
-            Morbi a bibendum metus. Donec scelerisque sollicitudin enim eu
-            venenatis. Duis tincidunt laoreet ex, in pretium orci vestibulum
-            eget.
-          </div>
-          <div>
-            Class aptent taciti sociosqu ad litora torquent per conubia nostra,
-            per inceptos himenaeos. Duis pharetra luctus lacus ut vestibulum.
-            Maecenas ipsum lacus, lacinia quis posuere ut, pulvinar vitae dolor.
-            Integer eu nibh at nisi ullamcorper sagittis id vel leo. Integer
-            feugiat faucibus libero, at maximus nisl suscipit posuere. Morbi nec
-            enim nunc.
-          </div>
-          <div>
-            Phasellus bibendum turpis ut ipsum egestas, sed sollicitudin elit
-            convallis. Cras pharetra mi tristique sapien vestibulum lobortis.
-            Nam eget bibendum metus, non dictum mauris. Nulla at tellus
-            sagittis, viverra est a, bibendum metus.
-          </div> */}
 				</Body>
 			</Inner>
 		</Container>
@@ -66,7 +36,6 @@ function Story() {
 }
 
 const Container = styled.div`
-	//   background-color: #efdafb;
 	display: flex;
 	justify-content: center;
 	margin-bottom: 13em;
@@ -80,7 +49,6 @@ const Inner = styled.div`
 
 	box-sizing: border-box;
 	width: 44em;
-	//   border: 1px solid red;
 
 	div {
 		padding: 1em;
