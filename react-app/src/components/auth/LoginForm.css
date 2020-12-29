@@ -94,3 +94,27 @@ label {
 	color: rgb(85, 88, 92);
 	font-family: "Open Sans", sans-serif;
 }
+
+.cta-p {
+	font-size: 12px;
+	margin-top: 20px;
+	font-weight: 600;
+	font-family: "Open Sans", sans-serif;
+}
+
+.cta-a {
+	margin-top: 20px;
+	font-size: 12px;
+	font-weight: 600;
+	font-family: "Open Sans", sans-serif;
+	color: rgb(85, 88, 92);
+}
+
+.cta-p:hover {
+	font-size: 12px;
+	text-shadow: none;
+}
+
+.cta-a:hover {
+	font-size: 12px;
+}

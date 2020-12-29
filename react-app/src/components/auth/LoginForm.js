@@ -63,6 +63,12 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
 				<button type="submit" className="login-button">
 					Login
 				</button>
+				<p className="cta-p">
+					Not a member?{" "}
+					<a className="cta-a" href="/sign-up">
+						Register here
+					</a>
+				</p>
 			</form>
 		</div>
 	);
