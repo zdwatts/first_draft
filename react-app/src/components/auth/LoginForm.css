@@ -8,7 +8,7 @@
 	padding: 10px;
 	border-radius: 10px;
 	height: 600px;
-	width: 300px;
+	width: 400px;
 	background-color: white;
 	box-shadow: 0 50px 100px -20px rgba(50, 50, 93, 0.25),
 		0 30px 60px -30px rgba(0, 0, 0, 0.3),
@@ -117,4 +117,7 @@ label {
 
 .cta-a:hover {
 	font-size: 12px;
+}
+
+.errors {
 }
