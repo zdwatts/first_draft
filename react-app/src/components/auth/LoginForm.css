@@ -2,10 +2,14 @@
 	border: 1px solid black;
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 	align-items: center;
+	align-self: center;
 	padding: 10px;
 	border-radius: 5px;
+	height: 300px;
 	width: 200px;
+	background-color: white;
 }
 
 .input {
@@ -17,6 +21,9 @@
 	height: 100vh;
 	width: 100vw;
 	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-self: center;
 }
 
 .bg-yellow {
