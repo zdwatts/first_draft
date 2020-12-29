@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Redirect } from "react-router-dom";
 import { login } from "../../services/auth";
+import "./LoginForm.css";
 
 const LoginForm = ({ authenticated, setAuthenticated }) => {
   const [errors, setErrors] = useState([]);
@@ -30,15 +31,15 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
   }
 
   return (
-    <form onSubmit={onLogin}>
+    <form onSubmit={onLogin} className="login-form">
       <div>
         {errors.map((error) => (
           <div>{error}</div>
         ))}
       </div>
       <div>
-        <label htmlFor="email">Email</label>
         <input
+          className="input"
           name="email"
           type="text"
           placeholder="Email"
@@ -47,16 +48,18 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
         />
       </div>
       <div>
-        <label htmlFor="password">Password</label>
         <input
+          className="input"
           name="password"
           type="password"
           placeholder="Password"
           value={password}
           onChange={updatePassword}
         />
-        <button type="submit">Login</button>
       </div>
+      <button type="submit" className="login-button">
+        Login
+      </button>
     </form>
   );
 };
