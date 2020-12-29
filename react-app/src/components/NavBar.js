@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import LogoutButton from "./auth/LogoutButton";
+import DemoButton from "./auth/DemoButton"
 import "./navbar.css";
 
 const NavBar = ({ setAuthenticated, authenticated }) => {
@@ -30,6 +31,12 @@ const NavBar = ({ setAuthenticated, authenticated }) => {
         </li>
         <li>
           <LogoutButton
+            setAuthenticated={setAuthenticated}
+            authenticated={authenticated}
+          />
+        </li>
+        <li>
+          <DemoButton
             setAuthenticated={setAuthenticated}
             authenticated={authenticated}
           />
