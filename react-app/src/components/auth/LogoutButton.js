@@ -2,13 +2,15 @@ import React from "react";
 import { logout } from "../../services/auth";
 import '../navbar.css'
 
-const LogoutButton = ({setAuthenticated}) => {
+const LogoutButton = ({setAuthenticated, authenticated}) => {
   const onLogout = async (e) => {
     await logout();
     setAuthenticated(false);
   };
 
-  return <button className="logout_button" onClick={onLogout}>Logout</button>;
+  console.log(authenticated)
+
+  return <button className="logout_button" onClick={onLogout}>{LogoutButton ? 'Logout' : 'Demo'}</button>;
 };
 
 export default LogoutButton;
