@@ -51,3 +51,32 @@
 		font-weight: 200;
 	}
 }
+
+@media only screen and (max-width: 1200px) {
+	.Logged_out_header {
+		margin: 0 !important;
+		display: flex;
+		background-color: #fec017;
+		justify-content: space-around;
+		border-bottom: 1px solid black;
+		height: 350px;
+		padding-left: 15%;
+		padding-right: 15%;
+	}
+
+	.header_image {
+		height: 350px;
+	}
+
+	.header_title {
+		font-size: 45px;
+		font-weight: 400;
+		font-family: "Source Serif Pro", serif;
+	}
+
+	.header_text {
+		font-family: "Open Sans", sans-serif;
+		font-size: 15px;
+		font-weight: 200;
+	}
+}
