@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Redirect, useHistory } from "react-router-dom";
+import { Editor } from "@tinymce/tinymce-react";
 
 function CreateStory({ authenticate }) {
 	const [title, setTitle] = useState("");
@@ -7,20 +8,25 @@ function CreateStory({ authenticate }) {
 	const [author, setAuthor] = useState("");
 	const history = useHistory();
 
+	const apiKey = process.env.REACT_APP_TINY_MCE;
 	useEffect(() => {
 		(async () => {
 			const response = await authenticate();
 			const username = response.username;
 			setAuthor(username);
 		})();
-	}, []);
+	}, [author]);
 	console.log(author);
 
 	const titleChange = (e) => {
 		setTitle(e.target.value);
 	};
-	const bodyChange = (e) => {
-		setBody(e.target.value);
+	// const bodyChange = (e) => {
+	// 	setBody(e.target.value);
+	// };
+	const handleEditorChange = (content, editor) => {
+		// console.log("Content was updated:", content);
+		setBody(content);
 	};
 
 	const handleSubmit = async (e) => {
@@ -51,7 +57,13 @@ function CreateStory({ authenticate }) {
 		<div>
 			<form onSubmit={handleSubmit}>
 				<input type="text" placeholder="title" onChange={titleChange} />
-				<input type="text" placeholder="body" onChange={bodyChange} />
+				{/* <input type="text" placeholder="body" onChange={bodyChange} /> */}
+				<Editor
+					apiKey={apiKey}
+					plugins="wordcount"
+					// onChange={bodyChange}
+					onEditorChange={handleEditorChange}
+				/>
 				<button type="submit">Submit</button>
 			</form>
 		</div>
