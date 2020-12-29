@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import LoginForm from "./components/auth/LoginForm";
 import SignUpForm from "./components/auth/SignUpForm";
 import NavBar from "./components/NavBar";
@@ -30,31 +30,37 @@ function App() {
   return (
     <BrowserRouter>
       <NavBar setAuthenticated={setAuthenticated} />
-      <Route path="/login" exact={true}>
-        <LoginForm
+      <Switch>
+        <Route path="/login" exact={true}>
+          <LoginForm
+            authenticated={authenticated}
+            setAuthenticated={setAuthenticated}
+          />
+        </Route>
+        <Route path="/sign-up" exact={true}>
+          <SignUpForm
+            authenticated={authenticated}
+            setAuthenticated={setAuthenticated}
+          />
+        </Route>
+        <ProtectedRoute
+          path="/users"
+          exact={true}
           authenticated={authenticated}
-          setAuthenticated={setAuthenticated}
-        />
-      </Route>
-      <Route path="/sign-up" exact={true}>
-        <SignUpForm
+        >
+          <UsersList />
+        </ProtectedRoute>
+        <ProtectedRoute
+          path="/users/:userId"
+          exact={true}
           authenticated={authenticated}
-          setAuthenticated={setAuthenticated}
-        />
-      </Route>
-      <ProtectedRoute path="/users" exact={true} authenticated={authenticated}>
-        <UsersList />
-      </ProtectedRoute>
-      <ProtectedRoute
-        path="/users/:userId"
-        exact={true}
-        authenticated={authenticated}
-      >
-        <User />
-      </ProtectedRoute>
-      <ProtectedRoute path="/" exact={true} authenticated={authenticated}>
-        <h1>My Home Page</h1>
-      </ProtectedRoute>
+        >
+          <User />
+        </ProtectedRoute>
+        <ProtectedRoute path="/" exact={true} authenticated={authenticated}>
+          <h1>My Home Page</h1>
+        </ProtectedRoute>
+      </Switch>
       <Story />
     </BrowserRouter>
   );

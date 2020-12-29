@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { Redirect } from 'react-router-dom';
-import { signUp } from '../../services/auth';
+import { Redirect } from "react-router-dom";
+import { signUp } from "../../services/auth";
+import "./SignUpForm.css";
 
-const SignUpForm = ({authenticated, setAuthenticated}) => {
+const SignUpForm = ({ authenticated, setAuthenticated }) => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -39,19 +40,21 @@ const SignUpForm = ({authenticated, setAuthenticated}) => {
   }
 
   return (
-    <form onSubmit={onSignUp}>
+    <form onSubmit={onSignUp} className="signup-form">
       <div>
-        <label>User Name</label>
         <input
           type="text"
+          className="input"
+          placeholder="Username"
           name="username"
           onChange={updateUsername}
           value={username}
         ></input>
       </div>
       <div>
-        <label>Email</label>
         <input
+          className="input"
+          placeholder="Email"
           type="text"
           name="email"
           onChange={updateEmail}
@@ -59,8 +62,9 @@ const SignUpForm = ({authenticated, setAuthenticated}) => {
         ></input>
       </div>
       <div>
-        <label>Password</label>
         <input
+          className="input"
+          placeholder="Password"
           type="password"
           name="password"
           onChange={updatePassword}
@@ -68,9 +72,10 @@ const SignUpForm = ({authenticated, setAuthenticated}) => {
         ></input>
       </div>
       <div>
-        <label>Repeat Password</label>
         <input
+          className="input"
           type="password"
+          placeholder="Confirm Password"
           name="repeat_password"
           onChange={updateRepeatPassword}
           value={repeatPassword}
