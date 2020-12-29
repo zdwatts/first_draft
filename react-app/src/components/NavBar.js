@@ -5,8 +5,15 @@ import DemoButton from "./auth/DemoButton";
 import "./navbar.css";
 
 const NavBar = ({ setAuthenticated, authenticated }) => {
+	let navTheme;
+	if (authenticated) {
+		navTheme = "loggedin";
+	} else {
+		navTheme = "loggedout";
+	}
+
 	return (
-		<nav>
+		<nav className={navTheme}>
 			<div className="main-logo">
 				<h1 className="logo">{"</>"}</h1>
 				<h1 className="logo-text">Medium</h1>
