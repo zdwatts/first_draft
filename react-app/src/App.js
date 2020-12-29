@@ -9,6 +9,7 @@ import { authenticate } from "./services/auth";
 import DefaultHeader from "./components/DefaultHeader";
 import "./index.css";
 import Story from "./components/Page/Story";
+import CreateStory from "./components/Page/CreateStory";
 
 function App() {
 	const [authenticated, setAuthenticated] = useState(false);
@@ -34,6 +35,7 @@ function App() {
 				setAuthenticated={setAuthenticated}
 				authenticated={authenticated}
 			/>
+
 			<Switch>
 				<Route path="/login" exact={true}>
 					<LoginForm
@@ -64,6 +66,7 @@ function App() {
 					<DefaultHeader authenticated={authenticated} className="header" />
 				</Route>
 				<Route path="/stories/:id" component={Story} />
+
 			</Switch>
 		</BrowserRouter>
 	);
