@@ -15,6 +15,10 @@
 .input {
 	padding: 2px;
 	margin: 2px;
+	border-bottom: 1px solid black;
+	border-top: none;
+	border-left: none;
+	border-right: none;
 }
 
 .login-form-div {
