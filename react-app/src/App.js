@@ -34,6 +34,7 @@ function App() {
 			<NavBar
 				setAuthenticated={setAuthenticated}
 				authenticated={authenticated}
+				authenticate={authenticate}
 			/>
 
 			<Switch>
@@ -63,10 +64,7 @@ function App() {
 					<User />
 				</ProtectedRoute>
 				<Route path="/" exact={true}>
-					<DefaultHeader
-						authenticated={authenticated}
-						className="header"
-					/>
+					<DefaultHeader authenticated={authenticated} className="header" />
 				</Route>
 				<Route path="/stories/:id" component={Story} />
 				<Route path="/stories">
