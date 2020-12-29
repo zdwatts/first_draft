@@ -3,3 +3,9 @@
 body {
     margin: 0;
 }
+
+.header {
+    background-color: #fec017 !important;
+    width: 100%;
+    margin: 0;
+}

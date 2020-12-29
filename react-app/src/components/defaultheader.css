@@ -1,12 +1,12 @@
 .Logged_out_header {
-    margin: 0;
+    margin: 0 !important;
     display: flex;
     background-color: #fec017;
     justify-content: space-around;
     border-bottom: 1px solid black;
     height: 400px;
-    margin-left: 15%;
-    margin-right: 15%;
+    padding-left: 15%;
+    padding-right: 15%;
 }
 
 .header_image{

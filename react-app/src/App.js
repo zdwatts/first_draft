@@ -8,6 +8,7 @@ import User from "./components/User";
 import Story from "./components/Story";
 import { authenticate } from "./services/auth";
 import DefaultHeader from "./components/DefaultHeader"
+import "./index.css"
 
 function App() {
   const [authenticated, setAuthenticated] = useState(false);
@@ -35,6 +36,7 @@ function App() {
       />
       <DefaultHeader
         authenticated={authenticated}
+        className="header"
       />
       <Route path="/login" exact={true}>
         <LoginForm
