@@ -15,8 +15,6 @@ const NavBar = ({ setAuthenticated, authenticated, authenticate }) => {
 		})();
 	}, []);
 
-	console.log(user);
-
 	let navTheme;
 	if (authenticated) {
 		navTheme = "loggedin";
@@ -29,6 +27,7 @@ const NavBar = ({ setAuthenticated, authenticated, authenticate }) => {
 			<div className="main-logo">
 				<h1 className="logo">{"</>"}</h1>
 				<h1 className="logo-text">Medium</h1>
+				<h1 className="welcome-message">{`Hello, ${user}`}</h1>
 			</div>
 			<ul className="nav_links">
 				<li>
