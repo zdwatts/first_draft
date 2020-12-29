@@ -1,14 +1,20 @@
 .login-form {
-  border: 1px solid black;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10px;
-  border-radius: 5px;
-  width: 200px;
+	border: 1px solid black;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 10px;
+	border-radius: 5px;
+	width: 200px;
 }
 
 .input {
-  padding: 2px;
-  margin: 2px;
+	padding: 2px;
+	margin: 2px;
+}
+
+.login-form-div {
+	height: 100vh;
+	width: 100vw;
+	background-color: blue;
 }
