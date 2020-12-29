@@ -63,10 +63,15 @@ function App() {
 					<User />
 				</ProtectedRoute>
 				<Route path="/" exact={true}>
-					<DefaultHeader authenticated={authenticated} className="header" />
+					<DefaultHeader
+						authenticated={authenticated}
+						className="header"
+					/>
 				</Route>
 				<Route path="/stories/:id" component={Story} />
-
+				<Route path="/stories">
+					<CreateStory authenticate={authenticate} />
+				</Route>
 			</Switch>
 		</BrowserRouter>
 	);
