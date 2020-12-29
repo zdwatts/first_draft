@@ -13,9 +13,7 @@ const DefaultHome = ({ setAuthenticated, authenticated }) => {
             publications, and experts from around the globe. Everyone's welcome.
           </p>
         </div>
-        <div>
           <img className="header_image"src="headerimage.png"></img>
-        </div>
       </div>
     );
 };

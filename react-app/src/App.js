@@ -33,7 +33,9 @@ function App() {
         setAuthenticated={setAuthenticated}
         authenticated={authenticated}
       />
-      <DefaultHeader authenticated={authenticated} />
+      <DefaultHeader
+        authenticated={authenticated}
+      />
       <Route path="/login" exact={true}>
         <LoginForm
           authenticated={authenticated}

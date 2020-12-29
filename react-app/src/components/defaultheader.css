@@ -5,6 +5,8 @@
     justify-content: space-around;
     border-bottom: 1px solid black;
     height: 400px;
+    margin-left: 15%;
+    margin-right: 15%;
 }
 
 .header_image{
