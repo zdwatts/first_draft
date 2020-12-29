@@ -40,6 +40,10 @@ a {
     color: black;
 }
 
+a:hover {
+    font-size: 17px;
+}
+
 .logout_button {
     color: white;
     background-color: black;
@@ -65,10 +69,12 @@ a {
 
 .demo_button:hover {
     background-color: rgb(44, 44, 44);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .logout_button:hover {
     background-color: rgb(44, 44, 44);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .demo_button_text {
