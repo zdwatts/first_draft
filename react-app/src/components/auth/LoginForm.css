@@ -15,7 +15,7 @@
 .input {
 	padding: 2px;
 	margin: 2px;
-	border-bottom: 1px solid black;
+	border-bottom: 2px solid black;
 	border-top: none;
 	border-left: none;
 	border-right: none;
@@ -32,4 +32,9 @@
 
 .bg-yellow {
 	background-color: #fec017;
+}
+
+.input-wrapper {
+	display: flex;
+	flex-direction: column;
 }

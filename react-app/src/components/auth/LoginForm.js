@@ -38,22 +38,22 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
 						<div>{error}</div>
 					))}
 				</div>
-				<div>
+				<div className="input-wrapper">
+					<label>Email</label>
 					<input
 						className="input"
 						name="email"
 						type="text"
-						placeholder="Email"
 						value={email}
 						onChange={updateEmail}
 					/>
 				</div>
-				<div>
+				<div className="input-wrapper">
+					<label>Password</label>
 					<input
 						className="input"
 						name="password"
 						type="password"
-						placeholder="Password"
 						value={password}
 						onChange={updatePassword}
 					/>
