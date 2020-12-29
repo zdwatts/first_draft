@@ -37,3 +37,8 @@ a {
     font-size: 15px;
     color: black;
 }
+
+.logout_button {
+    color: white;
+    background-color: black;
+}
