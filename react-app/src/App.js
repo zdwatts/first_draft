@@ -7,6 +7,7 @@ import ProtectedRoute from "./components/auth/ProtectedRoute";
 import User from "./components/User";
 import Story from "./components/Story";
 import { authenticate } from "./services/auth";
+import DefaultHeader from "./components/DefaultHeader"
 
 function App() {
   const [authenticated, setAuthenticated] = useState(false);
@@ -32,6 +33,7 @@ function App() {
         setAuthenticated={setAuthenticated}
         authenticated={authenticated}
       />
+      <DefaultHeader authenticated={authenticated} />
       <Route path="/login" exact={true}>
         <LoginForm
           authenticated={authenticated}
@@ -51,9 +53,11 @@ function App() {
       >
         <User />
       </ProtectedRoute>
-      <ProtectedRoute path="/" exact={true} authenticated={authenticated}>
-        <h1>My Home Page</h1>
-      </ProtectedRoute>
+      <ProtectedRoute
+        path="/"
+        exact={true}
+        authenticated={authenticated}
+      ></ProtectedRoute>
       <Story />
     </BrowserRouter>
   );

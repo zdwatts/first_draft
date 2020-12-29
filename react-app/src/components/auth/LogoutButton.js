@@ -8,8 +8,6 @@ const LogoutButton = ({ setAuthenticated, authenticated }) => {
     setAuthenticated(false);
   };
 
-  console.log(authenticated)
-
   return authenticated ? < button className="logout_button" onClick={onLogout} > {authenticated ? 'Logout' : 'Login'}</button > : "";
 };
 
