@@ -6,8 +6,8 @@ import "./navbar.css";
 
 const NavBar = ({ setAuthenticated, authenticated }) => {
 	return (
-    <nav>
-      <h1 className="logo_text">Medium</h1>
+		<nav>
+      <h1 className="logo_text"><img className="logo_img" src="htmltag.png"></img>Medium</h1>
       <ul className="nav_links">
         <li>
           <NavLink to="/" exact={true} activeClassName="active">
