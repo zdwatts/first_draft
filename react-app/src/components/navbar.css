@@ -17,4 +17,11 @@ nav {
     list-style: none;
     display: flex;
     align-items: center;
+    align-self: center;
+    justify-content: space-between;
+    padding: 0;
+}
+
+li {
+    margin: 10px;
 }
