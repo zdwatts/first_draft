@@ -11,6 +11,8 @@ nav {
 .logo_text{
     font-size: 3rem;
     margin: 10px;
+    font-family: 'Source Serif Pro', serif;
+    font-weight: 600;
 }
 
 .nav_links {
@@ -24,4 +26,9 @@ nav {
 
 li {
     margin: 10px;
+    
+}
+
+a {
+    text-decoration: none;
 }
