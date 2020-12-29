@@ -1,4 +1,6 @@
 import React from "react";
+import "./defaultheader.css"
+
 const DefaultHome = ({ setAuthenticated, authenticated }) => {
     return authenticated ? (
       <h1>Logged in</h1>
@@ -10,6 +12,9 @@ const DefaultHome = ({ setAuthenticated, authenticated }) => {
             Read and share ideas from independent voices, world-class
             publications, and experts from around the globe. Everyone's welcome.
           </p>
+        </div>
+        <div>
+          <img className="header_image"src="headerimage.png"></img>
         </div>
       </div>
     );
