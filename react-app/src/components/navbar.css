@@ -3,9 +3,9 @@
 nav {
     margin: 0;
     display: flex;
-    padding-left: 10%;
-    padding-right: 10%;
     background-color: #fec017;
+    justify-content: space-around;
+    border-bottom: 1px solid black;
 }
 
 .nav_links {
