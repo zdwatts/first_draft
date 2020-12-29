@@ -73,6 +73,7 @@ label {
 .login-button:hover {
 	background-color: #fec017;
 	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	cursor: pointer;
 }
 
 .form-title {
