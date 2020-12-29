@@ -7,4 +7,5 @@ nav {
 
 .nav_links {
     list-style: none;
+    display: flex;
 }
