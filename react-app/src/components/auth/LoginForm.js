@@ -39,6 +39,7 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
 					))}
 				</div>
 				<div className="input-wrapper">
+					<h1 className="form-title">Medium</h1>
 					<label>Email</label>
 					<input
 						className="input"
