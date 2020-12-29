@@ -31,7 +31,7 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
 	}
 
 	return (
-		<div className="login-form-div">
+		<div className="login-form-div h-100vh pattern-vertical-lines-md yellow-light bg-yellow flex justify-center items-center bg-fixed">
 			<form onSubmit={onLogin} className="login-form">
 				<div>
 					{errors.map((error) => (
