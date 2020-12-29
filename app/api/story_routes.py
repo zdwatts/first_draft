@@ -10,6 +10,6 @@ def stories():
 
 @story_routes.route('/<id>')
 def one_story(id):
-    story = Story.query.filter_by(author_id = id)
-    author = User.query.join(Story).filter(Story.author_id == id).all()
+    story = Story.query.filter_by(Story.id == id)
+    author = User.query.join(Story, User.id == Story.author_id).filter(Story.id == id)
     return {'author': [s.to_dict() for s in author], 'story': [s.to_dict() for s in story]}
