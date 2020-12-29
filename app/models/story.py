@@ -8,6 +8,11 @@ class Story(db.Model):
     title = db.Column(db.String, nullable=False)
     body = db.Column(db.String, nullable=False)
     author_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
+    
+    def __init__(self, title, body, author_id):
+        self.title = title
+        self.body = body
+        self.author_id = author_id
 
 
     def to_dict(self):
