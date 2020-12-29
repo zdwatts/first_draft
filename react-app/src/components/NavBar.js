@@ -6,7 +6,7 @@ import "./navbar.css";
 const NavBar = ({ setAuthenticated }) => {
 	return (
 		<nav>
-			<h1>
+			<h1 className="logo_text">
 				Medium
 			</h1>
 			<ul className="nav_links">

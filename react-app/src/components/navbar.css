@@ -8,6 +8,11 @@ nav {
     border-bottom: 1px solid black;
 }
 
+.logo_text{
+    font-size: 3rem;
+    margin: 10px;
+}
+
 .nav_links {
     list-style: none;
     display: flex;
