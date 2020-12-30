@@ -6,7 +6,7 @@ import "./Footer.css";
 
 const Footer = ({ setAuthenticated, authenticated }) => {
   return (
-    <nav className="footer">
+    <footer className="footer">
       <div className="main-logo-footer">
         <h1 className="logo-text">Medium</h1>
       </div>
@@ -31,7 +31,7 @@ const Footer = ({ setAuthenticated, authenticated }) => {
           </a>
         </li>
       </ul>
-    </nav>
+    </footer>
   );
 };
 
