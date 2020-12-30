@@ -39,5 +39,43 @@
 .cards-wrapper {
 	padding-left: 5%;
 	padding-right: 5%;
+	padding-top: 40px;
+	padding-bottom: 40px;
 	background-color: blue;
+}
+
+@media only screen and (min-width: 1000px) {
+	.card {
+		height: 300px;
+		width: 400px;
+		background-color: white;
+		margin: 5px;
+		border: none;
+	}
+
+	.cards-wrapper {
+		padding-left: 10%;
+		padding-right: 10%;
+		padding-top: 40px;
+		padding-bottom: 40px;
+		background-color: blue;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	.card {
+		height: 300px;
+		width: 400px;
+		background-color: white;
+		margin: 5px;
+		border: none;
+	}
+
+	.cards-wrapper {
+		padding-left: 7%;
+		padding-right: 7%;
+		padding-top: 40px;
+		padding-bottom: 40px;
+		background-color: blue;
+	}
 }
