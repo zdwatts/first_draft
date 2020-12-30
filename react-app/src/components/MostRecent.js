@@ -5,7 +5,6 @@ import "./Card.css";
 
 const MostRecent = () => {
 	let [stories, setStories] = useState([]);
-	const [authors, setAuthors] = useState([]);
 
 	useEffect(() => {
 		(async () => {
@@ -15,37 +14,6 @@ const MostRecent = () => {
 	}, []);
 
 	stories = stories.slice(0, 6);
-
-	let authorIds = [];
-
-	for (let i = 0; i < stories.length; i++) {
-		let story = stories[i];
-		authorIds.push(story.author_id);
-	}
-
-	console.log(authorIds);
-
-	// useEffect(() => {
-	// 	(async () => {
-	// 		const data = await axios.get(`/api/user/`);
-	// 		setStories(data.data.stories.reverse());
-	// 	})();
-	// }, []);
-
-	let usernames = [];
-
-	const getUsername = async (id) => {
-		const data = await axios.get(`/api/user/${id}`);
-		return data.data.author.username;
-	};
-
-	for (let i = 0; i < authorIds.length; i++) {
-		let authorId = authorIds[i];
-		let fetchedUsernames = getUsername(authorId);
-		usernames.push(fetchedUsernames);
-	}
-
-	console.log(usernames);
 
 	return (
 		<div className="cards-wrapper">
