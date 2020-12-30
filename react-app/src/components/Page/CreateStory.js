@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Redirect, useHistory } from "react-router-dom";
 import { Editor } from "@tinymce/tinymce-react";
+import './stories.css'
 
 function CreateStory({ authenticate }) {
 	const [title, setTitle] = useState("");
