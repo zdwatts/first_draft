@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Redirect, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { Editor } from "@tinymce/tinymce-react";
 import './stories.css'
 
@@ -10,13 +10,14 @@ function CreateStory({ authenticate }) {
 	const history = useHistory();
 
 	const apiKey = process.env.REACT_APP_TINY_MCE;
+
 	useEffect(() => {
 		(async () => {
 			const response = await authenticate();
 			const username = response.username;
 			setAuthor(username);
 		})();
-	}, [author]);
+	}, [author, authenticate]);
 
 	const titleChange = (e) => {
 		setTitle(e.target.value);
@@ -43,7 +44,6 @@ function CreateStory({ authenticate }) {
 
 		if (response.ok) {
 			const data = await response.json();
-			console.log(data);
 			const storyId = data.id;
 			history.push(`/stories/${storyId}`);
 		}

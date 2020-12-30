@@ -1,12 +1,17 @@
 import React, { useEffect, useState } from "react";
+import CreateComment from "./CreateComment";
+import Comment from "./Comment";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import parse from "html-react-parser";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faComments } from "@fortawesome/free-solid-svg-icons";
 
 function Story() {
 	const [story, setStory] = useState([]);
 	const [author, setAuthor] = useState([]);
+	const [comments, setComments] = useState([]);
 
 	const { id } = useParams();
 
@@ -14,22 +19,39 @@ function Story() {
 		(async () => {
 			const data = await axios.get(`/api/stories/${id}`);
 			data.data.story.length > 0 && setStory(data.data.story[0]);
-			data.data.story.length > 0 && setAuthor(data.data.author[0]);
+			data.data.story.length > 0 &&
+				setAuthor(data.data.author[0].username);
+			// data.data.comments.length > 0 && setComments(data.data.comments);
 		})();
-	}, [id]);
+	}, []);
+
+	useEffect(() => {
+		(async () => {
+			const response = await axios.get(`/api/stories/${id}`);
+			const comments_body = response.data.comments;
+			console.log(comments_body);
+			comments_body.length > 0 && setComments(comments_body);
+		})();
+	}, []);
+	console.log(comments);
 
 	return (
 		<Container>
 			<Inner>
 				<Title>{story.title}</Title>
 				<Author>
-					<div>{author.username}</div>
+					<div>{author}</div>
 				</Author>
 
 				<Body>
 					{/* <div>{story.body}</div> */}
 					<div>{story.body && parse(story.body)}</div>
 				</Body>
+				<FontAwesomeIcon icon={faComments} size="2x" />
+				<div>Total Comments: {comments.length}</div>
+
+				<Comment comments={comments} />
+				<CreateComment author={author} storyId={id} />
 			</Inner>
 		</Container>
 	);
@@ -59,13 +81,6 @@ const Title = styled.div`
 	padding-top: 1em;
 	font-family: roboto;
 	font-size: 32px;
-`;
-const Subtitle = styled.div`
-	padding-top: 1em;
-	font-family: monserrat;
-	font-size: 21px;
-	letter-spacing: 0.02em;
-	padding: 1em;
 `;
 
 const Author = styled.div`
