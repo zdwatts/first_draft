@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Redirect, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 function CreateStory({ authenticate }) {
 	const [title, setTitle] = useState("");
@@ -13,7 +13,7 @@ function CreateStory({ authenticate }) {
 			const username = response.username;
 			setAuthor(username);
 		})();
-	}, []);
+	}, [authenticate]);
 	console.log(author);
 
 	const titleChange = (e) => {

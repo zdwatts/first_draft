@@ -1,6 +1,4 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-import { useParams } from "react-router-dom";
+import React from "react";
 import "./defaultheader.css";
 
 const DefaultHome = ({ setAuthenticated, authenticated }) => {
@@ -15,7 +13,7 @@ const DefaultHome = ({ setAuthenticated, authenticated }) => {
 					publications, and experts from around the globe. Everyone's welcome.
 				</p>
 			</div>
-			<img className="header_image" src="headerimage.png"></img>
+			<img className="header_image" src="headerimage.png" alt=""></img>
 		</div>
 	);
 };
