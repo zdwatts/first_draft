@@ -62,7 +62,7 @@ function CreateStory({ authenticate }) {
 					plugins="wordcount"
 					onEditorChange={handleEditorChange}
 				/>
-				<button className="story-submit" type="submit">Submit</button>
+				<button className="story-submit" type="submit">Submit Story</button>
 			</form>
 		</div>
 	);
