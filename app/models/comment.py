@@ -9,7 +9,7 @@ class Comment(db.Model):
     story_id = db.Column(db.Integer, db.ForeignKey('stories.id'), nullable=False)
     comment = db.Column(db.Text, nullable=False)
     
-    def __init__(self, user_id, story_id, comment, ):
+    def __init__(self, user_id, story_id, comment):
         self.user_id = user_id
         self.comment = comment
         self.story_id = story_id

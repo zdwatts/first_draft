@@ -1,5 +1,4 @@
-from app.api.story_routes import stories
-from flask import Blueprint, jsonify
+from flask import Blueprint
 from app.models import User, Story
 
 user_stories = Blueprint('user', __name__)
