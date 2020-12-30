@@ -11,6 +11,7 @@ import "./index.css";
 import Story from "./components/Page/Story";
 import CreateStory from "./components/Page/CreateStory";
 import UsersList from "./components/Page/UserList";
+import Footer from "./components/Footer";
 
 function App() {
 	const [authenticated, setAuthenticated] = useState(false);
@@ -31,11 +32,11 @@ function App() {
 	}
 
 	return (
-		<BrowserRouter>
-			<NavBar
-				setAuthenticated={setAuthenticated}
-				authenticated={authenticated}
-			/>
+    <BrowserRouter>
+      <NavBar
+        setAuthenticated={setAuthenticated}
+        authenticated={authenticated}
+      />
 
 			<Switch>
 				<Route path="/login" exact={true}>
