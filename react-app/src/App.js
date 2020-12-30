@@ -10,6 +10,7 @@ import DefaultHeader from "./components/DefaultHeader";
 import "./index.css";
 import Story from "./components/Page/Story";
 import CreateStory from "./components/Page/CreateStory";
+import UsersList from "./components/Page/UserList";
 
 function App() {
 	const [authenticated, setAuthenticated] = useState(false);
@@ -72,6 +73,8 @@ function App() {
 				<Route path="/stories">
 					<CreateStory authenticate={authenticate} />
 				</Route>
+				<Route path="/users" component={UsersList} />
+				<Route path="/user/:id" component={User} />
 			</Switch>
 		</BrowserRouter>
 	);

@@ -16,7 +16,6 @@ function CreateStory({ authenticate }) {
 			setAuthor(username);
 		})();
 	}, [author]);
-	console.log(author);
 
 	const titleChange = (e) => {
 		setTitle(e.target.value);
