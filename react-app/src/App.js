@@ -11,6 +11,7 @@ import "./index.css";
 import Story from "./components/Page/Story";
 import CreateStory from "./components/Page/CreateStory";
 import UsersList from "./components/Page/UserList";
+import Footer from "./components/Footer";
 
 function App() {
 	const [authenticated, setAuthenticated] = useState(false);
@@ -68,6 +69,7 @@ function App() {
 						authenticated={authenticated}
 						className="header"
 					/>
+					<Footer />
 				</Route>
 				<Route path="/stories/:id" component={Story} />
 				<Route path="/stories">
