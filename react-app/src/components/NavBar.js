@@ -8,7 +8,7 @@ const NavBar = ({ setAuthenticated, authenticated, authenticate }) => {
 	const greeting = () => {
 		let greeting;
 		let time = new Date().getHours();
-		if (time < 10) {
+		if (time < 12) {
 			greeting = "Good morning";
 		} else if (time < 20) {
 			greeting = "Good afternoon";
@@ -26,54 +26,55 @@ const NavBar = ({ setAuthenticated, authenticated, authenticate }) => {
 	}
 
 	return (
-    <nav className={navTheme}>
-      <div className="main-logo">
-        <h1 className="logo">{"</>"}</h1>
-        <h1 className="logo-text">Medium</h1>
-      </div>
-      <ul className="nav_links">
-        <li>
-          <NavLink to="/" exact={true} activeClassName="active">
-            Home
-          </NavLink>
-        </li>
-        {authenticated ? (
-          <li>
-            <NavLink to="/stories" exact={true} activeClassName="active">
-              Create A Story
-            </NavLink>
-          </li>
-        ) : (
-          <li>
-            <NavLink to="/login" exact={true} activeClassName="active">
-              Login
-            </NavLink>
-          </li>
-        )}
-        {authenticated ? (
-          ""
-        ) : (
-          <li>
-            <NavLink to="/sign-up" exact={true} activeClassName="active">
-              Sign Up
-            </NavLink>
-          </li>
-        )}
-        <li>
-          <LogoutButton
-            setAuthenticated={setAuthenticated}
-            authenticated={authenticated}
-          />
-        </li>
-        <li>
-          <DemoButton
-            setAuthenticated={setAuthenticated}
-            authenticated={authenticated}
-          />
-        </li>
-      </ul>
-    </nav>
-  );
+		<nav className={navTheme}>
+			<div className="main-logo">
+				<h1 className="logo">{"</>"}</h1>
+				<h1 className="logo-text">Medium</h1>
+				<h2>{greeting()}</h2>
+			</div>
+			<ul className="nav_links">
+				<li>
+					<NavLink to="/" exact={true} activeClassName="active">
+						Home
+					</NavLink>
+				</li>
+				{authenticated ? (
+					<li>
+						<NavLink to="/stories" exact={true} activeClassName="active">
+							Create A Story
+						</NavLink>
+					</li>
+				) : (
+					<li>
+						<NavLink to="/login" exact={true} activeClassName="active">
+							Login
+						</NavLink>
+					</li>
+				)}
+				{authenticated ? (
+					""
+				) : (
+					<li>
+						<NavLink to="/sign-up" exact={true} activeClassName="active">
+							Sign Up
+						</NavLink>
+					</li>
+				)}
+				<li>
+					<LogoutButton
+						setAuthenticated={setAuthenticated}
+						authenticated={authenticated}
+					/>
+				</li>
+				<li>
+					<DemoButton
+						setAuthenticated={setAuthenticated}
+						authenticated={authenticated}
+					/>
+				</li>
+			</ul>
+		</nav>
+	);
 };
 
 export default NavBar;
