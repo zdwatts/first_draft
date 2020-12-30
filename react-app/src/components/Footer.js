@@ -4,7 +4,7 @@ import LogoutButton from "./auth/LogoutButton";
 import DemoButton from "./auth/DemoButton";
 import "./Footer.css";
 
-const Footer = ({ setAuthenticated, authenticated }) => {
+const Footer = () => {
   return (
     <footer className="footer">
       <div className="main-logo-footer">
