@@ -26,11 +26,20 @@
 	font-family: "Open Sans", sans-serif;
 	font-weight: 800;
 	font-size: 50px;
-	text-align: center;
+	text-align: left;
+	width: 100%;
 }
 
 .story-page-author {
 	text-align: center;
 	font-family: "Open Sans", sans-serif;
 	font-weight: 200;
+	text-align: left;
+	width: 100%;
+	color: rgba(117, 117, 117, 1);
+	font-weight: 800;
+}
+
+.author-name {
+	color: rgba(102, 138, 170, 1);
 }

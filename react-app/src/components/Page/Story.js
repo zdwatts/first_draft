@@ -39,7 +39,9 @@ function Story({ authenticate }) {
 		<Container className="story-container pattern-diagonal-lines-md">
 			<Inner className="story-div">
 				<h1 className="story-page-title">{story.title}</h1>
-				<p className="story-page-author">Written By: {author}</p>
+				<p className="story-page-author">
+					Written By: <span className="author-name">{author}</span>
+				</p>
 				<Body>
 					{/* <div>{story.body}</div> */}
 					<div>{story.body && parse(story.body)}</div>
