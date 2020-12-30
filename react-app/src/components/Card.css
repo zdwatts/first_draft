@@ -11,6 +11,9 @@
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
+	align-content: center;
+	width: 100%;
+	margin-bottom: 40px;
 }
 
 .card-number {
@@ -31,20 +34,19 @@
 
 .stories-header {
 	font-size: 14px;
-	margin-left: 40px;
-	margin-top: 0 !important;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 40px;
 	font-family: "Open Sans", sans-serif;
 }
 
 .cards-wrapper {
-	padding-left: 5%;
-	padding-right: 5%;
-	padding-top: 40px;
-	padding-bottom: 40px;
-	background-color: blue;
+	background-color: white;
+	width: 100%;
+	margin: 0;
 }
 
-@media only screen and (min-width: 1000px) {
+/* @media only screen and (min-width: 1000px) {
 	.card {
 		height: 300px;
 		width: 400px;
@@ -59,6 +61,13 @@
 		padding-top: 40px;
 		padding-bottom: 40px;
 		background-color: blue;
+	}
+
+	.stories-header {
+		font-size: 14px;
+		margin-left: 10%;
+		margin-top: 0 !important;
+		font-family: "Open Sans", sans-serif;
 	}
 }
 
@@ -78,4 +87,11 @@
 		padding-bottom: 40px;
 		background-color: blue;
 	}
-}
+
+	.stories-header {
+		font-size: 14px;
+		margin-left: 7%;
+		margin-top: 0 !important;
+		font-family: "Open Sans", sans-serif;
+	}
+} */
