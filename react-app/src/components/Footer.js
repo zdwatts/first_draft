@@ -21,6 +21,14 @@ const Footer = ({ setAuthenticated, authenticated }) => {
           >
             Home
           </NavLink>
+          <a
+            className="navlink"
+            href="https://github.com/zdwatts/medium-clone"
+            exact={true}
+            activeClassName="active"
+          >
+            GitHub
+          </a>
         </li>
       </ul>
     </nav>
