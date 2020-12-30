@@ -3,8 +3,6 @@ import { useHistory } from "react-router-dom";
 import { Editor } from "@tinymce/tinymce-react";
 
 function Comment({ author, storyId }) {
-	console.log(storyId);
-	console.log(author);
 	const [comment, setComment] = useState("");
 	const history = useHistory();
 
@@ -15,7 +13,6 @@ function Comment({ author, storyId }) {
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
-		console.log("You rock!!!!!!!!");
 
 		const response = await fetch(`/api/stories/${storyId}/comment`, {
 			method: "POST",
@@ -29,10 +26,6 @@ function Comment({ author, storyId }) {
 		});
 		if (response.ok) {
 			const data = await response.json();
-			console.log(
-				"This is the data received from the post to comment: ",
-				data
-			);
 			const storyId = data.story_id;
 			history.push(`/stories/${storyId}`);
 		}

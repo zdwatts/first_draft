@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Comment from "./Comment";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { Redirect, useParams } from "react-router-dom";
 import styled from "styled-components";
 import parse from "html-react-parser";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faComments } from "@fortawesome/free-solid-svg-icons";
 
 function Story() {
 	const [story, setStory] = useState([]);
@@ -32,6 +34,7 @@ function Story() {
 					{/* <div>{story.body}</div> */}
 					<div>{story.body && parse(story.body)}</div>
 				</Body>
+				<FontAwesomeIcon icon={faComments} />
 				<Comment author={author} storyId={id} />
 			</Inner>
 		</Container>
