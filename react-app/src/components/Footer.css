@@ -3,25 +3,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
 .footer {
 	margin: 0;
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 	background-color: black;
 	justify-content: space-around;
-    border-bottom: 1px solid black;
-    bottom: 0;
-    width: 100%;
-    color: white;
+	border-bottom: 1px solid black;
+	bottom: 0;
+	width: 100%;
+	color: white;
 }
 
 .navlink {
-    color: white;
-    margin: 5px;
+	color: white;
+	margin: 5px;
 }
 
 .navlink:hover {
-    font-size: 15px;
+	font-size: 15px;
 }
-.logo_text {
+
+.logo-text {
 	font-size: 3rem;
 	margin: 10px;
 	font-family: "Source Serif Pro", serif;
@@ -52,7 +53,7 @@ a {
 }
 
 a:hover {
-    cursor: pointer;
+	cursor: pointer;
 	text-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
@@ -103,7 +104,7 @@ a:hover {
 }
 
 .main-logo-footer {
-    padding-top: 10px;
+	padding-top: 10px;
 	display: flex;
 	margin: 0 !important;
 	justify-content: center;

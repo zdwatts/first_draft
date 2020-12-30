@@ -51,6 +51,8 @@ a {
 a:hover {
 	font-size: 17px;
 	text-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	text-decoration: underline;
+	text-decoration-color: black;
 }
 
 .logout_button {
