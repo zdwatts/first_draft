@@ -11,5 +11,3 @@ def one_user(id):
     return {'author': user.to_dict(), 
             'stories': [story.to_dict() for story in stories]
             }
-
-# @user_stories.route('/')
