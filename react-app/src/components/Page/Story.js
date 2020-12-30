@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Comment from "./Comment";
 import axios from "axios";
-import { Redirect, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import parse from "html-react-parser";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -65,13 +65,6 @@ const Title = styled.div`
 	padding-top: 1em;
 	font-family: roboto;
 	font-size: 32px;
-`;
-const Subtitle = styled.div`
-	padding-top: 1em;
-	font-family: monserrat;
-	font-size: 21px;
-	letter-spacing: 0.02em;
-	padding: 1em;
 `;
 
 const Author = styled.div`
