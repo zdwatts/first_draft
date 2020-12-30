@@ -1,13 +1,24 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Card from "./Card";
+import axios from "axios";
 import "./Card.css";
 
 const MostRecent = () => {
-	const cards = ["1", "2", "3", "4", "5", "6"];
+	const [stories, setStories] = useState([]);
+
+	useEffect(() => {
+		(async () => {
+			const data = await axios.get(`/api/stories/`);
+			setStories(data.data.stories.reverse());
+		})();
+	}, []);
+
+	console.log("STORIES:", stories);
+
 	return (
 		<div className="most-recent-div">
-			{cards.map((card) => {
-				return <Card />;
+			{stories.map((story) => {
+				return <h1>{story.title}</h1>;
 			})}
 		</div>
 	);
