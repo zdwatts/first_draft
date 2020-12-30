@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
 import CreateComment from "./CreateComment";
 import Comment from "./Comment";
 import axios from "axios";
@@ -6,7 +7,7 @@ import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import parse from "html-react-parser";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faComments } from "@fortawesome/free-solid-svg-icons";
+import { faComments, faHeart } from "@fortawesome/free-solid-svg-icons";
 
 function Story({ authenticate }) {
 	const [story, setStory] = useState([]);
@@ -14,8 +15,10 @@ function Story({ authenticate }) {
 	const [comments, setComments] = useState([]);
 	const [showComments, setShowComments] = useState(false);
 	const [currentUser, setCurrentUser] = useState("");
+	const [totalLikes, setTotalLikes] = useState(0);
 
 	const { id } = useParams();
+	const history = useHistory();
 
 	useEffect(() => {
 		(async () => {
@@ -28,11 +31,26 @@ function Story({ authenticate }) {
 			const response = await authenticate();
 			const loggedUser = response.username;
 			setCurrentUser(loggedUser);
+			setTotalLikes(data.data.total_likes);
 		})();
 	}, []);
 
 	const toggleComment = () => {
 		setShowComments(!showComments);
+	};
+
+	const handleLike = async () => {
+		const response = await fetch(`/api/stories/${id}/like`, {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify({
+				user: currentUser,
+			}),
+		});
+		const likeData = await axios.get(`/api/stories/${id}`);
+		setTotalLikes(likeData.data.total_likes);
 	};
 
 	return (
@@ -47,6 +65,12 @@ function Story({ authenticate }) {
 					{/* <div>{story.body}</div> */}
 					<div>{story.body && parse(story.body)}</div>
 				</Body>
+				<FontAwesomeIcon
+					icon={faHeart}
+					size="2x"
+					onClick={handleLike}
+				/>
+				<div>Total Likes: {totalLikes}</div>
 				<FontAwesomeIcon
 					icon={faComments}
 					size="2x"

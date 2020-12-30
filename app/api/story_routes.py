@@ -1,5 +1,5 @@
 from flask import Blueprint, jsonify, request
-from app.models import Story, User, Comment
+from app.models import Story, User, Comment, Like
 from app.models import db
 
 
@@ -14,12 +14,17 @@ def stories():
 # Get one story route with author and associated comments
 @story_routes.route('/<int:id>')
 def one_story(id):
-    story = Story.query.filter(Story.id == id)
+    story = Story.query.get(id)
     author = User.query.join(Story, User.id == Story.author_id).filter(Story.id == id)
     comments = Comment.query.join(Story, Comment.story_id == Story.id ).filter(Story.id == id)
-    return {'author': [s.to_dict() for s in author],
-            'story': [s.to_dict() for s in story],
-            'comments': [comment.to_dict() for comment in comments]}
+    count_likes = sum([like.count for like in story.likes])
+    
+    return {
+            'author': [s.to_dict() for s in author],
+            "story" : [story.to_dict()],
+            'comments': [comment.to_dict() for comment in comments],
+            "total_likes": count_likes
+            }
 
 # Post a story route
 @story_routes.route('', methods=['POST'])
@@ -47,8 +52,6 @@ def user_stories():
 @story_routes.route('/<int:id>/comment', methods=['POST'])
 def post_comment(id):
     story_id = Story.query.get(id).id
-    
-    # TODO: fix the user_id query to match the user posting the story
     user_id = User.query.filter_by(username = request.json['author']).first().id
     comment = request.json['comment']
     
@@ -57,3 +60,21 @@ def post_comment(id):
     db.session.commit()
 
     return new_comment.to_dict()
+
+# Post a like
+@story_routes.route('/<int:id>/like', methods=['POST'])
+def post_like(id):
+    story_id = Story.query.get(id).id
+    user_id = User.query.filter_by(username = request.json['user']).first().id
+    like = Like.query.filter(Like.story_id == id).filter(Like.user_id == user_id).first()
+    # count = 1
+    if like:
+        like.count = like.count + 1
+        db.session.add(like)
+        db.session.commit()
+        return like.to_dict()
+    else:
+        new_like = Like(user_id, story_id, count=1)
+        db.session.add(new_like)
+        db.session.commit()
+        return new_like.to_dict()
