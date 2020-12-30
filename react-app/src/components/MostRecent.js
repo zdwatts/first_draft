@@ -17,8 +17,8 @@ const MostRecent = () => {
 
 	return (
 		<div className="most-recent-div">
-			{stories.map((story) => {
-				return <h1>{story.title}</h1>;
+			{stories.map((story, idx) => {
+				return <Card story={story} idx={idx} />;
 			})}
 		</div>
 	);
