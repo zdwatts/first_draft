@@ -29,8 +29,8 @@ const NavBar = ({ setAuthenticated, authenticated, authenticate }) => {
 		<nav className={navTheme}>
 			<div className="main-logo">
 				<h1 className="logo">{"</>"}</h1>
-				<h1 className="logo-text">Medium</h1>
-				<h2>{greeting()}</h2>
+				<h1 className="logo-text">Medium</h1>{" "}
+				{authenticated ? <h2>{greeting()}</h2> : ""}
 			</div>
 			<ul className="nav_links">
 				<li>
