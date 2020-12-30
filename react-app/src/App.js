@@ -10,7 +10,8 @@ import DefaultHeader from "./components/DefaultHeader";
 import "./index.css";
 import Story from "./components/Page/Story";
 import CreateStory from "./components/Page/CreateStory";
-import MostRecent from "./components/MostRecent";
+import UsersList from "./components/Page/UserList";
+import Footer from "./components/Footer";
 
 function App() {
 	const [authenticated, setAuthenticated] = useState(false);
@@ -35,7 +36,6 @@ function App() {
 			<NavBar
 				setAuthenticated={setAuthenticated}
 				authenticated={authenticated}
-				authenticate={authenticate}
 			/>
 
 			<Switch>
@@ -65,13 +65,18 @@ function App() {
 					<User />
 				</ProtectedRoute>
 				<Route path="/" exact={true}>
-					<DefaultHeader authenticated={authenticated} className="header" />
+					<DefaultHeader
+						authenticated={authenticated}
+						className="header"
+					/>
 					<MostRecent />
 				</Route>
 				<Route path="/stories/:id" component={Story} />
 				<Route path="/stories">
 					<CreateStory authenticate={authenticate} />
 				</Route>
+				<Route path="/users" component={UsersList} />
+				<Route path="/users/:id" component={User} />
 			</Switch>
 		</BrowserRouter>
 	);
