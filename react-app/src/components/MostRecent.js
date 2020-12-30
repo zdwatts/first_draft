@@ -17,7 +17,7 @@ const MostRecent = () => {
 
 	return (
 		<>
-			<h1>Most Recent Stories</h1>
+			<h1 className="stories-header">Most Recent Stories</h1>
 			<div className="most-recent-div">
 				{stories.map((story, idx) => {
 					return <Card story={story} idx={idx} />;

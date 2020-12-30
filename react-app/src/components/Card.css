@@ -16,3 +16,12 @@
 .card-number {
 	color: #e6e6e6;
 }
+
+.card-title {
+	font-size: 16px;
+}
+
+.stories-header {
+	font-size: 12px;
+	margin-left: 40px;
+}
