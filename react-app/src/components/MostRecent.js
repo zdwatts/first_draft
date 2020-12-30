@@ -4,7 +4,7 @@ import axios from "axios";
 import "./Card.css";
 
 const MostRecent = () => {
-	const [stories, setStories] = useState([]);
+	let [stories, setStories] = useState([]);
 
 	useEffect(() => {
 		(async () => {
@@ -13,7 +13,7 @@ const MostRecent = () => {
 		})();
 	}, []);
 
-	console.log("STORIES:", stories);
+	stories = stories.slice(0, 6);
 
 	return (
 		<div className="most-recent-div">
