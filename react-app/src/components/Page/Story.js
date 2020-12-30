@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Comment from "./Comment";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
@@ -14,7 +15,8 @@ function Story() {
 		(async () => {
 			const data = await axios.get(`/api/stories/${id}`);
 			data.data.story.length > 0 && setStory(data.data.story[0]);
-			data.data.story.length > 0 && setAuthor(data.data.author[0]);
+			data.data.story.length > 0 &&
+				setAuthor(data.data.author[0].username);
 		})();
 	}, [id]);
 
@@ -23,13 +25,14 @@ function Story() {
 			<Inner>
 				<Title>{story.title}</Title>
 				<Author>
-					<div>{author.username}</div>
+					<div>{author}</div>
 				</Author>
 
 				<Body>
 					{/* <div>{story.body}</div> */}
 					<div>{story.body && parse(story.body)}</div>
 				</Body>
+				<Comment author={author} storyId={id} />
 			</Inner>
 		</Container>
 	);
