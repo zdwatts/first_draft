@@ -39,10 +39,7 @@ function Story({ authenticate }) {
 		<Container className="story-container pattern-diagonal-lines-md">
 			<Inner className="story-div">
 				<h1 className="story-page-title">{story.title}</h1>
-				<Author>
-					<p>Written By: {author}</p>
-				</Author>
-
+				<p className="story-page-author">Written By: {author}</p>
 				<Body>
 					{/* <div>{story.body}</div> */}
 					<div>{story.body && parse(story.body)}</div>
@@ -68,7 +65,6 @@ function Story({ authenticate }) {
 const Container = styled.div`
 	display: flex;
 	justify-content: center;
-	margin-bottom: 13em;
 `;
 
 const Inner = styled.div`
@@ -83,16 +79,6 @@ const Inner = styled.div`
 	div {
 		padding: 1em;
 	}
-`;
-
-const Title = styled.div`
-	padding-top: 1em;
-	font-family: roboto;
-	font-size: 32px;
-`;
-
-const Author = styled.div`
-	font-family: nunito;
 `;
 
 const Body = styled.div`
