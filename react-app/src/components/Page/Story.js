@@ -38,7 +38,7 @@ function Story({ authenticate }) {
 	return (
 		<Container className="story-container pattern-diagonal-lines-md">
 			<Inner className="story-div">
-				<Title className="story-title">{story.title}</Title>
+				<h1 className="story-page-title">{story.title}</h1>
 				<Author>
 					<p>Written By: {author}</p>
 				</Author>
