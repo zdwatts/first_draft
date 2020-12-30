@@ -37,6 +37,18 @@ function Story({ authenticate }) {
 		setShowComments(!showComments);
 	};
 
+	const handleLike = async () => {
+		const response = await fetch(`/api/stories/${id}/like`, {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify({
+				user: currentUser,
+			}),
+		});
+	};
+
 	return (
 		<Container>
 			<Inner>
@@ -49,7 +61,11 @@ function Story({ authenticate }) {
 					{/* <div>{story.body}</div> */}
 					<div>{story.body && parse(story.body)}</div>
 				</Body>
-				<FontAwesomeIcon icon={faHeart} size="2x" />
+				<FontAwesomeIcon
+					icon={faHeart}
+					size="2x"
+					onClick={handleLike}
+				/>
 				<div>Total Likes: {totalLikes}</div>
 				<FontAwesomeIcon
 					icon={faComments}
