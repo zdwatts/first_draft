@@ -53,8 +53,10 @@ function CreateStory({ authenticate }) {
 		<div class="create-story-div">
 			<h1 className="story-title">Create A Story</h1>
 			<form onSubmit={handleSubmit}>
-				<h2 className="story-title-label">Story Title</h2>
+				<div className="input-div">
+				<label className="story-title-label">Story Title</label>
 				<input type="text" placeholder="title" onChange={titleChange} />
+				</div>
 				<Editor
 					apiKey={apiKey}
 					plugins="wordcount"

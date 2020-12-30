@@ -11,3 +11,10 @@
     font-family: "Open Sans", sans-serif;
     font-size: 75px;
 }
+
+.input-div {
+    display: flex;
+	flex-direction: column;
+	margin-bottom: 15px;
+	width: 100%;
+}
