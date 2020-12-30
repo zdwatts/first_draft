@@ -16,14 +16,18 @@ const MostRecent = () => {
 	stories = stories.slice(0, 6);
 
 	return (
-		<>
-			<h1 className="stories-header">Most Recent Stories</h1>
-			<div className="most-recent-div">
+		<div className="cards-wrapper">
+			<div className="title-wrapper">
+				<h1 className="stories-header animate__animated animate__slideInLeft">
+					Most Recent Stories
+				</h1>
+			</div>
+			<div className="most-recent-div animate__animated animate__slideInRight">
 				{stories.map((story, idx) => {
 					return <Card story={story} idx={idx} />;
 				})}
 			</div>
-		</>
+		</div>
 	);
 };
 
