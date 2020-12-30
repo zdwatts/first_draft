@@ -1,10 +1,18 @@
 .card {
-	height: 300px;
-	width: 400px;
-	background-color: blue;
+	height: 150px;
+	width: 250px;
+	background-color: white;
 	margin: 5px;
+	border: none;
 }
 
 .most-recent-div {
 	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.card-number {
+	color: #e6e6e6;
 }
