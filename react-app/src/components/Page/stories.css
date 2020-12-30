@@ -18,3 +18,7 @@
 	margin-bottom: 15px;
 	width: 100%;
 }
+
+.title-input {
+    border-top: none;
+}

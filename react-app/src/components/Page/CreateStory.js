@@ -55,7 +55,7 @@ function CreateStory({ authenticate }) {
 			<form onSubmit={handleSubmit}>
 				<div className="input-div">
 				<label className="story-title-label">Story Title</label>
-				<input type="text" placeholder="title" onChange={titleChange} />
+				<input className="title-input" type="text" placeholder="title" onChange={titleChange} />
 				</div>
 				<Editor
 					apiKey={apiKey}
