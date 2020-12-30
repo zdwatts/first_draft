@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+
+.story-container {
+	height: 100%;
+	margin: 0 !important;
+}
+
+.story-div {
+	background-color: white;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	border-radius: 5px;
+	border: 1px solid rgb(7, 7, 7);
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+		rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+		rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+	width: 80%;
+	padding: 40px;
+	display: flex;
+	flex-direction: column;
+}
+
+.story-page-title {
+	font-family: "Open Sans", sans-serif;
+	font-weight: 800;
+	font-size: 50px;
+	text-align: left;
+	width: 100%;
+}
+
+.story-page-author {
+	text-align: center;
+	font-family: "Open Sans", sans-serif;
+	font-weight: 200;
+	text-align: left;
+	width: 100%;
+	color: rgba(117, 117, 117, 1);
+	font-weight: 800;
+}
+
+.author-name {
+	color: rgba(102, 138, 170, 1);
+}
+
+.main-body-div {
+	background-color: blue;
+	width: 100%;
+}
+
+.story-body > p {
+	/* background-color: green; */
+	width: 100%;
+	margin: 0;
+	font-family: "Open Sans", sans-serif;
+}
+
+div > .story-body {
+	font-size: 50px !important;
+}

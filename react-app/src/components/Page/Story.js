@@ -7,6 +7,7 @@ import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import parse from "html-react-parser";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "./Story.css";
 import { faComments, faHeart } from "@fortawesome/free-solid-svg-icons";
 
 function Story({ authenticate }) {
@@ -24,8 +25,7 @@ function Story({ authenticate }) {
 		(async () => {
 			const data = await axios.get(`/api/stories/${id}`);
 			data.data.story.length > 0 && setStory(data.data.story[0]);
-			data.data.story.length > 0 &&
-				setAuthor(data.data.author[0].username);
+			data.data.story.length > 0 && setAuthor(data.data.author[0].username);
 			data.data.comments.length > 0 && setComments(data.data.comments);
 
 			const response = await authenticate();
@@ -54,35 +54,22 @@ function Story({ authenticate }) {
 	};
 
 	return (
-		<Container>
-			<Inner>
-				<Title>{story.title}</Title>
-				<Author>
-					<p>Written By: {author}</p>
-				</Author>
-
-				<Body>
-					{/* <div>{story.body}</div> */}
-					<div>{story.body && parse(story.body)}</div>
-				</Body>
-				<FontAwesomeIcon
-					icon={faHeart}
-					size="2x"
-					onClick={handleLike}
-				/>
+		<Container className="story-container pattern-diagonal-lines-md">
+			<Inner className="story-div">
+				<h1 className="story-page-title">{story.title}</h1>
+				<p className="story-page-author">
+					Written By: <span className="author-name">{author}</span>
+				</p>
+				{/* <div>{story.body}</div> */}
+				<div className="story-body">{story.body && parse(story.body)}</div>
+				<FontAwesomeIcon icon={faHeart} size="2x" onClick={handleLike} />
 				<div>Total Likes: {totalLikes}</div>
-				<FontAwesomeIcon
-					icon={faComments}
-					size="2x"
-					onClick={toggleComment}
-				/>
+				<FontAwesomeIcon icon={faComments} size="2x" onClick={toggleComment} />
+
 				<div>Total Comments: {comments.length}</div>
 				{showComments && (
 					<>
-						<Comment
-							comments={comments}
-							currentUser={currentUser}
-						/>
+						<Comment comments={comments} currentUser={currentUser} />
 						<CreateComment
 							author={author}
 							storyId={id}
@@ -99,7 +86,6 @@ function Story({ authenticate }) {
 const Container = styled.div`
 	display: flex;
 	justify-content: center;
-	margin-bottom: 13em;
 `;
 
 const Inner = styled.div`
@@ -114,16 +100,6 @@ const Inner = styled.div`
 	div {
 		padding: 1em;
 	}
-`;
-
-const Title = styled.div`
-	padding-top: 1em;
-	font-family: roboto;
-	font-size: 32px;
-`;
-
-const Author = styled.div`
-	font-family: nunito;
 `;
 
 const Body = styled.div`
