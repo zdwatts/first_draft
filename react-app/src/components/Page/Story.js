@@ -12,6 +12,7 @@ function Story() {
 	const [story, setStory] = useState([]);
 	const [author, setAuthor] = useState([]);
 	const [comments, setComments] = useState([]);
+	const [showComments, setShowComments] = useState(false);
 
 	const { id } = useParams();
 
@@ -29,11 +30,14 @@ function Story() {
 		(async () => {
 			const response = await axios.get(`/api/stories/${id}`);
 			const comments_body = response.data.comments;
-			console.log(comments_body);
+			// console.log(comments_body);
 			comments_body.length > 0 && setComments(comments_body);
 		})();
 	}, []);
-	console.log(comments);
+
+	const toggleComment = () => {
+		setShowComments(!showComments);
+	};
 
 	return (
 		<Container>
@@ -47,11 +51,22 @@ function Story() {
 					{/* <div>{story.body}</div> */}
 					<div>{story.body && parse(story.body)}</div>
 				</Body>
-				<FontAwesomeIcon icon={faComments} size="2x" />
+				<FontAwesomeIcon
+					icon={faComments}
+					size="2x"
+					onClick={toggleComment}
+				/>
 				<div>Total Comments: {comments.length}</div>
-
-				<Comment comments={comments} />
-				<CreateComment author={author} storyId={id} />
+				{showComments && (
+					<>
+						<Comment comments={comments} />
+						<CreateComment
+							author={author}
+							storyId={id}
+							setComments={setComments}
+						/>
+					</>
+				)}
 			</Inner>
 		</Container>
 	);
