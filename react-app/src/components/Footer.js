@@ -22,43 +22,6 @@ const Footer = ({ setAuthenticated, authenticated }) => {
             Home
           </NavLink>
         </li>
-        {authenticated ? (
-          <li>
-            <NavLink
-              className="navlink"
-              to="/stories"
-              exact={true}
-              activeClassName="active"
-            >
-              Create A Story
-            </NavLink>
-          </li>
-        ) : (
-          <li>
-            <NavLink
-              className="navlink"
-              to="/login"
-              exact={true}
-              activeClassName="active"
-            >
-              Login
-            </NavLink>
-          </li>
-        )}
-        {authenticated ? (
-          ""
-        ) : (
-          <li>
-            <NavLink
-              to="/sign-up"
-              className="navlink"
-              exact={true}
-              activeClassName="active"
-            >
-              Sign Up
-            </NavLink>
-          </li>
-        )}
       </ul>
     </nav>
   );
