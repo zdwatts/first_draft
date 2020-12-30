@@ -12,6 +12,7 @@ import Story from "./components/Page/Story";
 import CreateStory from "./components/Page/CreateStory";
 import UsersList from "./components/Page/UserList";
 import Footer from "./components/Footer";
+import MostRecent from "./components/MostRecent";
 
 function App() {
 	const [authenticated, setAuthenticated] = useState(false);
