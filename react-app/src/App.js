@@ -74,7 +74,7 @@ function App() {
 					<CreateStory authenticate={authenticate} />
 				</Route>
 				<Route path="/users" component={UsersList} />
-				<Route path="/user/:id" component={User} />
+				<Route path="/users/:id" component={User} />
 			</Switch>
 		</BrowserRouter>
 	);
