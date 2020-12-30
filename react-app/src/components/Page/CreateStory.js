@@ -51,7 +51,7 @@ function CreateStory({ authenticate }) {
 
 	return (
 		<div class="create-story-div">
-			<h1>Create A Story</h1>
+			<h1 className="story-title">Create A Story</h1>
 			<form onSubmit={handleSubmit}>
 				<input type="text" placeholder="title" onChange={titleChange} />
 				<Editor
