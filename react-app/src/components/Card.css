@@ -47,13 +47,13 @@
 
 .stories-header {
 	font-size: 40px;
-	margin-left: 10%;
 	margin-right: 10%;
+	margin-left: 10%;
 	margin-top: 40px;
 	font-family: "Open Sans", sans-serif;
 	font-weight: 800;
-	/* text-decoration: underline;
-	text-decoration-color: #fec017; */
+	width: 60%;
+	text-align: center;
 }
 
 .cards-wrapper {
@@ -62,52 +62,76 @@
 	margin: 0;
 }
 
-/* @media only screen and (min-width: 1000px) {
+.title-wrapper {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@media only screen and (min-width: 1000px) {
 	.card {
-		height: 300px;
-		width: 400px;
-		background-color: white;
+		height: 150px;
+		width: 250px;
 		margin: 5px;
-		border: none;
+		margin-bottom: 30px;
 	}
 
 	.cards-wrapper {
-		padding-left: 10%;
-		padding-right: 10%;
-		padding-top: 40px;
-		padding-bottom: 40px;
-		background-color: blue;
+		background-color: white;
+		width: 100%;
+		margin: 0;
 	}
 
 	.stories-header {
-		font-size: 14px;
-		margin-left: 10%;
-		margin-top: 0 !important;
+		font-size: 40px;
 		font-family: "Open Sans", sans-serif;
+		font-weight: 800;
+		width: 60%;
+	}
+
+	.most-recent-div {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+		width: 100%;
+		margin-bottom: 40px;
 	}
 }
 
 @media only screen and (min-width: 1200px) {
 	.card {
-		height: 300px;
-		width: 400px;
+		height: 250px;
+		width: 450px;
 		background-color: white;
 		margin: 5px;
-		border: none;
+		margin-bottom: 30px;
 	}
 
 	.cards-wrapper {
-		padding-left: 7%;
-		padding-right: 7%;
-		padding-top: 40px;
-		padding-bottom: 40px;
-		background-color: blue;
+		background-color: white;
+		width: 100%;
+		margin: 0;
 	}
 
 	.stories-header {
-		font-size: 14px;
-		margin-left: 7%;
-		margin-top: 0 !important;
+		font-size: 40px;
+		margin-left: 10%;
+		margin-right: 10%;
+		margin-top: 40px;
 		font-family: "Open Sans", sans-serif;
+		font-weight: 800;
 	}
-} */
+
+	.most-recent-div {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+		width: 100%;
+		margin-bottom: 40px;
+	}
+}
