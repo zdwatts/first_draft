@@ -42,10 +42,8 @@ function Story({ authenticate }) {
 				<p className="story-page-author">
 					Written By: <span className="author-name">{author}</span>
 				</p>
-				<Body>
-					{/* <div>{story.body}</div> */}
-					<div>{story.body && parse(story.body)}</div>
-				</Body>
+				{/* <div>{story.body}</div> */}
+				<div className="story-body">{story.body && parse(story.body)}</div>
 				<FontAwesomeIcon icon={faComments} size="2x" onClick={toggleComment} />
 				<div>Total Comments: {comments.length}</div>
 				{showComments && (
