@@ -50,22 +50,30 @@ function CreateStory({ authenticate }) {
 	};
 
 	return (
-		<div class="create-story-div">
-			<h1 className="story-title">Create A Story</h1>
-			<form onSubmit={handleSubmit}>
-				<div className="input-div">
-				<label className="story-title-label">Story Title</label>
-				<input className="title-input" type="text" onChange={titleChange} placeholder='"A really awesome title"'/>
-				</div>
-				<Editor
-					apiKey={apiKey}
-					plugins="wordcount"
-					onEditorChange={handleEditorChange}
-				/>
-				<button className="story-submit" type="submit">Submit Story</button>
-			</form>
-		</div>
-	);
+    <div class="create-story-div animate__animated animate__zoomInRight">
+      <h1 className="story-title">Create A Story</h1>
+      <form onSubmit={handleSubmit}>
+        <div className="input-div">
+          <label className="story-title-label">Story Title</label>
+          <input
+            className="title-input"
+            type="text"
+            onChange={titleChange}
+            placeholder='"A really awesome title"'
+          />
+        </div>
+        <Editor
+          apiKey={apiKey}
+          plugins="wordcount"
+          onEditorChange={handleEditorChange}
+          className="animate__animated animate__hinge"
+        />
+        <button className="story-submit" type="submit">
+          Submit Story
+        </button>
+      </form>
+    </div>
+  );
 }
 
 export default CreateStory;
