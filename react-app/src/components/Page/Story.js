@@ -22,16 +22,7 @@ function Story() {
 			data.data.story.length > 0 && setStory(data.data.story[0]);
 			data.data.story.length > 0 &&
 				setAuthor(data.data.author[0].username);
-			// data.data.comments.length > 0 && setComments(data.data.comments);
-		})();
-	}, []);
-
-	useEffect(() => {
-		(async () => {
-			const response = await axios.get(`/api/stories/${id}`);
-			const comments_body = response.data.comments;
-			// console.log(comments_body);
-			comments_body.length > 0 && setComments(comments_body);
+			data.data.comments.length > 0 && setComments(data.data.comments);
 		})();
 	}, []);
 
@@ -44,7 +35,7 @@ function Story() {
 			<Inner>
 				<Title>{story.title}</Title>
 				<Author>
-					<div>{author}</div>
+					<p>Written By: {author}</p>
 				</Author>
 
 				<Body>
@@ -59,7 +50,7 @@ function Story() {
 				<div>Total Comments: {comments.length}</div>
 				{showComments && (
 					<>
-						<Comment comments={comments} />
+						<Comment comments={comments} author={author} />
 						<CreateComment
 							author={author}
 							storyId={id}
