@@ -1,5 +1,5 @@
 from flask import Blueprint, jsonify, request
-from app.models import Story, User, story
+from app.models import Story, User, Comment
 from app.models import db
 
 
@@ -15,7 +15,10 @@ def stories():
 def one_story(id):
     story = Story.query.filter(Story.id == id)
     author = User.query.join(Story, User.id == Story.author_id).filter(Story.id == id)
-    return {'author': [s.to_dict() for s in author], 'story': [s.to_dict() for s in story]}
+    comments = Comment.query.join(Story, Comment.story_id == Story.id ).filter(Story.id == id)
+    return {'author': [s.to_dict() for s in author],
+            'story': [s.to_dict() for s in story],
+            'comments': [comment.to_dict() for comment in comments]}
 
 
 @story_routes.route('', methods=['POST'])
