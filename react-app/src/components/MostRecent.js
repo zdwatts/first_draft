@@ -16,11 +16,14 @@ const MostRecent = () => {
 	stories = stories.slice(0, 6);
 
 	return (
-		<div className="most-recent-div">
-			{stories.map((story, idx) => {
-				return <Card story={story} idx={idx} />;
-			})}
-		</div>
+		<>
+			<h1>Most Recent Stories</h1>
+			<div className="most-recent-div">
+				{stories.map((story, idx) => {
+					return <Card story={story} idx={idx} />;
+				})}
+			</div>
+		</>
 	);
 };
 
