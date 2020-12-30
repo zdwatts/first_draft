@@ -7,12 +7,8 @@ import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import parse from "html-react-parser";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-<<<<<<< HEAD
-import { faComments } from "@fortawesome/free-solid-svg-icons";
 import "./Story.css";
-=======
 import { faComments, faHeart } from "@fortawesome/free-solid-svg-icons";
->>>>>>> master
 
 function Story({ authenticate }) {
 	const [story, setStory] = useState([]);
@@ -58,7 +54,6 @@ function Story({ authenticate }) {
 	};
 
 	return (
-<<<<<<< HEAD
 		<Container className="story-container pattern-diagonal-lines-md">
 			<Inner className="story-div">
 				<h1 className="story-page-title">{story.title}</h1>
@@ -67,31 +62,10 @@ function Story({ authenticate }) {
 				</p>
 				{/* <div>{story.body}</div> */}
 				<div className="story-body">{story.body && parse(story.body)}</div>
-				<FontAwesomeIcon icon={faComments} size="2x" onClick={toggleComment} />
-=======
-		<Container>
-			<Inner>
-				<Title>{story.title}</Title>
-				<Author>
-					<p>Written By: {author}</p>
-				</Author>
-
-				<Body>
-					{/* <div>{story.body}</div> */}
-					<div>{story.body && parse(story.body)}</div>
-				</Body>
-				<FontAwesomeIcon
-					icon={faHeart}
-					size="2x"
-					onClick={handleLike}
-				/>
+				<FontAwesomeIcon icon={faHeart} size="2x" onClick={handleLike} />
 				<div>Total Likes: {totalLikes}</div>
-				<FontAwesomeIcon
-					icon={faComments}
-					size="2x"
-					onClick={toggleComment}
-				/>
->>>>>>> master
+				<FontAwesomeIcon icon={faComments} size="2x" onClick={toggleComment} />
+
 				<div>Total Comments: {comments.length}</div>
 				{showComments && (
 					<>
