@@ -25,3 +25,10 @@
     border-right: none;
     font-size: 30px;
 }
+
+.story-title-label {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
