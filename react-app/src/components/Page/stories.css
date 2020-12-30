@@ -26,6 +26,10 @@
     font-size: 30px;
 }
 
+.title-input:focus {
+    outline: none;
+}
+
 .story-title-label {
     font-family: "Open Sans", sans-serif;
     font-weight: 600;
