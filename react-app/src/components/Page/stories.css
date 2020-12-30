@@ -11,10 +11,8 @@
 .create-story-div {
     margin-right: 15%;
     margin-left: 15%;
-    box-shadow: 0 50px 100px -20px rgba(50, 50, 93, 0.25),
-		0 30px 60px -30px rgba(0, 0, 0, 0.3),
-        inset 0 -2px 6px 0 rgba(10, 37, 64, 0.35);
-        padding: 40px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        padding: 80px 40px;
     border-radius: 5px;
     background-color: white;
     height: auto;
@@ -23,6 +21,7 @@
 .story-title {
     font-family: "Open Sans", sans-serif;
     font-size: 75px;
+    margin: 0;
 }
 
 .input-div {
