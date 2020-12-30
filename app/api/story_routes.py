@@ -30,3 +30,9 @@ def add_story():
     db.session.commit()
     
     return {"id": new_story.id}
+
+
+@story_routes.route('/user/<int:id>')
+def user_stories():
+    stories_by_user = Story.query.all()
+    return {'stories': [story.to_dict() for story in stories_by_user]}
