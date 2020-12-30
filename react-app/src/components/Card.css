@@ -33,11 +33,13 @@
 }
 
 .stories-header {
-	font-size: 14px;
+	font-size: 25px;
 	margin-left: 10%;
 	margin-right: 10%;
 	margin-top: 40px;
 	font-family: "Open Sans", sans-serif;
+	text-decoration: underline;
+	text-decoration-color: #fec017;
 }
 
 .cards-wrapper {
