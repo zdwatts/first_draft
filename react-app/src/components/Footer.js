@@ -13,19 +13,34 @@ const Footer = ({ setAuthenticated, authenticated }) => {
       </div>
       <ul className="nav_links">
         <li>
-          <NavLink to="/" exact={true} activeClassName="active">
+          <NavLink
+            className="navlink"
+            to="/"
+            exact={true}
+            activeClassName="active"
+          >
             Home
           </NavLink>
         </li>
         {authenticated ? (
           <li>
-            <NavLink to="/stories" exact={true} activeClassName="active">
+            <NavLink
+              className="navlink"
+              to="/stories"
+              exact={true}
+              activeClassName="active"
+            >
               Create A Story
             </NavLink>
           </li>
         ) : (
           <li>
-            <NavLink to="/login" exact={true} activeClassName="active">
+            <NavLink
+              className="navlink"
+              to="/login"
+              exact={true}
+              activeClassName="active"
+            >
               Login
             </NavLink>
           </li>
@@ -34,23 +49,16 @@ const Footer = ({ setAuthenticated, authenticated }) => {
           ""
         ) : (
           <li>
-            <NavLink to="/sign-up" exact={true} activeClassName="active">
+            <NavLink
+              to="/sign-up"
+              className="navlink"
+              exact={true}
+              activeClassName="active"
+            >
               Sign Up
             </NavLink>
           </li>
         )}
-        <li>
-          <LogoutButton
-            setAuthenticated={setAuthenticated}
-            authenticated={authenticated}
-          />
-        </li>
-        <li>
-          <DemoButton
-            setAuthenticated={setAuthenticated}
-            authenticated={authenticated}
-          />
-        </li>
       </ul>
     </nav>
   );
