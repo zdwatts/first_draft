@@ -17,8 +17,10 @@ const MostRecent = () => {
 
 	return (
 		<div className="cards-wrapper">
-			<h1 className="stories-header">Most Recent Stories</h1>
-			<div className="most-recent-div">
+			<h1 className="stories-header animate__animated animate__slideInLeft">
+				Most Recent Stories
+			</h1>
+			<div className="most-recent-div animate__animated animate__slideInRight">
 				{stories.map((story, idx) => {
 					return <Card story={story} idx={idx} />;
 				})}
