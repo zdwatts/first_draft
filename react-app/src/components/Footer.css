@@ -18,6 +18,10 @@
     color: white;
     margin: 5px;
 }
+
+.navlink:hover {
+    font-size: 15px;
+}
 .logo_text {
 	font-size: 3rem;
 	margin: 10px;
@@ -49,7 +53,7 @@ a {
 }
 
 a:hover {
-	font-size: 17px;
+    cursor: pointer;
 	text-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
@@ -99,7 +103,8 @@ a:hover {
 	margin: 0;
 }
 
-.main-logo {
+.main-logo-footer {
+    padding-top: 10px;
 	display: flex;
 	margin: 0 !important;
 	justify-content: center;
