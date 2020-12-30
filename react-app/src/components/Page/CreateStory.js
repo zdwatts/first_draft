@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { Editor } from "@tinymce/tinymce-react";
-import './stories.css'
+import "./stories.css";
 
 function CreateStory({ authenticate }) {
 	const [title, setTitle] = useState("");
@@ -50,32 +50,32 @@ function CreateStory({ authenticate }) {
 	};
 
 	return (
-    <div className="content-wrapper pattern-cross-dots-xl yellow-light bg-white flex justify-center items-center bg-fixed">
-      <div class="create-story-div animate__animated animate__zoomInRight">
-        <h1 className="story-title">Create A Story</h1>
-        <form onSubmit={handleSubmit}>
-          <div className="input-div">
-            <label className="story-title-label">Story Title</label>
-            <input
-              className="title-input"
-              type="text"
-              onChange={titleChange}
-              placeholder='"A really awesome title"'
-            />
-          </div>
-          <Editor
-            apiKey={apiKey}
-            plugins="wordcount"
-            onEditorChange={handleEditorChange}
-            className="animate__animated animate__hinge"
-          />
-          <button className="story-submit" type="submit">
-            Submit Story
-          </button>
-        </form>
-      </div>
-    </div>
-  );
+		<div className="content-wrapper pattern-cross-dots-xl yellow-light bg-white flex justify-center items-center bg-fixed">
+			<div class="create-story-div animate__animated animate__zoomInRight">
+				<h1 className="story-title">Create A Story</h1>
+				<form onSubmit={handleSubmit}>
+					<div className="input-div">
+						<label className="story-title-label">Story Title</label>
+						<input
+							className="title-input"
+							type="text"
+							onChange={titleChange}
+							placeholder='"A really awesome title"'
+						/>
+					</div>
+					<Editor
+						apiKey={apiKey}
+						plugins="wordcount"
+						onEditorChange={handleEditorChange}
+						className="animate__animated animate__hinge"
+					/>
+					<button className="story-submit" type="submit">
+						Submit Story
+					</button>
+				</form>
+			</div>
+		</div>
+	);
 }
 
 export default CreateStory;

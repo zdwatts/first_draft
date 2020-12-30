@@ -32,11 +32,11 @@ function App() {
 	}
 
 	return (
-    <BrowserRouter>
-      <NavBar
-        setAuthenticated={setAuthenticated}
-        authenticated={authenticated}
-      />
+		<BrowserRouter>
+			<NavBar
+				setAuthenticated={setAuthenticated}
+				authenticated={authenticated}
+			/>
 
 			<Switch>
 				<Route path="/login" exact={true}>
@@ -69,6 +69,7 @@ function App() {
 						authenticated={authenticated}
 						className="header"
 					/>
+					<MostRecent />
 				</Route>
 				<Route path="/stories/:id" component={Story} />
 				<Route path="/stories">

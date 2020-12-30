@@ -4,7 +4,27 @@ import LogoutButton from "./auth/LogoutButton";
 import DemoButton from "./auth/DemoButton";
 import "./navbar.css";
 
-const NavBar = ({ setAuthenticated, authenticated }) => {
+const NavBar = ({ setAuthenticated, authenticated, authenticate }) => {
+	const greeting = () => {
+		let greeting;
+		let time = new Date().getHours();
+		if (time < 10) {
+			greeting = "Good morning";
+		} else if (time < 20) {
+			greeting = "Good afternoon";
+		} else {
+			greeting = "Good evening";
+		}
+		return greeting;
+	};
+
+	let navTheme;
+	if (authenticated) {
+		navTheme = "loggedin";
+	} else {
+		navTheme = "loggedout";
+	}
+
 	return (
     <nav>
       <div className="main-logo">

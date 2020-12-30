@@ -1,12 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap");
 
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
-nav {
+.loggedout {
 	margin: 0;
 	display: flex;
 	background-color: #fec017;
 	justify-content: space-around;
 	border-bottom: 1px solid black;
+}
+
+.loggedin {
+	margin: 0;
+	display: flex;
+	background-color: white;
+	justify-content: space-around;
+	border: none;
 }
 
 .logo_text {
@@ -107,4 +115,13 @@ a:hover {
 	font-size: 40px;
 	margin: 0;
 	font-family: "Source Serif Pro", serif;
+}
+
+.welcome-message {
+	padding-left: 10px;
+	margin-left: 10px;
+	border-left: 1px solid rgb(219, 224, 230);
+	font-family: "Open Sans", sans-serif;
+	font-weight: 800;
+	font-size: 15px;
 }
