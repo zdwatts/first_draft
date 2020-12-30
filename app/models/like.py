@@ -7,14 +7,19 @@ class Like(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
     story_id = db.Column(db.Integer, db.ForeignKey('stories.id'), nullable=False)
-    vote = db.Column(db.Integer)
+    count = db.Column(db.Integer)
     
     story = db.relationship('Story', back_populates='likes')
+    
+    def __init__(self, user_id, story_id, count):
+        self.user_id = user_id
+        self.story_id = story_id
+        self.count = count
 
     def to_dict(self):
         return {
             "story_id": self.story_id,
             "user_id": self.user_id,
-            "vote": self.vote,
-            "story_title": self.story.title
+            "vote": self.count,
+            # "story_title": self.story.title
         }

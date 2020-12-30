@@ -22,7 +22,7 @@ def upgrade():
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('user_id', sa.Integer(), nullable=False),
     sa.Column('story_id', sa.Integer(), nullable=False),
-    sa.Column('vote', sa.Integer(), nullable=True),
+    sa.Column('count', sa.Integer(), nullable=True),
     sa.ForeignKeyConstraint(['story_id'], ['stories.id'], ),
     sa.ForeignKeyConstraint(['user_id'], ['users.id'], ),
     sa.PrimaryKeyConstraint('id')

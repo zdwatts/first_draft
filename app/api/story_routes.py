@@ -48,8 +48,6 @@ def user_stories():
 @story_routes.route('/<int:id>/comment', methods=['POST'])
 def post_comment(id):
     story_id = Story.query.get(id).id
-    
-    # TODO: fix the user_id query to match the user posting the story
     user_id = User.query.filter_by(username = request.json['author']).first().id
     comment = request.json['comment']
     
@@ -59,3 +57,20 @@ def post_comment(id):
 
     return new_comment.to_dict()
 
+# Post a like
+@story_routes.route('/<int:id>/like', methods=['POST'])
+def post_like(id):
+    story_id = Story.query.get(id).id
+    user_id = User.query.filter_by(username = request.json['user']).first().id
+    like = Like.query.filter(Like.story_id == id).filter(Like.user_id == user_id).first()
+    # count = 1
+    if like:
+        like.count = like.count + 1
+        db.session.add(like)
+        db.session.commit()
+        return like.to_dict()
+    else:
+        new_like = Like(user_id, story_id, count=1)
+        db.session.add(new_like)
+        db.session.commit()
+        return new_like.to_dict()
