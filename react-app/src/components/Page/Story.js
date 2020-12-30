@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import parse from "html-react-parser";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faComments } from "@fortawesome/free-solid-svg-icons";
+import { faComments, faHeart } from "@fortawesome/free-solid-svg-icons";
 
 function Story({ authenticate }) {
 	const [story, setStory] = useState([]);
@@ -14,6 +14,7 @@ function Story({ authenticate }) {
 	const [comments, setComments] = useState([]);
 	const [showComments, setShowComments] = useState(false);
 	const [currentUser, setCurrentUser] = useState("");
+	const [totalLikes, setTotalLikes] = useState(0);
 
 	const { id } = useParams();
 
@@ -28,6 +29,7 @@ function Story({ authenticate }) {
 			const response = await authenticate();
 			const loggedUser = response.username;
 			setCurrentUser(loggedUser);
+			setTotalLikes(data.data.total_likes);
 		})();
 	}, []);
 
@@ -47,6 +49,8 @@ function Story({ authenticate }) {
 					{/* <div>{story.body}</div> */}
 					<div>{story.body && parse(story.body)}</div>
 				</Body>
+				<FontAwesomeIcon icon={faHeart} size="2x" />
+				<div>Total Likes: {totalLikes}</div>
 				<FontAwesomeIcon
 					icon={faComments}
 					size="2x"
