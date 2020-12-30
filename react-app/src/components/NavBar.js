@@ -26,7 +26,7 @@ const NavBar = ({ setAuthenticated, authenticated, authenticate }) => {
 	}
 
 	return (
-    <nav>
+    <nav className={navTheme}>
       <div className="main-logo">
         <h1 className="logo">{"</>"}</h1>
         <h1 className="logo-text">Medium</h1>
