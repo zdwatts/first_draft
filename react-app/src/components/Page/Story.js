@@ -7,6 +7,7 @@ import styled from "styled-components";
 import parse from "html-react-parser";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faComments } from "@fortawesome/free-solid-svg-icons";
+import "./Story.css";
 
 function Story({ authenticate }) {
 	const [story, setStory] = useState([]);
@@ -21,8 +22,7 @@ function Story({ authenticate }) {
 		(async () => {
 			const data = await axios.get(`/api/stories/${id}`);
 			data.data.story.length > 0 && setStory(data.data.story[0]);
-			data.data.story.length > 0 &&
-				setAuthor(data.data.author[0].username);
+			data.data.story.length > 0 && setAuthor(data.data.author[0].username);
 			data.data.comments.length > 0 && setComments(data.data.comments);
 
 			const response = await authenticate();
@@ -36,7 +36,7 @@ function Story({ authenticate }) {
 	};
 
 	return (
-		<Container>
+		<Container className="story-container pattern-diagonal-lines-md">
 			<Inner>
 				<Title>{story.title}</Title>
 				<Author>
@@ -47,18 +47,11 @@ function Story({ authenticate }) {
 					{/* <div>{story.body}</div> */}
 					<div>{story.body && parse(story.body)}</div>
 				</Body>
-				<FontAwesomeIcon
-					icon={faComments}
-					size="2x"
-					onClick={toggleComment}
-				/>
+				<FontAwesomeIcon icon={faComments} size="2x" onClick={toggleComment} />
 				<div>Total Comments: {comments.length}</div>
 				{showComments && (
 					<>
-						<Comment
-							comments={comments}
-							currentUser={currentUser}
-						/>
+						<Comment comments={comments} currentUser={currentUser} />
 						<CreateComment
 							author={author}
 							storyId={id}

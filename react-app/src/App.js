@@ -66,15 +66,13 @@ function App() {
 					<User />
 				</ProtectedRoute>
 				<Route path="/" exact={true}>
-					<DefaultHeader
-						authenticated={authenticated}
-						className="header"
-					/>
+					<DefaultHeader authenticated={authenticated} className="header" />
 					<MostRecent />
 					<Footer />
 				</Route>
 				<Route path="/stories/:id">
 					<Story authenticate={authenticate} />
+					<Footer />
 				</Route>
 				<Route path="/stories">
 					<CreateStory authenticate={authenticate} />
