@@ -32,54 +32,52 @@ function App() {
 	}
 
 	return (
-		<BrowserRouter>
-			<NavBar
-				setAuthenticated={setAuthenticated}
-				authenticated={authenticated}
-			/>
+    <BrowserRouter>
+      <NavBar
+        setAuthenticated={setAuthenticated}
+        authenticated={authenticated}
+      />
 
-			<Switch>
-				<Route path="/login" exact={true}>
-					<LoginForm
-						setAuthenticated={setAuthenticated}
-						authenticated={authenticated}
-					/>
-					<ProtectedRoute
-						path="/users/:userId"
-						exact={true}
-						authenticated={authenticated}
-						setAuthenticated={setAuthenticated}
-					/>
-				</Route>
-				<Route path="/sign-up" exact={true}>
-					<SignUpForm
-						authenticated={authenticated}
-						setAuthenticated={setAuthenticated}
-					/>
-				</Route>
-				<ProtectedRoute
-					path="/users/:userId"
-					exact={true}
-					authenticated={authenticated}
-				>
-					<User />
-				</ProtectedRoute>
-				<Route path="/" exact={true}>
-					<DefaultHeader
-						authenticated={authenticated}
-						className="header"
-					/>
-					<Footer />
-				</Route>
-				<Route path="/stories/:id" component={Story} />
-				<Route path="/stories">
-					<CreateStory authenticate={authenticate} />
-				</Route>
-				<Route path="/users" component={UsersList} />
-				<Route path="/user/:id" component={User} />
-			</Switch>
-		</BrowserRouter>
-	);
+      <Switch>
+        <Route path="/login" exact={true}>
+          <LoginForm
+            setAuthenticated={setAuthenticated}
+            authenticated={authenticated}
+          />
+          <ProtectedRoute
+            path="/users/:userId"
+            exact={true}
+            authenticated={authenticated}
+            setAuthenticated={setAuthenticated}
+          />
+        </Route>
+        <Route path="/sign-up" exact={true}>
+          <SignUpForm
+            authenticated={authenticated}
+            setAuthenticated={setAuthenticated}
+          />
+        </Route>
+        <ProtectedRoute
+          path="/users/:userId"
+          exact={true}
+          authenticated={authenticated}
+        >
+          <User />
+        </ProtectedRoute>
+        <Route path="/" exact={true}>
+          <DefaultHeader authenticated={authenticated} className="header" />
+          <Footer />
+        </Route>
+        <Route path="/stories/:id" component={Story} />
+        <Route path="/stories">
+          <CreateStory authenticate={authenticate} />
+          <Footer />
+        </Route>
+        <Route path="/users" component={UsersList} />
+        <Route path="/user/:id" component={User} />
+      </Switch>
+    </BrowserRouter>
+  );
 }
 
 export default App;
