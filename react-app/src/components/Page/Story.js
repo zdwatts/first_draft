@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
 import CreateComment from "./CreateComment";
 import Comment from "./Comment";
 import axios from "axios";
@@ -17,6 +18,7 @@ function Story({ authenticate }) {
 	const [totalLikes, setTotalLikes] = useState(0);
 
 	const { id } = useParams();
+	const history = useHistory();
 
 	useEffect(() => {
 		(async () => {
@@ -47,6 +49,8 @@ function Story({ authenticate }) {
 				user: currentUser,
 			}),
 		});
+		const likeData = await axios.get(`/api/stories/${id}`);
+		setTotalLikes(likeData.data.total_likes);
 	};
 
 	return (
