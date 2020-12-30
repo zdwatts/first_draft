@@ -15,6 +15,7 @@
 	background-color: white;
 	justify-content: space-around;
 	border: none;
+	border-bottom: 1px solid black;
 }
 
 .logo_text {
