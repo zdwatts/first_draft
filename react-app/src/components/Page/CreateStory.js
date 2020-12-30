@@ -9,6 +9,7 @@ function CreateStory({ authenticate }) {
 	const history = useHistory();
 
 	const apiKey = process.env.REACT_APP_TINY_MCE;
+
 	useEffect(() => {
 		(async () => {
 			const response = await authenticate();
