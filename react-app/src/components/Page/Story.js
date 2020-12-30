@@ -8,11 +8,12 @@ import parse from "html-react-parser";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faComments } from "@fortawesome/free-solid-svg-icons";
 
-function Story() {
+function Story({ authenticate }) {
 	const [story, setStory] = useState([]);
 	const [author, setAuthor] = useState([]);
 	const [comments, setComments] = useState([]);
 	const [showComments, setShowComments] = useState(false);
+	const [currentUser, setCurrentUser] = useState("");
 
 	const { id } = useParams();
 
@@ -23,6 +24,10 @@ function Story() {
 			data.data.story.length > 0 &&
 				setAuthor(data.data.author[0].username);
 			data.data.comments.length > 0 && setComments(data.data.comments);
+
+			const response = await authenticate();
+			const loggedUser = response.username;
+			setCurrentUser(loggedUser);
 		})();
 	}, []);
 
@@ -50,11 +55,15 @@ function Story() {
 				<div>Total Comments: {comments.length}</div>
 				{showComments && (
 					<>
-						<Comment comments={comments} author={author} />
+						<Comment
+							comments={comments}
+							currentUser={currentUser}
+						/>
 						<CreateComment
 							author={author}
 							storyId={id}
 							setComments={setComments}
+							currentUser={currentUser}
 						/>
 					</>
 				)}

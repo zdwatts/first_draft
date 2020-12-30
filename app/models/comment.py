@@ -9,6 +9,8 @@ class Comment(db.Model):
     story_id = db.Column(db.Integer, db.ForeignKey('stories.id'), nullable=False)
     comment = db.Column(db.Text, nullable=False)
     
+    user = db.relationship('User', back_populates='comments')
+    
     def __init__(self, user_id, story_id, comment):
         self.user_id = user_id
         self.comment = comment
@@ -19,4 +21,5 @@ class Comment(db.Model):
             "story_id": self.story_id,
             "user_id": self.user_id,
             "comment": self.comment,
+            "user": self.user.username
         }

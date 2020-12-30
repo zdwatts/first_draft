@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { Redirect, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { Editor } from "@tinymce/tinymce-react";
 import axios from "axios";
 
-function Comment({ author, storyId, setComments }) {
+function Comment({ storyId, setComments, currentUser }) {
 	const [comment, setComment] = useState("");
 	const history = useHistory();
 
@@ -23,19 +23,16 @@ function Comment({ author, storyId, setComments }) {
 			},
 			body: JSON.stringify({
 				comment,
-				author,
+				author: currentUser,
 			}),
 		});
 		if (response.ok) {
 			const data = await response.json();
 			const storyId = data.story_id;
 			history.push(`/stories/${storyId}`);
-			// return <Redirect to={`/stories/${storyId}`} />;
 		}
 		const data = await axios.get(`/api/stories/${storyId}`);
-		// console.log(data);
 		const newComments = data.data.comments;
-		// console.log(newComments);
 		newComments.length > 0 && setComments(newComments);
 	};
 

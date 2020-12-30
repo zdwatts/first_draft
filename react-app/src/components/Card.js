@@ -2,7 +2,7 @@ import React from "react";
 import "./Card.css";
 
 const Card = ({ story, idx }) => {
-	console.log(story);
+	// console.log(story);
 
 	return (
 		<div className="card">
