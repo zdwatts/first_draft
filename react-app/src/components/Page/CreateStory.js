@@ -55,7 +55,7 @@ function CreateStory({ authenticate }) {
 			<form onSubmit={handleSubmit}>
 				<div className="input-div">
 				<label className="story-title-label">Story Title</label>
-				<input className="title-input" type="text" placeholder='"Why Sequelize Sucks"' onChange={titleChange} />
+				<input className="title-input" type="text" onChange={titleChange} placeholder='"A really awesome title"'/>
 				</div>
 				<Editor
 					apiKey={apiKey}
