@@ -73,7 +73,9 @@ function App() {
 					<MostRecent />
 					<Footer />
 				</Route>
-				<Route path="/stories/:id" component={Story} />
+				<Route path="/stories/:id">
+					<Story authenticate={authenticate} />
+				</Route>
 				<Route path="/stories">
 					<CreateStory authenticate={authenticate} />
 					<Footer />
