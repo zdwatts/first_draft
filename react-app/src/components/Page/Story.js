@@ -1,110 +1,80 @@
 import React, { useEffect, useState } from "react";
-import CreateComment from "./CreateComment";
-import Comment from "./Comment";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import parse from "html-react-parser";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faComments } from "@fortawesome/free-solid-svg-icons";
 
-function Story({ authenticate }) {
-	const [story, setStory] = useState([]);
-	const [author, setAuthor] = useState([]);
-	const [comments, setComments] = useState([]);
-	const [showComments, setShowComments] = useState(false);
-	const [currentUser, setCurrentUser] = useState("");
+function Story() {
+  const [story, setStory] = useState([]);
+  const [author, setAuthor] = useState([]);
 
-	const { id } = useParams();
+  const { id } = useParams();
 
-	useEffect(() => {
-		(async () => {
-			const data = await axios.get(`/api/stories/${id}`);
-			data.data.story.length > 0 && setStory(data.data.story[0]);
-			data.data.story.length > 0 &&
-				setAuthor(data.data.author[0].username);
-			data.data.comments.length > 0 && setComments(data.data.comments);
+  useEffect(() => {
+    (async () => {
+      const data = await axios.get(`/api/stories/${id}`);
+      data.data.story.length > 0 && setStory(data.data.story[0]);
+      data.data.story.length > 0 && setAuthor(data.data.author[0]);
+    })();
+  }, [id]);
 
-			const response = await authenticate();
-			const loggedUser = response.username;
-			setCurrentUser(loggedUser);
-		})();
-	}, []);
+  return (
+    <Container>
+      <Inner>
+        <Title>{story.title}</Title>
+        <Author>
+          <div>{author.username}</div>
+        </Author>
 
-	const toggleComment = () => {
-		setShowComments(!showComments);
-	};
-
-	return (
-		<Container>
-			<Inner>
-				<Title>{story.title}</Title>
-				<Author>
-					<p>Written By: {author}</p>
-				</Author>
-
-				<Body>
-					{/* <div>{story.body}</div> */}
-					<div>{story.body && parse(story.body)}</div>
-				</Body>
-				<FontAwesomeIcon
-					icon={faComments}
-					size="2x"
-					onClick={toggleComment}
-				/>
-				<div>Total Comments: {comments.length}</div>
-				{showComments && (
-					<>
-						<Comment
-							comments={comments}
-							currentUser={currentUser}
-						/>
-						<CreateComment
-							author={author}
-							storyId={id}
-							setComments={setComments}
-							currentUser={currentUser}
-						/>
-					</>
-				)}
-			</Inner>
-		</Container>
-	);
+        <Body>
+          {/* <div>{story.body}</div> */}
+          <div>{story.body && parse(story.body)}</div>
+        </Body>
+      </Inner>
+    </Container>
+  );
 }
 
 const Container = styled.div`
-	display: flex;
-	justify-content: center;
-	margin-bottom: 13em;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 13em;
 `;
 
 const Inner = styled.div`
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-	box-sizing: border-box;
-	width: 44em;
+  box-sizing: border-box;
+  width: 44em;
 
-	div {
-		padding: 1em;
-	}
+  div {
+    padding: 1em;
+  }
 `;
 
 const Title = styled.div`
-	padding-top: 1em;
-	font-family: roboto;
-	font-size: 32px;
+  padding-top: 1em;
+  font-family: roboto;
+  font-size: 32px;
+`;
+const Subtitle = styled.div`
+  padding-top: 1em;
+  font-family: monserrat;
+  font-size: 21px;
+  letter-spacing: 0.02em;
+  padding: 1em;
 `;
 
 const Author = styled.div`
-	font-family: nunito;
+  font-family: nunito;
 `;
 
 const Body = styled.div`
-	font-family: nunito;
-	font-size: 16px;
+  font-family: nunito;
+  font-size: 16px;
 `;
 
 export default Story;
