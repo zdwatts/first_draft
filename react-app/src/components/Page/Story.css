@@ -86,6 +86,7 @@ div > .story-body {
 .clap-icon:active {
 	color: white;
 	background-color: #ffce49;
+	box-shadow: none;
 }
 
 .comment-icon:hover {
