@@ -65,8 +65,25 @@ div > .story-body {
 	justify-content: center;
 	align-content: center;
 	align-items: center;
+	margin:0;
 }
 
 .clap-icon {
 	color: #fec017;
+}
+
+.like-text {
+	margin: 0;
+	font-family: "Open Sans", sans-serif;
+	font-weight: 800;
+	font-size: 17px;
+	color: rgba(117, 117, 117, 1);
+}
+
+.total-text {
+	margin: 0;
+	font-family: "Open Sans", sans-serif;
+	font-weight: 800;
+	font-size: 17px;
+	color: rgba(102, 138, 170, 1);
 }
