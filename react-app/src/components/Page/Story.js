@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import CreateComment from "./CreateComment";
 import Comment from "./Comment";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { Redirect, useParams, useHistory } from "react-router-dom";
 import styled from "styled-components";
 import parse from "html-react-parser";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -16,6 +16,7 @@ function Story({ authenticate }) {
 	const [showComments, setShowComments] = useState(false);
 	const [currentUser, setCurrentUser] = useState("");
 	const [totalLikes, setTotalLikes] = useState(0);
+	const history = useHistory();
 
 	const { id } = useParams();
 
@@ -35,10 +36,12 @@ function Story({ authenticate }) {
 	}, [authenticate, id]);
 
 	const toggleComment = () => {
+		if (!currentUser) history.push("/login");
 		setShowComments(!showComments);
 	};
 
 	const handleLike = async () => {
+		if (!currentUser) history.push("/login");
 		await fetch(`/api/stories/${id}/like`, {
 			method: "POST",
 			headers: {
