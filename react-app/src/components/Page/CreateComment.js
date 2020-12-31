@@ -38,7 +38,6 @@ function Comment({ storyId, setComments, currentUser }) {
 
 	return (
 		<div>
-			<h1>Got something to say?</h1>
 			<form onSubmit={handleSubmit}>
 				<Editor
 					apiKey={apiKey}
