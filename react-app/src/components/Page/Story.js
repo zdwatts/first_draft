@@ -62,8 +62,10 @@ function Story({ authenticate }) {
 				</p>
 				{/* <div>{story.body}</div> */}
 				<div className="story-body">{story.body && parse(story.body)}</div>
+				<div className="like-wrapper">
 				<FontAwesomeIcon icon={faHeart} size="2x" onClick={handleLike} />
 				<div>Total Likes: {totalLikes}</div>
+				</div>
 				<FontAwesomeIcon icon={faComments} size="2x" onClick={toggleComment} />
 
 				<div>Total Comments: {comments.length}</div>
