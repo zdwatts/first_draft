@@ -94,13 +94,12 @@
 
 .start-title {
 	font-size: 50px;
-	margin-right: 10%;
-	margin-left: 10%;
 	margin-top: 40px;
 	font-family: "Open Sans", sans-serif;
 	font-weight: 300;
-	width: 60%;
+	width: 100%;
 	text-align: center;
+
 }
 
 .feature-title {
@@ -125,4 +124,30 @@
 	width: 350px;
 	height: auto;
 	padding-left: 20px;
+}
+
+.card-wrapper-2 {
+	display: flex;
+	flex-direction: column;
+}
+
+.card-1 {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 40px;
+}
+
+.card-2 {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 40px;
+}
+
+.card-3 {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 40px;
 }
