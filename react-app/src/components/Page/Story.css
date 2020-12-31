@@ -62,7 +62,6 @@ div > .story-body {
 
 .like-wrapper {
 	display: flex;
-	justify-content: center;
 	align-content: center;
 	align-items: center;
 	margin:0;
@@ -82,7 +81,7 @@ div > .story-body {
 	margin: 0;
 	font-family: "Open Sans", sans-serif;
 	font-weight: 300;
-	font-size: 25px;
+	font-size: 17px;
 	color: rgba(117, 117, 117, 1);
 }
 
@@ -90,6 +89,6 @@ div > .story-body {
 	margin: 0;
 	font-family: "Open Sans", sans-serif;
 	font-weight: 300;
-	font-size: 25px;
-	color: rgba(102, 138, 170, 1);
+	font-size: 17px;
+	color: rgba(117, 117, 117, 1);
 }
