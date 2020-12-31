@@ -78,7 +78,6 @@ function App() {
 					<Story authenticate={authenticate} />
 					<Footer />
 				</Route>
-				{/* <ProtectedRoute> */}
 				<Route path="/stories">
 					{authenticated ? (
 						<div>
@@ -92,7 +91,6 @@ function App() {
 						/>
 					)}
 				</Route>
-				{/* </ProtectedRoute> */}
 				<Route path="/users" component={UsersList} />
 				<Route path="/users/:id" component={User} />
 			</Switch>
