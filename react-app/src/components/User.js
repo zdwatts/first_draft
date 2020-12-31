@@ -36,23 +36,29 @@ function User() {
   return (
     <Container>
       <Inner>
-        <ul>
-          {/* <li>
+        <div>
+          <ul>
+            {/* <li>
             <strong>User Id :</strong> <span>{userId}</span>
-          </li> */}
-          <li>
-            <strong>Username :</strong> <span> {user.username} </span>
-          </li>
-          <li>
-            <strong>Email :</strong> <span>{user.email}</span>
-          </li>
-        </ul>
+		</li> */}
+            <li>
+              <strong>Username :</strong>{" "}
+              <span className="head"> {user.username} </span>
+            </li>
+            <li>
+              <strong>Email :</strong>{" "}
+              <span className="head">{user.email}</span>
+            </li>
+          </ul>
+        </div>
       </Inner>
       <Stories>
         {stories &&
           stories.map((story) => (
-            <div>
-              <Link to={`/stories/${story.id}`}>{story.title}</Link>
+            <div className="story_container animate__animated animate__bounceInDown master pattern-cross-dots-sm">
+              <Link to={`/stories/${story.id}`} className="story_link">
+                {story.title}
+              </Link>
               {/* <p>{parse(story.body)}</p> */}
             </div>
           ))}
@@ -76,13 +82,29 @@ const Inner = styled.div`
   justify-content: center;
   width: 44em;
 
+  ul {
+    margin-top: 2em;
+    margin-bottom: 3em;
+  }
+
   li {
     width: 18em;
     // border: 1px solid blue;
     display: flex;
     justify-content: space-between;
-    font-family: nunito;
+    font-family: nunito sans;
+    letter-spacing: 0.02em;
+    font-weight: 500;
     list-style: none;
+    font-size: 18px;
+    padding-bottom: 0.5em;
+  }
+
+  .head {
+    font-family: nunito sans;
+    color: grey;
+    font-size: 18px;
+    letter-spacing: 0.02em;
   }
 `;
 
@@ -100,15 +122,24 @@ const Stories = styled.div`
     margin: 1em 0em;
     background-color: #f5f0f9;
 
-    Link {
-      font-family: nunito;
-      font-size: 18px;
-      padding-bottom: 0.5em;
-    }
     p {
       font-family: nunito;
       font-size: 15px;
     }
+  }
+
+  .story_container {
+    background-color: #fec017;
+    color: red;
+    filter: drop-shadow(0 2px 2px grey);
+  }
+
+  .story_link {
+    text-decoration: none;
+    font-family: nunito sans;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
   }
 `;
 
