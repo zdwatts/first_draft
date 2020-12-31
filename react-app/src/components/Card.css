@@ -1,7 +1,9 @@
 .card {
+	background-image: url("/waves.png") !important;
+	background-repeat: no-repeat;
+background-size: cover;
 	height: 160px;
 	width: 250px;
-	overflow: hidden;
 	margin: 5px;
 	border-top: 7px solid #fec017;
 	border-bottom: 1px solid #e6e6e6;
