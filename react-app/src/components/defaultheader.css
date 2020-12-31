@@ -9,6 +9,16 @@
 	padding-right: 15%;
 }
 
+.getting-started {
+	margin: 0 !important;
+	display: flex;
+	background-color: #ffffff;
+	justify-content: space-around;
+	height: 400px;
+	padding-left: 15%;
+	padding-right: 15%;
+}
+
 .header_image {
 	height: 400px;
 }
@@ -79,4 +89,16 @@
 		font-size: 15px;
 		font-weight: 200;
 	}
+}
+
+
+.start-title {
+	font-size: 50px;
+	margin-right: 10%;
+	margin-left: 10%;
+	margin-top: 40px;
+	font-family: "Open Sans", sans-serif;
+	font-weight: 300;
+	width: 60%;
+	text-align: center;
 }
