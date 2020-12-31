@@ -78,6 +78,16 @@ const NavBar = ({ setAuthenticated, authenticated, authenticate }) => {
 						</NavLink>
 					</li>
 				)}
+				{!authenticated ? (
+					""
+				) : (
+					<li>
+						<NavLink to="/users" exact activeClassName="active">
+							Users
+						</NavLink>
+					</li>
+				)}
+
 				<li>
 					<LogoutButton
 						setAuthenticated={setAuthenticated}
