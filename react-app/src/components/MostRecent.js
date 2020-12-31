@@ -9,11 +9,11 @@ const MostRecent = () => {
 	useEffect(() => {
 		(async () => {
 			const data = await axios.get(`/api/stories/`);
-			const storyInfo = data.data;
-			console.log("storyInfo: ", storyInfo);
-			setStories(data.data.stories);
+			const storyInfo = data.data.stories;
+			setStories(storyInfo);
 		})();
 	}, []);
+	// console.log(stories);
 
 	return (
 		<div className="cards-wrapper">
