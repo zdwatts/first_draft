@@ -84,7 +84,7 @@ function Story({ authenticate }) {
               className="fas fa-comments fa-2x comment-icon"
               onClick={toggleComment}
             ></i>{" "}
-            <span className="total-text">Comments {comments.length}</span>
+            <span className="total-text">Replies {comments.length}</span>
           </div>
         </div>
         <span onClick={toggleComment}  className="like-text" id="comment-cta">
