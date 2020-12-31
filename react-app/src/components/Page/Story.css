@@ -107,7 +107,10 @@ div > .story-body {
 	box-shadow: none;
 	border: 1px solid #000000;
 }
-
+.comments-container {
+	background-color: blue;
+	width: 100%;
+}
 .comment-icon:hover {
 	cursor: pointer;
 	color: #e0e0e0;
