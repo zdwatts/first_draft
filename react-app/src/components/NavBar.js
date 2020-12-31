@@ -29,8 +29,14 @@ const NavBar = ({ setAuthenticated, authenticated, authenticate }) => {
 		<nav className={navTheme}>
 			<div className="main-logo">
 				<h1 className="logo">{"</>"}</h1>
-				<h1 className="logo-text">first_draft</h1>{" "}
-				{authenticated ? <h2 className="welcome-message">{greeting()}</h2> : ""}
+				<a href="/">
+					<h1 className="logo-text">first_draft</h1>{" "}
+				</a>
+				{authenticated ? (
+					<h2 className="welcome-message">{greeting()}</h2>
+				) : (
+					""
+				)}
 			</div>
 			<ul className="nav_links">
 				<li>
@@ -40,13 +46,21 @@ const NavBar = ({ setAuthenticated, authenticated, authenticate }) => {
 				</li>
 				{authenticated ? (
 					<li>
-						<NavLink to="/stories" exact={true} activeClassName="active">
+						<NavLink
+							to="/stories"
+							exact={true}
+							activeClassName="active"
+						>
 							Create A Story
 						</NavLink>
 					</li>
 				) : (
 					<li>
-						<NavLink to="/login" exact={true} activeClassName="active">
+						<NavLink
+							to="/login"
+							exact={true}
+							activeClassName="active"
+						>
 							Login
 						</NavLink>
 					</li>
@@ -55,7 +69,11 @@ const NavBar = ({ setAuthenticated, authenticated, authenticate }) => {
 					""
 				) : (
 					<li>
-						<NavLink to="/sign-up" exact={true} activeClassName="active">
+						<NavLink
+							to="/sign-up"
+							exact={true}
+							activeClassName="active"
+						>
 							Sign Up
 						</NavLink>
 					</li>
