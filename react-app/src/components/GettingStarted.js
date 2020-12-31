@@ -11,7 +11,7 @@ const GettingStarted = ({ authenticated }) => {
         <div className="card-1">
           <div>
             <h1 className="feature-title">Create an account.</h1>
-            <p>Sign up today to begin sharing your stries with others.</p>
+            <p>Sign up to gain access to all of the features first_draft has to offer.</p>
           </div>
           <div class="pattern-diagonal-lines-sm gray-lighter bg-dots">
             <img class="sign-image" src="signup.gif" />
@@ -19,20 +19,22 @@ const GettingStarted = ({ authenticated }) => {
         </div>
         <div className="card-2">
           <div>
-            <h1 className="feature-title">Create an account.</h1>
-            <p>Sign up today to begin sharing your stries with others.</p>
+            <h1 className="feature-title">Begin sharing your stories.</h1>
+            <p>Registered users can create stories.</p>
           </div>
           <div class="pattern-diagonal-lines-sm gray-lighter bg-dots">
-            <img class="sign-image" src="signup.gif" />
+            <img class="sign-image" src="story.gif" />
           </div>
         </div>
         <div className="card-3">
           <div>
-            <h1 className="feature-title">Create an account.</h1>
-            <p>Sign up today to begin sharing your stries with others.</p>
+            <h1 className="feature-title">Share your thoughts.</h1>
+            <p>
+              Registered users have the ability to leave comments on stories.
+            </p>
           </div>
           <div class="pattern-diagonal-lines-sm gray-lighter bg-dots">
-            <img class="sign-image" src="signup.gif" />
+            <img class="sign-image" src="commenting.gif" />
           </div>
         </div>
       </div>
