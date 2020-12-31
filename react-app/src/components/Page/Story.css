@@ -69,6 +69,7 @@ div > .story-body {
 }
 
 .clap-icon {
+	cursor: pointer;
 	color: #fec017;
 }
 
