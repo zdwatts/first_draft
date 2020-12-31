@@ -65,7 +65,7 @@ function Story({ authenticate }) {
 
 	return (
     <Container className="story-container pattern-diagonal-lines-md">
-      <Inner className="story-div">
+      <Inner className="story-div animate__animated animate__backInDown">
         <h1 className="story-page-title">{story.title}</h1>
         <p className="story-page-author">
           Written By: <span className="author-name">{author}</span>
@@ -87,7 +87,7 @@ function Story({ authenticate }) {
             <span className="total-text">Replies {comments.length}</span>
           </div>
         </div>
-        <span onClick={toggleComment}  className="like-text" id="comment-cta">
+        <span onClick={toggleComment} className="like-text" id="comment-cta">
           Leave a comment . . .
         </span>
 
