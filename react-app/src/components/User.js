@@ -1,8 +1,6 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import { login } from "../services/auth";
-import parse from "html-react-parser";
 import styled from "styled-components";
 
 function User() {
@@ -109,23 +107,18 @@ const Inner = styled.div`
 `;
 
 const Stories = styled.div`
-  display: flex;
-  flex-direction: column;
-  //   border: 1px solid yellow;
-  div {
-    overflow: auto;
-    box-sizing: border-box;
-    border-radius: 1em;
-    padding: 1em;
-    padding-left: 2em;
-    width: 44em;
-    margin: 1em 0em;
-    background-color: #f5f0f9;
-
-    p {
-      font-family: nunito;
-      font-size: 15px;
-    }
+	display: flex;
+	flex-direction: column;
+	//   border: 1px solid yellow;
+	div {
+		overflow: auto;
+		box-sizing: border-box;
+		border-radius: 1em;
+		padding: 1em;
+		padding-left: 2em;
+		width: 44em;
+		margin: 1em 0em;
+		background-color: #f5f0f9;
   }
 
   .story_container {
@@ -141,6 +134,16 @@ const Stories = styled.div`
     font-weight: 500;
     letter-spacing: 0.05em;
   }
+		Link {
+			font-family: nunito;
+			font-size: 18px;
+			padding-bottom: 0.5em;
+		}
+		p {
+			font-family: nunito;
+			font-size: 15px;
+		}
+	}
 `;
 
 export default User;

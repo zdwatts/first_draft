@@ -2,7 +2,6 @@ import React from "react";
 import "./Card.css";
 
 const Card = ({ story, idx }) => {
-
 	return (
 		<div className="card">
 			<h1 className="card-number">0{idx + 1}</h1>
@@ -11,6 +10,7 @@ const Card = ({ story, idx }) => {
 					{story.title}
 				</a>
 			</h2>
+			<p>Written By: {story.author_name}</p>
 		</div>
 	);
 };
