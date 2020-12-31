@@ -11,7 +11,6 @@ const NavBar = ({ setAuthenticated, authenticated, authenticate }) => {
 	useEffect(() => {
 		(async () => {
 			const response = await authenticate();
-			console.log(response);
 			const id = response.id;
 			const user = response.username;
 			setUserId(id);
@@ -42,8 +41,8 @@ const NavBar = ({ setAuthenticated, authenticated, authenticate }) => {
 	return (
 		<nav className={navTheme}>
 			<div className="main-logo">
-				<a href="/">
-					<h1 className="logo-text">first_draft</h1>{" "}
+				<a href="/" style={{ textDecoration: "none" }}>
+					<h1 className="logo-text">first_draft</h1>
 				</a>
 				{authenticated ? (
 					<h2 className="welcome-message">{greeting()}</h2>
