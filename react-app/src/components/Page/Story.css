@@ -109,6 +109,11 @@ div > .story-body {
 }
 .comments-container {
 	width: 100%;
+	color: rgba(117, 117, 117, 1);
+}
+
+.comment-maker {
+	font-family: "Open Sans", sans-serif;
 }
 
 .comment-box {
