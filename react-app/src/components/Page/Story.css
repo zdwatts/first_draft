@@ -158,6 +158,7 @@ div > .story-body {
 }
 
 .form-submit-button {
+	cursor: pointer;
 	color: white;
 	font-weight: 800;
 	padding: 15px 30px;
@@ -169,7 +170,29 @@ div > .story-body {
 	box-shadow: rgba(0, 238, 255, 0.25) 0px 54px 55px, rgba(5, 199, 233, 0.12) 0px -12px 30px, rgba(0, 220, 236, 0.12) 0px 4px 6px, rgba(3, 184, 230, 0.17) 0px 12px 13px, rgba(4, 190, 246, 0.09) 0px -3px 5px;
 }
 
+.form-submit-button:hover {
+	box-shadow: none;
+	border: 1px solid rgba(102, 138, 170, 1);
+	color: rgba(102, 138, 170, 1);
+	font-weight: 800;
+	padding: 15px 30px;
+	background-color: white;
+	margin-top:20px;
+	width: 100%;
+	border-radius: 5px;
+}
+
+.form-submit-button:active {
+	box-shadow: none;
+}
 
 .textarea {
 	border: none;
+	border-bottom: 1px solid #efefef;
+	margin-bottom: 20px;
+	margin-top: 40px;
+}
+
+.textarea:focus {
+	outline-color: white;
 }
