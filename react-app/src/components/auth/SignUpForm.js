@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Redirect } from "react-router-dom";
 import { signUp } from "../../services/auth";
 import "./SignUpForm.css";
@@ -8,6 +8,9 @@ const SignUpForm = ({ authenticated, setAuthenticated }) => {
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 	const [repeatPassword, setRepeatPassword] = useState("");
+	useEffect(() => {
+		document.title = "first_draft: Sign Up";
+	});
 
 	const onSignUp = async (e) => {
 		e.preventDefault();
