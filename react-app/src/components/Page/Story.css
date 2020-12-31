@@ -59,3 +59,8 @@
 div > .story-body {
 	font-size: 50px !important;
 }
+
+.like-wrapper {
+	background-color: blue;
+	
+}
