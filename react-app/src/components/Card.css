@@ -1,7 +1,9 @@
 .card {
-	height: 160px;
+	background: white;
+	background-repeat: no-repeat;
+background-size: cover;
+	height: 200px;
 	width: 250px;
-	background-color: white;
 	margin: 5px;
 	border-top: 7px solid #fec017;
 	border-bottom: 1px solid #e6e6e6;
@@ -21,13 +23,16 @@
 }
 
 .most-recent-div {
+	background-image: url("/waves.png") !important;
+	background-repeat: no-repeat;
+background-size: cover;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
 	align-content: center;
 	width: 100%;
-	margin-bottom: 40px;
+	margin-bottom: 0;
 }
 
 .card-number {
@@ -47,12 +52,12 @@
 }
 
 .stories-header {
-	font-size: 40px;
+	font-size: 50px;
 	margin-right: 10%;
 	margin-left: 10%;
 	margin-top: 40px;
 	font-family: "Open Sans", sans-serif;
-	font-weight: 800;
+	font-weight: 300;
 	width: 60%;
 	text-align: center;
 }
@@ -84,13 +89,6 @@
 		margin: 0;
 	}
 
-	.stories-header {
-		font-size: 40px;
-		font-family: "Open Sans", sans-serif;
-		font-weight: 800;
-		width: 60%;
-	}
-
 	.most-recent-div {
 		display: flex;
 		flex-wrap: wrap;
@@ -98,7 +96,6 @@
 		align-items: center;
 		align-content: center;
 		width: 100%;
-		margin-bottom: 40px;
 	}
 }
 
@@ -106,7 +103,6 @@
 	.card {
 		height: 250px;
 		width: 450px;
-		background-color: white;
 		margin: 5px;
 		margin-bottom: 30px;
 	}
@@ -117,15 +113,6 @@
 		margin: 0;
 	}
 
-	.stories-header {
-		font-size: 40px;
-		margin-left: 10%;
-		margin-right: 10%;
-		margin-top: 40px;
-		font-family: "Open Sans", sans-serif;
-		font-weight: 800;
-	}
-
 	.most-recent-div {
 		display: flex;
 		flex-wrap: wrap;
@@ -133,6 +120,5 @@
 		align-items: center;
 		align-content: center;
 		width: 100%;
-		margin-bottom: 40px;
 	}
 }
