@@ -74,11 +74,18 @@ div > .story-body {
 	cursor: pointer;
 	color: #fec017;
 	border-radius: 100%;
+	background-color: white;
+	box-shadow: rgba(184, 127, 6, 0.25) 0px 54px 55px, rgba(200, 141, 14, 0.12) 0px -12px 30px, rgba(211, 129, 36, 0.12) 0px 4px 6px, rgba(214, 147, 23, 0.17) 0px 12px 13px, rgba(221, 160, 18, 0.09) 0px -3px 5px;
 }
 
 .clap-icon:hover {
 	cursor: pointer;
 	color: #ffce49;
+}
+
+.clap-icon:active {
+	color: white;
+	background-color: #ffce49;
 }
 
 .comment-icon:hover {
