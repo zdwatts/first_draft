@@ -8,7 +8,8 @@ story_routes = Blueprint('stories', __name__)
 # Get all the story route
 @story_routes.route('/')
 def stories():
-    stories = Story.query.all()
+    # stories = Story.query.all()
+    stories = Story.query.order_by(Story.id.desc()).limit(6)
     return {'stories': [story.to_dict() for story in stories]}
 
 # Get one story route with author and associated comments
