@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+import Users from "./Users";
 
 function UsersList() {
 	const [users, setUsers] = useState([]);
@@ -15,25 +16,16 @@ function UsersList() {
 		fetchData();
 	}, []);
 
-	const userComponents = users.map((user) => {
-		return (
-			<li key={user.id}>
-				<div>
-					<NavLink to={`/users/${user.id}`} className="username">
-						{user.username}
-					</NavLink>
-				</div>
-			</li>
-		);
-	});
-
 	return (
 		<Container>
 			<div className="master pattern-cross-dots-md">
 				<div className="user_container animate__animated animate__fadeInDown">
 					<div>
 						<h1>User List: </h1>
-						<ul>{userComponents}</ul>
+						{/* <ul>{userComponents}</ul> */}
+						<ul>
+							<Users users={users} />
+						</ul>
 					</div>
 				</div>
 			</div>
