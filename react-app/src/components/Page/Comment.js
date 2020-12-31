@@ -6,7 +6,7 @@ function Comment({ comments, currentUser }) {
 	return (
 		<div className="comments-container">
 			{comments.map((comment, i) => (
-				<div claskey={i}>
+				<div className="comment-box" claskey={i}>
 					<p>{comment.user} commented:</p>
 					<div>{parse(comment.comment)}</div>
 				</div>

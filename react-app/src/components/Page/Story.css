@@ -110,6 +110,11 @@ div > .story-body {
 .comments-container {
 	width: 100%;
 }
+
+.comment-box {
+	background: blue;
+	margin-bottom: 10px;
+}
 .comment-icon:hover {
 	cursor: pointer;
 	color: #e0e0e0;
