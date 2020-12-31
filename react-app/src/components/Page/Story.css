@@ -61,6 +61,7 @@ div > .story-body {
 }
 
 .like-wrapper {
+	justify-content: center;
 	display: flex;
 	align-content: center;
 	align-items: center;
