@@ -92,3 +92,7 @@ div > .story-body {
 	font-size: 17px;
 	color: rgba(117, 117, 117, 1);
 }
+
+.hide{
+	display: none;
+}

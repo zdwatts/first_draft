@@ -41,6 +41,12 @@ function Story({ authenticate }) {
 
 	const toggleComment = () => {
 		setShowComments(!showComments);
+		const hideMe = () => {
+			let text = document.getElementById("comment-cta")
+			text.classList.toggle("hide")
+		}
+
+		hideMe()
 	};
 
 	const handleLike = async () => {
@@ -75,14 +81,15 @@ function Story({ authenticate }) {
             <span className="like-text">Claps </span>
             <span className="total-text">{totalLikes}</span>
             <i
-              className="fas fa-comments fa-2x clap-icon"
+              className="fas fa-comments fa-2x comment-icon"
               onClick={toggleComment}
             ></i>{" "}
-            <span className="total-text">
-              {comments.length}
-            </span>
+            <span className="total-text">Comments {comments.length}</span>
           </div>
         </div>
+        <span onClick={toggleComment}  className="like-text" id="comment-cta">
+          Leave a comment . . .
+        </span>
 
         {showComments && (
           <>
