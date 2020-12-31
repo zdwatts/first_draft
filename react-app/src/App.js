@@ -78,12 +78,21 @@ function App() {
 					<Story authenticate={authenticate} />
 					<Footer />
 				</Route>
-				<ProtectedRoute>
-					<Route path="/stories">
-						<CreateStory authenticate={authenticate} />
-						<Footer />
-					</Route>
-				</ProtectedRoute>
+				{/* <ProtectedRoute> */}
+				<Route path="/stories">
+					{authenticated ? (
+						<div>
+							<CreateStory authenticate={authenticate} />
+							<Footer />
+						</div>
+					) : (
+						<LoginForm
+							setAuthenticated={setAuthenticated}
+							authenticated={authenticated}
+						/>
+					)}
+				</Route>
+				{/* </ProtectedRoute> */}
 				<Route path="/users" component={UsersList} />
 				<Route path="/users/:id" component={User} />
 			</Switch>
