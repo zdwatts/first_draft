@@ -51,7 +51,7 @@ function CreateStory({ authenticate }) {
 
 	return (
 		<div className="content-wrapper pattern-cross-dots-xl yellow-light bg-white flex justify-center items-center bg-fixed">
-			<div class="create-story-div animate__animated animate__zoomInRight">
+			<div className="create-story-div animate__animated animate__zoomInRight">
 				<h1 className="story-title">Create A Story</h1>
 				<form onSubmit={handleSubmit}>
 					<div className="input-div">
@@ -59,13 +59,14 @@ function CreateStory({ authenticate }) {
 						<input
 							className="title-input"
 							type="text"
+							required
 							onChange={titleChange}
 							placeholder='"A really awesome title"'
 						/>
 					</div>
 					<Editor
 						apiKey={apiKey}
-						plugins="wordcount"
+						plugins="wordcount wordcount fullscreen emoticons image insertdatetime preview"
 						onEditorChange={handleEditorChange}
 						className="animate__animated animate__hinge"
 					/>

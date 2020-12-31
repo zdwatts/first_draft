@@ -1,5 +1,5 @@
 .card {
-	height: 150px;
+	height: 160px;
 	width: 250px;
 	background-color: white;
 	margin: 5px;
@@ -16,7 +16,8 @@
 }
 
 .card:hover {
-	box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+	box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+		rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 .most-recent-div {
