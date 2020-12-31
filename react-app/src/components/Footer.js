@@ -8,7 +8,7 @@ const Footer = () => {
 	return (
 		<footer className="footer">
 			<div className="main-logo-footer">
-				<h1 className="logo-text">Medium</h1>
+				<h1 className="logo-text">first_draft</h1>
 			</div>
 			<ul className="nav_links">
 				<li>
@@ -22,13 +22,12 @@ const Footer = () => {
 					</NavLink>
 					<a
 						className="navlink"
-						href="https://github.com/zdwatts/medium-clone"
+						href="https://github.com/zdwatts/first_draft"
 						target="_blank"
 						rel="noopener noreferrer"
 						activeclassname="active"
 					>
-						<i className="fab fa-github footer-icon fa-md"></i>{" "}
-						GitHub
+						<i className="fab fa-github footer-icon fa-md"></i> GitHub
 					</a>
 				</li>
 			</ul>
