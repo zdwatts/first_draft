@@ -144,3 +144,20 @@ div > .story-body {
 .hide{
 	display: none;
 }
+
+.submit-comment {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.submit-comment-form{
+	background: blue;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.form-submit-button {
+
+}
