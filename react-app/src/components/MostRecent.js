@@ -9,11 +9,11 @@ const MostRecent = () => {
 	useEffect(() => {
 		(async () => {
 			const data = await axios.get(`/api/stories/`);
-			setStories(data.data.stories.reverse());
+			const storyInfo = data.data.stories;
+			setStories(storyInfo);
 		})();
 	}, []);
-
-	stories = stories.slice(0, 6);
+	// console.log(stories);
 
 	return (
 		<div className="cards-wrapper">
@@ -24,7 +24,7 @@ const MostRecent = () => {
 			</div>
 			<div className="most-recent-div animate__animated animate__slideInRight">
 				{stories.map((story, idx) => {
-					return <Card story={story} idx={idx} />;
+					return <Card key={story.id} story={story} idx={idx} />;
 				})}
 			</div>
 		</div>
