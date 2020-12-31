@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import CreateComment from "./CreateComment";
 import Comment from "./Comment";
 import axios from "axios";
-import { Redirect, useParams, useHistory } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 import styled from "styled-components";
 import parse from "html-react-parser";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
