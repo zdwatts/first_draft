@@ -52,12 +52,12 @@ background-size: cover;
 }
 
 .stories-header {
-	font-size: 40px;
+	font-size: 50px;
 	margin-right: 10%;
 	margin-left: 10%;
 	margin-top: 40px;
 	font-family: "Open Sans", sans-serif;
-	font-weight: 800;
+	font-weight: 300;
 	width: 60%;
 	text-align: center;
 }
@@ -89,13 +89,6 @@ background-size: cover;
 		margin: 0;
 	}
 
-	.stories-header {
-		font-size: 40px;
-		font-family: "Open Sans", sans-serif;
-		font-weight: 800;
-		width: 60%;
-	}
-
 	.most-recent-div {
 		display: flex;
 		flex-wrap: wrap;
@@ -118,15 +111,6 @@ background-size: cover;
 		background-color: white;
 		width: 100%;
 		margin: 0;
-	}
-
-	.stories-header {
-		font-size: 40px;
-		margin-left: 10%;
-		margin-right: 10%;
-		margin-top: 40px;
-		font-family: "Open Sans", sans-serif;
-		font-weight: 800;
 	}
 
 	.most-recent-div {
