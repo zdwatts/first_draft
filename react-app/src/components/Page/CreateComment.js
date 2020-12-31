@@ -31,19 +31,20 @@ function Comment({ storyId, setComments, currentUser }) {
 	};
 
 	return (
-		<div>
-			<h1>Got something to say?</h1>
-			<form onSubmit={handleSubmit}>
+    <div className="submit-comment">
+      <form onSubmit={handleSubmit} className="submit-comment-form">
 				<textarea
-					cols="30"
-					rows="10"
-					onChange={(e) => setComment(e.target.value)}
-					value={comment}
-				></textarea>
-				<button type="submit">Submit</button>
-			</form>
-		</div>
-	);
+					placeholder="Leave a comment . . ."
+					className="textarea"
+          cols="30"
+          rows="1"
+          onChange={(e) => setComment(e.target.value)}
+          value={comment}
+        ></textarea>
+        <button className="form-submit-button" type="submit">Submit</button>
+      </form>
+    </div>
+  );
 }
 
 export default Comment;
