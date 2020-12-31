@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { useHistory } from "react-router-dom";
 import CreateComment from "./CreateComment";
 import Comment from "./Comment";
 import axios from "axios";
@@ -19,13 +18,13 @@ function Story({ authenticate }) {
 	const [totalLikes, setTotalLikes] = useState(0);
 
 	const { id } = useParams();
-	const history = useHistory();
 
 	useEffect(() => {
 		(async () => {
 			const data = await axios.get(`/api/stories/${id}`);
 			data.data.story.length > 0 && setStory(data.data.story[0]);
-			data.data.story.length > 0 && setAuthor(data.data.author[0].username);
+			data.data.story.length > 0 &&
+				setAuthor(data.data.author[0].username);
 			data.data.comments.length > 0 && setComments(data.data.comments);
 
 			const response = await authenticate();
@@ -33,14 +32,14 @@ function Story({ authenticate }) {
 			setCurrentUser(loggedUser);
 			setTotalLikes(data.data.total_likes);
 		})();
-	}, []);
+	}, [authenticate, id]);
 
 	const toggleComment = () => {
 		setShowComments(!showComments);
 	};
 
 	const handleLike = async () => {
-		const response = await fetch(`/api/stories/${id}/like`, {
+		await fetch(`/api/stories/${id}/like`, {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
@@ -61,15 +60,28 @@ function Story({ authenticate }) {
 					Written By: <span className="author-name">{author}</span>
 				</p>
 				{/* <div>{story.body}</div> */}
-				<div className="story-body">{story.body && parse(story.body)}</div>
-				<FontAwesomeIcon icon={faHeart} size="2x" onClick={handleLike} />
+				<div className="story-body">
+					{story.body && parse(story.body)}
+				</div>
+				<FontAwesomeIcon
+					icon={faHeart}
+					size="2x"
+					onClick={handleLike}
+				/>
 				<div>Total Likes: {totalLikes}</div>
-				<FontAwesomeIcon icon={faComments} size="2x" onClick={toggleComment} />
+				<FontAwesomeIcon
+					icon={faComments}
+					size="2x"
+					onClick={toggleComment}
+				/>
 
 				<div>Total Comments: {comments.length}</div>
 				{showComments && (
 					<>
-						<Comment comments={comments} currentUser={currentUser} />
+						<Comment
+							comments={comments}
+							currentUser={currentUser}
+						/>
 						<CreateComment
 							author={author}
 							storyId={id}
@@ -100,11 +112,6 @@ const Inner = styled.div`
 	div {
 		padding: 1em;
 	}
-`;
-
-const Body = styled.div`
-	font-family: nunito;
-	font-size: 16px;
 `;
 
 export default Story;

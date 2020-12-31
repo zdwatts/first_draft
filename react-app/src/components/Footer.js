@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import LogoutButton from "./auth/LogoutButton";
-import DemoButton from "./auth/DemoButton";
+// import LogoutButton from "./auth/LogoutButton";
+// import DemoButton from "./auth/DemoButton";
 import "./Footer.css";
 
 const Footer = () => {
