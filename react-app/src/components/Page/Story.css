@@ -73,6 +73,11 @@ div > .story-body {
 	color: #fec017;
 }
 
+.clap-icon:hover {
+	cursor: pointer;
+	color: #ffce49;
+}
+
 .like-text {
 	margin: 0;
 	font-family: "Open Sans", sans-serif;
