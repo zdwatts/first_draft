@@ -23,6 +23,8 @@ const Footer = () => {
 					<a
 						className="navlink"
 						href="https://github.com/zdwatts/medium-clone"
+						target="_blank"
+						rel="noopener noreferrer"
 						activeclassname="active"
 					>
 						<i className="fab fa-github footer-icon fa-md"></i>{" "}
