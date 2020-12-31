@@ -112,8 +112,8 @@ div > .story-body {
 }
 
 .comment-box {
-	background: blue;
-	margin-bottom: 10px;
+	border-bottom: 1px solid #efefef;
+	border-top: 1px solid #efefef;
 }
 .comment-icon:hover {
 	cursor: pointer;
