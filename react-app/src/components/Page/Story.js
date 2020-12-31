@@ -91,7 +91,7 @@ function Story({ authenticate }) {
         </span>
 
         {showComments && (
-          <>
+          <div className="animate__animated animate__zoomIn">
             <Comment comments={comments} currentUser={currentUser} />
             <CreateComment
               author={author}
@@ -99,7 +99,7 @@ function Story({ authenticate }) {
               setComments={setComments}
               currentUser={currentUser}
             />
-          </>
+          </div>
         )}
       </Inner>
     </Container>

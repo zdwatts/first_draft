@@ -41,7 +41,7 @@
 }
 
 .author-name {
-	color: rgba(102, 138, 170, 1);
+	color: rgb(0, 0, 0);
 }
 
 .main-body-div {
@@ -114,7 +114,7 @@ div > .story-body {
 
 .comment-maker {
 	font-family: "Open Sans", sans-serif;
-	color: rgba(102, 138, 170, 1);
+	color: rgb(0, 0, 0);
 }
 
 .comment-box {
