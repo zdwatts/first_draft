@@ -1,7 +1,7 @@
 .card {
 	height: 160px;
 	width: 250px;
-	background-color: white;
+	overflow: hidden;
 	margin: 5px;
 	border-top: 7px solid #fec017;
 	border-bottom: 1px solid #e6e6e6;
@@ -106,7 +106,6 @@
 	.card {
 		height: 250px;
 		width: 450px;
-		background-color: white;
 		margin: 5px;
 		margin-bottom: 30px;
 	}
