@@ -102,9 +102,10 @@ div > .story-body {
 }
 
 .comment-icon:active {
-	color: white;
-	background-color: #ffce49;
+	color: rgb(5, 5, 5);
+	background-color: #ffffff;
 	box-shadow: none;
+	border: 1px solid #000000;
 }
 
 .comment-icon:hover {
