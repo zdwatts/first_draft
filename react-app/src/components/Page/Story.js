@@ -21,6 +21,7 @@ function Story({ authenticate }) {
 	const { id } = useParams();
 
 	useEffect(() => {
+		document.title = "first_draft: Story";
 		(async () => {
 			const data = await axios.get(`/api/stories/${id}`);
 			data.data.story.length > 0 && setStory(data.data.story[0]);

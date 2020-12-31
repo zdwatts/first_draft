@@ -19,6 +19,7 @@ function App() {
 	const [loaded, setLoaded] = useState(false);
 
 	useEffect(() => {
+		document.title = "first_draft: Home";
 		(async () => {
 			const user = await authenticate();
 			if (!user.errors) {
@@ -66,7 +67,10 @@ function App() {
 					<User />
 				</ProtectedRoute>
 				<Route path="/" exact={true}>
-					<DefaultHeader authenticated={authenticated} className="header" />
+					<DefaultHeader
+						authenticated={authenticated}
+						className="header"
+					/>
 					<MostRecent />
 					<Footer />
 				</Route>
@@ -74,10 +78,12 @@ function App() {
 					<Story authenticate={authenticate} />
 					<Footer />
 				</Route>
-				<Route path="/stories">
-					<CreateStory authenticate={authenticate} />
-					<Footer />
-				</Route>
+				<ProtectedRoute>
+					<Route path="/stories">
+						<CreateStory authenticate={authenticate} />
+						<Footer />
+					</Route>
+				</ProtectedRoute>
 				<Route path="/users" component={UsersList} />
 				<Route path="/users/:id" component={User} />
 			</Switch>

@@ -12,6 +12,8 @@ function CreateStory({ authenticate }) {
 	const apiKey = process.env.REACT_APP_TINY_MCE;
 
 	useEffect(() => {
+		document.title = "first_draft: Create Story";
+
 		(async () => {
 			const response = await authenticate();
 			const username = response.username;

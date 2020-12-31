@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Redirect } from "react-router-dom";
 import { login } from "../../services/auth";
 import "./LoginForm.css";
@@ -7,6 +7,10 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
 	const [errors, setErrors] = useState([]);
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
+
+	useEffect(() => {
+		document.title = "first_draft: Login";
+	});
 
 	const onLogin = async (e) => {
 		e.preventDefault();
