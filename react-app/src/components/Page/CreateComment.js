@@ -1,20 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { useHistory } from "react-router-dom";
-import { Editor } from "@tinymce/tinymce-react";
 import axios from "axios";
 
 function Comment({ storyId, setComments, currentUser }) {
 	const [comment, setComment] = useState("");
 	const history = useHistory();
 
-	const apiKey = process.env.REACT_APP_TINY_MCE;
-
-	const handleEditorChange = (content, editor) => {
-		setComment(content);
-	};
-
 	const handleSubmit = async (e) => {
 		e.preventDefault();
+		setComment("");
 
 		const response = await fetch(`/api/stories/${storyId}/comment`, {
 			method: "POST",
@@ -40,11 +34,12 @@ function Comment({ storyId, setComments, currentUser }) {
 		<div>
 			<h1>Got something to say?</h1>
 			<form onSubmit={handleSubmit}>
-				<Editor
-					apiKey={apiKey}
-					plugins="wordcount"
-					onEditorChange={handleEditorChange}
-				/>
+				<textarea
+					cols="30"
+					rows="10"
+					onChange={(e) => setComment(e.target.value)}
+					value={comment}
+				></textarea>
 				<button type="submit">Submit</button>
 			</form>
 		</div>
