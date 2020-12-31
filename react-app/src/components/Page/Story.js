@@ -74,15 +74,16 @@ function Story({ authenticate }) {
             ></i>{" "}
             <span className="like-text">Claps </span>
             <span className="total-text">{totalLikes}</span>
-            <FontAwesomeIcon
-              icon={faComments}
-              size="2x"
+            <i
+              className="fas fa-comments fa-2x clap-icon"
               onClick={toggleComment}
-            />
+            ></i>{" "}
+            <span className="total-text">
+              {comments.length}
+            </span>
           </div>
         </div>
 
-        <div>Total Comments: {comments.length}</div>
         {showComments && (
           <>
             <Comment comments={comments} currentUser={currentUser} />
