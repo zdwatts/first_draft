@@ -13,6 +13,7 @@ import CreateStory from "./components/Page/CreateStory";
 import UsersList from "./components/Page/UserList";
 import Footer from "./components/Footer";
 import MostRecent from "./components/MostRecent";
+import GettingStarted from "./components/GettingStarted";
 
 function App() {
 	const [authenticated, setAuthenticated] = useState(false);
@@ -72,6 +73,7 @@ function App() {
 						authenticated={authenticated}
 						className="header"
 					/>
+					<GettingStarted authenticated={authenticated} />
 					<MostRecent />
 					<Footer />
 				</Route>
