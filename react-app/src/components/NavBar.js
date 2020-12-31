@@ -29,7 +29,7 @@ const NavBar = ({ setAuthenticated, authenticated, authenticate }) => {
 		<nav className={navTheme}>
 			<div className="main-logo">
 				<h1 className="logo">{"</>"}</h1>
-				<h1 className="logo-text">Medium</h1>{" "}
+				<h1 className="logo-text">first_draft</h1>{" "}
 				{authenticated ? <h2 className="welcome-message">{greeting()}</h2> : ""}
 			</div>
 			<ul className="nav_links">

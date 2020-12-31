@@ -46,7 +46,7 @@ const SignUpForm = ({ authenticated, setAuthenticated }) => {
 				className="signup-form animate__animated animate__bounceInUp"
 			>
 				<div className="input-wrapper">
-					<h1 className="form-title">Medium</h1>
+					<h1 className="form-title">first_draft</h1>
 					<h3 className="form-sub">Sign Up</h3>
 					<label>Username</label>
 					<input
