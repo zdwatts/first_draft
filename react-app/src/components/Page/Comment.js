@@ -1,12 +1,13 @@
 import React from "react";
 import parse from "html-react-parser";
+import "./Story.css"
 
 function Comment({ comments, currentUser }) {
 	return (
-		<div>
+		<div className="comments-container">
 			{comments.map((comment, i) => (
-				<div key={i}>
-					<p>{comment.user} commented:</p>
+				<div className="comment-box" claskey={i}>
+					<p className="comment-maker">{comment.user} says:</p>
 					<div>{parse(comment.comment)}</div>
 				</div>
 			))}

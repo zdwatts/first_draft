@@ -12,7 +12,7 @@
 	margin-top: 40px;
 	margin-bottom: 40px;
 	border-radius: 5px;
-	border: 1px solid rgb(7, 7, 7);
+	border: 1px solid rgb(0, 0, 0);
 	box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
 		rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
 		rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
@@ -41,7 +41,7 @@
 }
 
 .author-name {
-	color: rgba(102, 138, 170, 1);
+	color: rgb(0, 0, 0);
 }
 
 .main-body-div {
@@ -58,4 +58,145 @@
 
 div > .story-body {
 	font-size: 50px !important;
+}
+
+.like-wrapper {
+	justify-content: center;
+	display: flex;
+	align-content: center;
+	align-items: center;
+	margin:0;
+	padding:0 !important;
+}
+
+.clap-icon {
+	padding: 5px;
+	border: 1px solid #fec017;
+	cursor: pointer;
+	color: #fec017;
+	border-radius: 100%;
+	background-color: white;
+	box-shadow: rgba(184, 127, 6, 0.25) 0px 54px 55px, rgba(200, 141, 14, 0.12) 0px -12px 30px, rgba(211, 129, 36, 0.12) 0px 4px 6px, rgba(214, 147, 23, 0.17) 0px 12px 13px, rgba(221, 160, 18, 0.09) 0px -3px 5px;
+}
+
+.clap-icon:hover {
+	cursor: pointer;
+	color: #ffce49;
+}
+
+.clap-icon:active {
+	color: white;
+	background-color: #ffce49;
+	box-shadow: none;
+}
+
+.comment-icon {
+	font-size: 30px;
+	padding: 5px;
+	border: 1px solid #ffffff;
+	cursor: pointer;
+	color: #ffffff;
+	border-radius: 100%;
+	background-color: rgb(0, 0, 0);
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.comment-icon:active {
+	color: rgb(5, 5, 5);
+	background-color: #ffffff;
+	box-shadow: none;
+	border: 1px solid #000000;
+}
+.comments-container {
+	width: 100%;
+	color: rgba(117, 117, 117, 1);
+}
+
+.comment-maker {
+	font-family: "Open Sans", sans-serif;
+	color: rgb(0, 0, 0);
+}
+
+.comment-box {
+	border-bottom: 1px solid #efefef;
+	border-top: 1px solid #efefef;
+}
+.comment-icon:hover {
+	cursor: pointer;
+	color: #e0e0e0;
+}
+.like-text {
+	margin: 0;
+	font-family: "Open Sans", sans-serif;
+	font-weight: 300;
+	font-size: 17px;
+	color: rgba(117, 117, 117, 1);
+}
+
+.total-text {
+	margin-right: 20px;
+	font-family: "Open Sans", sans-serif;
+	font-weight: 300;
+	font-size: 17px;
+	color: rgba(117, 117, 117, 1);
+}
+
+.hide{
+	display: none;
+}
+
+.submit-comment {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.submit-comment-form{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.form-submit-button {
+	cursor: pointer;
+	color: #ffffff;
+	font-weight: 800;
+	padding: 15px 30px;
+	border: none;
+	background-color: rgb(0, 0, 0);
+	margin-top:20px;
+	width: 100%;
+	border-radius: 5px;
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgbargba(0, 0, 0, 0.09) -3px 5px;
+}
+
+.form-submit-button:hover {
+	box-shadow: none;
+	border: 1px solid rgb(0, 0, 0);
+	color: rgb(255, 255, 255);
+	font-weight: 800;
+	padding: 15px 30px;
+	background-color: #fec017;
+	margin-top:20px;
+	width: 100%;
+	border-radius: 5px;
+}
+
+.form-submit-button:active {
+	box-shadow: none;
+}
+
+.textarea {
+	border: none;
+	border-bottom: 1px solid #efefef;
+	margin-bottom: 20px;
+	margin-top: 40px;
+}
+
+.textarea:focus {
+	outline-color: white;
+}
+
+.pattern-diagonal-lines-md {
+	background-color: #fec017;
 }
