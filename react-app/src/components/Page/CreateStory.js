@@ -59,13 +59,14 @@ function CreateStory({ authenticate }) {
 						<input
 							className="title-input"
 							type="text"
+							required
 							onChange={titleChange}
 							placeholder='"A really awesome title"'
 						/>
 					</div>
 					<Editor
 						apiKey={apiKey}
-						plugins="wordcount"
+						plugins="wordcount wordcount fullscreen emoticons image insertdatetime preview"
 						onEditorChange={handleEditorChange}
 						className="animate__animated animate__hinge"
 					/>
