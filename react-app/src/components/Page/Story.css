@@ -77,6 +77,10 @@ div > .story-body {
 	color: #ffce49;
 }
 
+.comment-icon:hover {
+	cursor: pointer;
+	color: #353333;
+}
 .like-text {
 	margin: 0;
 	font-family: "Open Sans", sans-serif;
@@ -94,5 +98,4 @@ div > .story-body {
 }
 
 .hide{
-	display: none;
 }
