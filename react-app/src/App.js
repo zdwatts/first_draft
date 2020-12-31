@@ -38,6 +38,7 @@ function App() {
 			<NavBar
 				setAuthenticated={setAuthenticated}
 				authenticated={authenticated}
+				authenticate={authenticate}
 			/>
 
 			<Switch>

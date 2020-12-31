@@ -1,10 +1,24 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import LogoutButton from "./auth/LogoutButton";
 import DemoButton from "./auth/DemoButton";
 import "./navbar.css";
 
 const NavBar = ({ setAuthenticated, authenticated, authenticate }) => {
+	const [userId, setUserId] = useState("");
+	const [currentUser, setCurrentUser] = useState("");
+
+	useEffect(() => {
+		(async () => {
+			const response = await authenticate();
+			console.log(response);
+			const id = response.id;
+			const user = response.username;
+			setUserId(id);
+			setCurrentUser(user);
+		})();
+	});
+
 	const greeting = () => {
 		let greeting;
 		let time = new Date().getHours();
@@ -81,8 +95,12 @@ const NavBar = ({ setAuthenticated, authenticated, authenticate }) => {
 					""
 				) : (
 					<li>
-						<NavLink to="/users" exact activeClassName="active">
-							Users
+						<NavLink
+							to={`/users/${userId}`}
+							exact
+							activeClassName="active"
+						>
+							Profile
 						</NavLink>
 					</li>
 				)}
