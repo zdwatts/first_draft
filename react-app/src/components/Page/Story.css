@@ -81,15 +81,15 @@ div > .story-body {
 .like-text {
 	margin: 0;
 	font-family: "Open Sans", sans-serif;
-	font-weight: 800;
-	font-size: 20px;
+	font-weight: 300;
+	font-size: 25px;
 	color: rgba(117, 117, 117, 1);
 }
 
 .total-text {
 	margin: 0;
 	font-family: "Open Sans", sans-serif;
-	font-weight: 800;
-	font-size: 20px;
+	font-weight: 300;
+	font-size: 25px;
 	color: rgba(102, 138, 170, 1);
 }
