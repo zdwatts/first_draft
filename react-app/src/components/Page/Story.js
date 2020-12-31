@@ -8,7 +8,11 @@ import styled from "styled-components";
 import parse from "html-react-parser";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Story.css";
-import { faComments, faHeart } from "@fortawesome/free-solid-svg-icons";
+import {
+  faComments,
+  faHeart,
+  faSignLanguage,
+} from "@fortawesome/free-solid-svg-icons";
 
 function Story({ authenticate }) {
 	const [story, setStory] = useState([]);
@@ -54,35 +58,34 @@ function Story({ authenticate }) {
 	};
 
 	return (
-		<Container className="story-container pattern-diagonal-lines-md">
-			<Inner className="story-div">
-				<h1 className="story-page-title">{story.title}</h1>
-				<p className="story-page-author">
-					Written By: <span className="author-name">{author}</span>
-				</p>
-				{/* <div>{story.body}</div> */}
-				<div className="story-body">{story.body && parse(story.body)}</div>
-				<div className="like-wrapper">
-				<FontAwesomeIcon icon={faHeart} size="2x" onClick={handleLike} />
-				<div>Total Likes: {totalLikes}</div>
-				</div>
-				<FontAwesomeIcon icon={faComments} size="2x" onClick={toggleComment} />
+    <Container className="story-container pattern-diagonal-lines-md">
+      <Inner className="story-div">
+        <h1 className="story-page-title">{story.title}</h1>
+        <p className="story-page-author">
+          Written By: <span className="author-name">{author}</span>
+        </p>
+        {/* <div>{story.body}</div> */}
+        <div className="story-body">{story.body && parse(story.body)}</div>
+        <div className="like-wrapper">
+          <i class="fas fa-sign-language fa-2x clap-icon" onClick={handleLike}></i>
+          <div>Total Likes: {totalLikes}</div>
+        </div>
 
-				<div>Total Comments: {comments.length}</div>
-				{showComments && (
-					<>
-						<Comment comments={comments} currentUser={currentUser} />
-						<CreateComment
-							author={author}
-							storyId={id}
-							setComments={setComments}
-							currentUser={currentUser}
-						/>
-					</>
-				)}
-			</Inner>
-		</Container>
-	);
+        <div>Total Comments: {comments.length}</div>
+        {showComments && (
+          <>
+            <Comment comments={comments} currentUser={currentUser} />
+            <CreateComment
+              author={author}
+              storyId={id}
+              setComments={setComments}
+              currentUser={currentUser}
+            />
+          </>
+        )}
+      </Inner>
+    </Container>
+  );
 }
 
 const Container = styled.div`
