@@ -24,8 +24,9 @@
 
 .card-author {
 	font-family: "Open Sans", sans-serif;
-	font-weight: 600;
+	font-weight: 800;
 	font-size: 12px;
+	color: #463DD7;
 }
 .most-recent-div {
 	background-image: url(./images/waves.png) !important;
