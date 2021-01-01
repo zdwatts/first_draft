@@ -11,7 +11,6 @@ const NavBar = ({ setAuthenticated, authenticated, authenticate }) => {
 	// const [currentUser, setCurrentUser] = useState("");
 
 	useEffect(() => {
-		document.title = "first_draft: Profile";
 		(async () => {
 			const response = await authenticate();
 			const id = response.id;
