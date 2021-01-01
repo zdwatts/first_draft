@@ -22,6 +22,9 @@
 		rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
+.card-author {
+	font-family: "Open Sans", sans-serif;
+}
 .most-recent-div {
 	background-image: url(./images/waves.png) !important;
 	background-repeat: no-repeat;
