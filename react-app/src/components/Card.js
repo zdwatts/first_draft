@@ -11,7 +11,7 @@ const Card = ({ story, idx }) => {
           {story.title}
         </a>
       </h2>
-      <p className="card-author">Written By: {story.author_name}</p>
+      <p className="card-author">Written By - {story.author_name}</p>
     </div>
   );
 };
