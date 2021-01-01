@@ -19,8 +19,12 @@ const GettingStarted = ({ authenticated }) => {
 							first_draft has to offer.
 						</p>
 					</div>
-					<div class="pattern-diagonal-lines-sm gray-lighter bg-dots">
-						<img class="sign-image" src={signup} alt="demo gifs" />
+					<div className="pattern-diagonal-lines-sm gray-lighter bg-dots">
+						<img
+							className="sign-image"
+							src={signup}
+							alt="demo gifs"
+						/>
 					</div>
 				</div>
 				<div className="card-2">
@@ -30,8 +34,12 @@ const GettingStarted = ({ authenticated }) => {
 						</h1>
 						<p>Registered users can create stories.</p>
 					</div>
-					<div class="pattern-diagonal-lines-sm gray-lighter bg-dots">
-						<img class="sign-image" src={story} alt="demo gifs" />
+					<div className="pattern-diagonal-lines-sm gray-lighter bg-dots">
+						<img
+							className="sign-image"
+							src={story}
+							alt="demo gifs"
+						/>
 					</div>
 				</div>
 				<div className="card-3">
@@ -42,9 +50,9 @@ const GettingStarted = ({ authenticated }) => {
 							on stories.
 						</p>
 					</div>
-					<div class="pattern-diagonal-lines-sm gray-lighter bg-dots">
+					<div className="pattern-diagonal-lines-sm gray-lighter bg-dots">
 						<img
-							class="sign-image"
+							className="sign-image"
 							src={commenting}
 							alt="demo gifs"
 						/>
