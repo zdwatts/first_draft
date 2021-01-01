@@ -1,7 +1,7 @@
 .card {
 	background: white;
 	background-repeat: no-repeat;
-background-size: cover;
+	background-size: cover;
 	height: 200px;
 	width: 250px;
 	margin: 5px;
@@ -23,9 +23,9 @@ background-size: cover;
 }
 
 .most-recent-div {
-	background-image: url("/waves.png") !important;
+	background-image: url(./images/waves.png) !important;
 	background-repeat: no-repeat;
-background-size: cover;
+	background-size: cover;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;

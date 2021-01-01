@@ -20,7 +20,7 @@ const GettingStarted = ({ authenticated }) => {
 						</p>
 					</div>
 					<div class="pattern-diagonal-lines-sm gray-lighter bg-dots">
-						<img class="sign-image" src={signup} />
+						<img class="sign-image" src={signup} alt="demo gifs" />
 					</div>
 				</div>
 				<div className="card-2">
@@ -31,7 +31,7 @@ const GettingStarted = ({ authenticated }) => {
 						<p>Registered users can create stories.</p>
 					</div>
 					<div class="pattern-diagonal-lines-sm gray-lighter bg-dots">
-						<img class="sign-image" src={story} />
+						<img class="sign-image" src={story} alt="demo gifs" />
 					</div>
 				</div>
 				<div className="card-3">
@@ -43,7 +43,11 @@ const GettingStarted = ({ authenticated }) => {
 						</p>
 					</div>
 					<div class="pattern-diagonal-lines-sm gray-lighter bg-dots">
-						<img class="sign-image" src={commenting} />
+						<img
+							class="sign-image"
+							src={commenting}
+							alt="demo gifs"
+						/>
 					</div>
 				</div>
 			</div>
