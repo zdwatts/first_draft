@@ -6,12 +6,14 @@ from app.models import db
 
 story_routes = Blueprint('stories', __name__)
 
+
 # Get all the story route
 @story_routes.route('/')
 def stories():
     # stories = Story.query.all()
     stories = Story.query.order_by(Story.id.desc()).limit(6)
     return {'stories': [story.to_dict() for story in stories]}
+
 
 # Get one story route with author and associated comments
 @story_routes.route('/<int:id>')
@@ -43,17 +45,21 @@ def add_story():
     
     return {"id": new_story.id}
 
+
 # Update a story route
 @story_routes.route('/<int:id>', methods=["PUT"])
 @login_required
 def update_story(id):
     story = Story.query.get(id)
+    if current_user.get_id() != story.author_id:
+        return jsonify('not authorized!')
+    new_title = request.json['title']
     new_body = request.json['body']
+    story.title = new_title
     story.body = new_body
     db.session.add(story)
     db.session.commit()
     return story.to_dict()
-
 
 
 # Delete a story route
@@ -63,8 +69,8 @@ def delete_story(id):
     story = Story.query.get(id)
     if not story:
         return jsonify('story not found')
-    # if current_user.get_id() != story.author_id:
-    #     return jsonify('not authorized!')
+    if current_user.get_id() != story.author_id:
+        return jsonify('not authorized!')
     db.session.delete(story)
     db.session.commit()
     return jsonify('deleted')
@@ -89,6 +95,7 @@ def post_comment(id):
     db.session.commit()
 
     return new_comment.to_dict()
+
 
 # Post a like
 @story_routes.route('/<int:id>/like', methods=['POST'])
