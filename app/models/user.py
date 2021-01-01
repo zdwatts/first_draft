@@ -12,7 +12,7 @@ class User(db.Model, UserMixin):
 
   comments = db.relationship('Comment', back_populates="user")
   
-  authors = db.relationship('Story', back_populates='story')
+  stories = db.relationship('Story', back_populates='author')
   
   @property
   def password(self):
