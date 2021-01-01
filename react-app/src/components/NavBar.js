@@ -42,7 +42,15 @@ const NavBar = ({ setAuthenticated, authenticated, authenticate }) => {
 		<nav className={navTheme}>
 			<div className="main-logo">
 				<a href="/" style={{ textDecoration: "none" }}>
-					<h1 className="logo-text">first_draft</h1>
+					<h1
+						className="logo-text"
+						style={{
+							fontFamily: "Charmonman, cursive",
+							fontSize: "2rem",
+						}}
+					>
+						first_draft
+					</h1>
 				</a>
 				{authenticated ? (
 					<h2 className="welcome-message">{greeting()}</h2>
