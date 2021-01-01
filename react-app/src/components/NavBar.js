@@ -3,18 +3,20 @@ import { NavLink } from "react-router-dom";
 import LogoutButton from "./auth/LogoutButton";
 import DemoButton from "./auth/DemoButton";
 import "./navbar.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser, faFeatherAlt } from "@fortawesome/free-solid-svg-icons";
 
 const NavBar = ({ setAuthenticated, authenticated, authenticate }) => {
 	const [userId, setUserId] = useState("");
-	const [currentUser, setCurrentUser] = useState("");
+	// const [currentUser, setCurrentUser] = useState("");
 
 	useEffect(() => {
 		(async () => {
 			const response = await authenticate();
 			const id = response.id;
-			const user = response.username;
+			// const user = response.username;
 			setUserId(id);
-			setCurrentUser(user);
+			// setCurrentUser(user);
 		})();
 	});
 
@@ -23,7 +25,7 @@ const NavBar = ({ setAuthenticated, authenticated, authenticate }) => {
 		let time = new Date().getHours();
 		if (time < 12) {
 			greeting = "Good morning";
-		} else if (time < 20) {
+		} else if (time < 17) {
 			greeting = "Good afternoon";
 		} else {
 			greeting = "Good evening";
@@ -42,7 +44,16 @@ const NavBar = ({ setAuthenticated, authenticated, authenticate }) => {
 		<nav className={navTheme}>
 			<div className="main-logo">
 				<a href="/" style={{ textDecoration: "none" }}>
-					<h1 className="logo-text">first_draft</h1>
+					<h1
+						className="logo-text"
+						style={{
+							fontFamily: "Satisfy, cursive",
+							fontSize: "2rem",
+						}}
+					>
+						First_Draft
+						<FontAwesomeIcon icon={faFeatherAlt} />
+					</h1>
 				</a>
 				{authenticated ? (
 					<h2 className="welcome-message">{greeting()}</h2>
@@ -99,7 +110,7 @@ const NavBar = ({ setAuthenticated, authenticated, authenticate }) => {
 							exact
 							activeClassName="active"
 						>
-							Profile
+							<FontAwesomeIcon icon={faUser} size="2x" />
 						</NavLink>
 					</li>
 				)}
