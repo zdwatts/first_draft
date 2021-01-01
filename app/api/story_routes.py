@@ -30,9 +30,13 @@ def one_story(id):
 
 # Delete a story route
 @story_routes.route('/<int:id>', methods=['DELETE'])
-@login_required
+# @login_required
 def delete_story(id):
     story = Story.query.get(id)
+    if not story:
+        return jsonify('story not found')
+    # if current_user.get_id() != story.author_id:
+    #     return jsonify('not authorized!')
     db.session.delete(story)
     db.session.commit()
     return jsonify('deleted')
