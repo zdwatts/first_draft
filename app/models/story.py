@@ -10,6 +10,7 @@ class Story(db.Model):
     author_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
     
     likes = db.relationship('Like', back_populates='story')
+    comments = db.relationship('Comment', back_populates='story')
     author = db.relationship('User', back_populates='stories')
     
     def __init__(self, title, body, author_id):
