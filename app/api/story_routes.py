@@ -1,4 +1,5 @@
 from flask import Blueprint, jsonify, request
+from flask_login import login_required, current_user
 from app.models import Story, User, Comment, Like
 from app.models import db
 
@@ -29,12 +30,12 @@ def one_story(id):
 
 # Delete a story route
 @story_routes.route('/<int:id>', methods=['DELETE'])
+@login_required
 def delete_story(id):
     story = Story.query.get(id)
     db.session.delete(story)
     db.session.commit()
-
-    return {'deletedStory': story.to_dict()}
+    return jsonify('deleted')
 
 # Post a story route
 @story_routes.route('', methods=['POST'])

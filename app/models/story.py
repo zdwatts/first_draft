@@ -9,9 +9,9 @@ class Story(db.Model):
     body = db.Column(db.String, nullable=False)
     author_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
     
-    likes = db.relationship('Like', back_populates='story')
-    comments = db.relationship('Comment', back_populates='story')
-    author = db.relationship('User', back_populates='stories')
+    likes = db.relationship('Like', back_populates='story', cascade="all, delete-orphan")
+    comments = db.relationship('Comment', back_populates='story', cascade='all, delete, delete-orphan',)
+    author = db.relationship('User', back_populates='stories', )
     
     def __init__(self, title, body, author_id):
         self.title = title
