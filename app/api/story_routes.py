@@ -28,18 +28,6 @@ def one_story(id):
             "total_likes": count_likes
             }
 
-# Delete a story route
-@story_routes.route('/<int:id>', methods=['DELETE'])
-# @login_required
-def delete_story(id):
-    story = Story.query.get(id)
-    if not story:
-        return jsonify('story not found')
-    # if current_user.get_id() != story.author_id:
-    #     return jsonify('not authorized!')
-    db.session.delete(story)
-    db.session.commit()
-    return jsonify('deleted')
 
 # Post a story route
 @story_routes.route('', methods=['POST'])
@@ -54,6 +42,32 @@ def add_story():
     db.session.commit()
     
     return {"id": new_story.id}
+
+# Update a story route
+@story_routes.route('/<int:id>', methods=["PUT"])
+@login_required
+def update_story(id):
+    story = Story.query.get(id)
+    new_body = request.json['body']
+    story.body = new_body
+    db.session.add(story)
+    db.session.commit()
+    return story.to_dict()
+
+
+
+# Delete a story route
+@story_routes.route('/<int:id>', methods=['DELETE'])
+@login_required
+def delete_story(id):
+    story = Story.query.get(id)
+    if not story:
+        return jsonify('story not found')
+    # if current_user.get_id() != story.author_id:
+    #     return jsonify('not authorized!')
+    db.session.delete(story)
+    db.session.commit()
+    return jsonify('deleted')
 
 
 # Get all the stories written by a single user
