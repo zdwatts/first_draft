@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import LogoutButton from "./auth/LogoutButton";
 import DemoButton from "./auth/DemoButton";
 import "./navbar.css";
 
 const NavBar = ({ setAuthenticated, authenticated, authenticate }) => {
+	const [userId, setUserId] = useState("");
+	const [currentUser, setCurrentUser] = useState("");
+
+	useEffect(() => {
+		(async () => {
+			const response = await authenticate();
+			const id = response.id;
+			const user = response.username;
+			setUserId(id);
+			setCurrentUser(user);
+		})();
+	});
+
 	const greeting = () => {
 		let greeting;
 		let time = new Date().getHours();
@@ -28,8 +41,8 @@ const NavBar = ({ setAuthenticated, authenticated, authenticate }) => {
 	return (
 		<nav className={navTheme}>
 			<div className="main-logo">
-				<a href="/">
-					<h1 className="logo-text">first_draft</h1>{" "}
+				<a href="/" style={{ textDecoration: "none" }}>
+					<h1 className="logo-text">first_draft</h1>
 				</a>
 				{authenticated ? (
 					<h2 className="welcome-message">{greeting()}</h2>
@@ -77,6 +90,20 @@ const NavBar = ({ setAuthenticated, authenticated, authenticate }) => {
 						</NavLink>
 					</li>
 				)}
+				{!authenticated ? (
+					""
+				) : (
+					<li>
+						<NavLink
+							to={`/users/${userId}`}
+							exact
+							activeClassName="active"
+						>
+							Profile
+						</NavLink>
+					</li>
+				)}
+
 				<li>
 					<LogoutButton
 						setAuthenticated={setAuthenticated}

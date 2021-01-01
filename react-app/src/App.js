@@ -13,6 +13,7 @@ import CreateStory from "./components/Page/CreateStory";
 import UsersList from "./components/Page/UserList";
 import Footer from "./components/Footer";
 import MostRecent from "./components/MostRecent";
+import GettingStarted from "./components/GettingStarted";
 
 function App() {
 	const [authenticated, setAuthenticated] = useState(false);
@@ -38,6 +39,7 @@ function App() {
 			<NavBar
 				setAuthenticated={setAuthenticated}
 				authenticated={authenticated}
+				authenticate={authenticate}
 			/>
 
 			<Switch>
@@ -71,6 +73,7 @@ function App() {
 						authenticated={authenticated}
 						className="header"
 					/>
+					<GettingStarted authenticated={authenticated} />
 					<MostRecent />
 					<Footer />
 				</Route>
@@ -78,7 +81,6 @@ function App() {
 					<Story authenticate={authenticate} />
 					<Footer />
 				</Route>
-				{/* <ProtectedRoute> */}
 				<Route path="/stories">
 					{authenticated ? (
 						<div>
@@ -92,7 +94,6 @@ function App() {
 						/>
 					)}
 				</Route>
-				{/* </ProtectedRoute> */}
 				<Route path="/users" component={UsersList} />
 				<Route path="/users/:id" component={User} />
 			</Switch>

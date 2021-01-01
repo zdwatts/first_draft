@@ -5,13 +5,7 @@ import axios from "axios";
 import { useParams, useHistory } from "react-router-dom";
 import styled from "styled-components";
 import parse from "html-react-parser";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Story.css";
-import {
-  faComments,
-  faHeart,
-  faSignLanguage,
-} from "@fortawesome/free-solid-svg-icons";
 
 function Story({ authenticate }) {
 	const [story, setStory] = useState([]);
