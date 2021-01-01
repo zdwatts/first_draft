@@ -27,6 +27,15 @@ def one_story(id):
             "total_likes": count_likes
             }
 
+# Delete a story route
+@story_routes.route('/<int:id>', methods=['DELETE'])
+def delete_story(id):
+    story = Story.query.get(id)
+    db.session.delete(story)
+    db.session.commit()
+
+    return {'deletedStory': story.to_dict()}
+
 # Post a story route
 @story_routes.route('', methods=['POST'])
 def add_story():
