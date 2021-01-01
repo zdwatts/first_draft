@@ -10,6 +10,7 @@ function User() {
 	const { userId } = useParams();
 
 	useEffect(() => {
+		document.title = "first_draft: Profile";
 		if (!userId) {
 			return;
 		}
