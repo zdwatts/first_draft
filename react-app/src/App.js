@@ -97,7 +97,7 @@ function App() {
 						/>
 					)}
 				</Route>
-				<Route path="/users" component={UsersList} />
+				<Route path="/users"><UsersList /><Footer /></Route>
 			</Switch>
 		</BrowserRouter>
 	);

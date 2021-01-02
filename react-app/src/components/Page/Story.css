@@ -4,7 +4,8 @@
 
 .story-container {
 	height: 100%;
-	margin: 0 !important;
+	margin: 0;
+	padding-bottom: 25vh;
 }
 
 .story-div {
@@ -49,15 +50,12 @@
 	width: 100%;
 }
 
-.story-body > p {
+.story-body {
 	/* background-color: green; */
 	width: 100%;
 	margin: 0;
 	font-family: "Open Sans", sans-serif;
-}
-
-div > .story-body {
-	font-size: 50px !important;
+	font-size: 14px !important;
 }
 
 .like-wrapper {
@@ -108,8 +106,9 @@ div > .story-body {
 	border: 1px solid #000000;
 }
 .comments-container {
-	width: 100%;
 	color: rgba(117, 117, 117, 1);
+	font-family: "Open Sans", sans-serif;
+	font-size: 14px;
 }
 
 .comment-maker {
@@ -119,8 +118,9 @@ div > .story-body {
 
 .comment-box {
 	border-bottom: 1px solid #efefef;
-	border-top: 1px solid #efefef;
+	width: 100%;
 }
+
 .comment-icon:hover {
 	cursor: pointer;
 	color: #e0e0e0;

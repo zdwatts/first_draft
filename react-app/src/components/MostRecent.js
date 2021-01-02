@@ -16,11 +16,12 @@ const MostRecent = () => {
 	// console.log(stories);
 
 	return (
-		<div className="cards-wrapper">
+		<div className="cards-wrapper pattern-diagonal-lines-md">
 			<div className="title-wrapper">
 				<h1 className="stories-header animate__animated animate__slideInLeft">
 					Most Recent Stories
 				</h1>
+				<p>Check out the latest stories from our </p>
 			</div>
 			<div className="most-recent-div animate__animated animate__slideInRight">
 				{stories.map((story, idx) => {

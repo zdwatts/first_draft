@@ -52,7 +52,7 @@ function CreateStory({ authenticate }) {
 	};
 
 	return (
-		<div className="content-wrapper pattern-cross-dots-xl yellow-light bg-white flex justify-center items-center bg-fixed">
+		<div className="content-wrapper pattern-cross-dots-xl bg-white flex justify-center items-center bg-fixed">
 			<div className="create-story-div animate__animated animate__zoomInRight">
 				<h1 className="story-title">Create A Story</h1>
 				<form onSubmit={handleSubmit}>

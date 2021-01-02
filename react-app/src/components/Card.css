@@ -1,20 +1,20 @@
 .card {
-	background: white;
+	background: #ffffff;
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 200px;
 	width: 250px;
 	margin: 5px;
-	border-top: 7px solid #fec017;
-	border-bottom: 1px solid #e6e6e6;
-	border-left: 1px solid #e6e6e6;
-	border-right: 1px solid #e6e6e6;
-	border-bottom-left-radius: 10px;
-	border-bottom-right-radius: 10px;
+	border-top: 7px solid #000000;
+	border-bottom: 7px solid #000000;
+	border-right: 7px solid #080808;
+	border-left: 7px solid #000000;
+	border-radius: 10px;
 	padding: 5px;
 	padding-left: 15px;
-	box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+	box-shadow: rgba(0, 0, 0, 0.445) 0px 20px 30px -10px;
 	margin-bottom: 30px;
+	overflow: scroll;
 }
 
 .card:hover {
@@ -25,11 +25,10 @@
 .card-author {
 	font-family: "Open Sans", sans-serif;
 	font-weight: 800;
-	font-size: 12px;
-	color: #55585C;
+	font-size: 13px;
+	color: #000000;
 }
 .most-recent-div {
-	background-image: url(./images/waves.png) !important;
 	background-repeat: no-repeat;
 	background-size: cover;
 	display: flex;
@@ -42,18 +41,21 @@
 }
 
 .card-number {
-	color: #e6e6e6;
+	color: #959595;
 	font-family: "Open Sans", sans-serif;
+	font-weight: 800;
+	border-bottom: 7px solid #959595;
+	width: 38px;
 }
 
 .card-title {
-	font-size: 18px;
+	font-size: 30px;
 	font-family: "Open Sans", sans-serif;
 	font-weight: 700;
 }
 
 .card-title:hover {
-	font-size: 18px;
+	font-size: 30px !important;
 	text-shadow: none;
 }
 
@@ -66,12 +68,17 @@
 	font-weight: 800;
 	width: 60%;
 	text-align: center;
+	color: #000000 !important;
+	margin-bottom: 40px;
+	background-color: #ffcb3a;
+	border: 1px solid black;
 }
 
 .cards-wrapper {
-	background-color: white;
 	width: 100%;
 	margin: 0;
+	color: #000000;
+	background-color: #ffcb3a !important;
 }
 
 .title-wrapper {
@@ -79,6 +86,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-direction: column;
 }
 
 @media only screen and (min-width: 1000px) {

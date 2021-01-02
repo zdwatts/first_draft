@@ -105,7 +105,7 @@ function Story({ authenticate }) {
 				</span>
 
 				{showComments && (
-					<div className="animate__animated animate__zoomIn">
+					<div className="animate__animated animate__zoomIn comment-box">
 						<Comment
 							comments={comments}
 							currentUser={currentUser}
@@ -126,6 +126,7 @@ function Story({ authenticate }) {
 const Container = styled.div`
 	display: flex;
 	justify-content: center;
+	height: 100%;
 `;
 
 const Inner = styled.div`
@@ -139,6 +140,10 @@ const Inner = styled.div`
 
 	div {
 		padding: 1em;
+	}
+
+	.comment-box {
+		width: 80%;
 	}
 `;
 
