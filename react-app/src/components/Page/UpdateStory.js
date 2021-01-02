@@ -7,7 +7,7 @@ function UpdateStory({ id, title, body }) {
 	return (
 		<div>
 			<button onClick={() => setShowForm(!showForm)}>
-				Modernize and Make it More Awesome 😉
+				Modernize and Make it More Awesome
 			</button>
 			{showForm ? <UpdateForm id={id} title={title} body={body} /> : ""}
 		</div>
