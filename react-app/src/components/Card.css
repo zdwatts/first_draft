@@ -66,13 +66,13 @@
 	font-weight: 800;
 	width: 60%;
 	text-align: center;
-	color: #55585C !important;
+	color: #000000 !important;
 }
 
 .cards-wrapper {
 	width: 100%;
 	margin: 0;
-	color: #e4e4e4
+	color: #f5f5f5
 }
 
 .title-wrapper {
