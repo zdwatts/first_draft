@@ -1,6 +1,6 @@
 import React from "react";
 import parse from "html-react-parser";
-import "./Story.css"
+import "./Story.css";
 
 function Comment({ comments, currentUser }) {
 	return (
