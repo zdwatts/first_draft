@@ -96,8 +96,9 @@ const Container = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding-top: 3em;
+	padding-top: 1.5em;
 	padding-bottom: 8em;
+	width: 100%;
 `;
 
 const Inner = styled.div`
