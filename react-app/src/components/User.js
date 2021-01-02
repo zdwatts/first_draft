@@ -42,7 +42,7 @@ function User({ authenticate }) {
 	};
 
 	return (
-		<Container>
+		<Container className="pattern-diagonal-lines-md">
 			<Inner>
 				<h1 className="profile-title">My Profile</h1>
 					<p className="user-details">
@@ -51,7 +51,7 @@ function User({ authenticate }) {
 					</p>
 			</Inner>
 			<Stories>
-				<div className="main-div">
+				<div className="main-div ">
 
 				{stories.length === 0 ? (
 					<h1 className="pun" style={{ fontFamily: "Satisfy, cursive" ,textAlign: "center"}}>
@@ -138,13 +138,13 @@ const Stories = styled.div`
 	.main-div {
 		overflow: auto;
 		box-sizing: border-box;
-		border-radius: 1em;
-		padding: 1em;
-		padding-left: 2em;
 		width: 44em;
 		margin: 1em 0em;
-		background-color: white;
 		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-content: center;
+		align-items: center;
 
 		Link {
 			font-family: nunito;
@@ -158,8 +158,16 @@ const Stories = styled.div`
 		}
 
 		.story-box {
-			box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 			padding: 20px 40px;
+			width: 80%;
+			border-bottom: 1px solid black;
+			margin-bottom: 40px !important;
+			background-color: white;
+			border-radius: 5px;
+		}
+
+		.story-box:hover {
+			box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
 		}
 	}
 `;
