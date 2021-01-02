@@ -73,7 +73,7 @@ function User({ authenticate }) {
 									<button
 										onClick={() => deleteStory(story.id)}
 									>
-										DELETE STORY
+										⚠️ Eradicate ⚠️
 									</button>
 								</div>
 							) : (

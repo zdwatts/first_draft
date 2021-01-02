@@ -6,7 +6,9 @@ function UpdateStory({ id, title, body }) {
 	const [showForm, setShowForm] = useState(false);
 	return (
 		<div>
-			<button onClick={() => setShowForm(!showForm)}>Upgreydd</button>
+			<button onClick={() => setShowForm(!showForm)}>
+				Modernize and Make it More Awesome 😉
+			</button>
 			{showForm ? <UpdateForm id={id} title={title} body={body} /> : ""}
 		</div>
 	);
