@@ -27,6 +27,7 @@
 	font-size: 70px;
 	font-weight: 400;
 	font-family: "Source Serif Pro", serif;
+	
 }
 
 .header_text {
@@ -109,6 +110,7 @@
 	font-size: 20px;
 	text-decoration: underline;
 	text-decoration-color: #fec017;
+	font-weight: 800;
 }
 
 .feature-text {
