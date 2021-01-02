@@ -42,7 +42,7 @@ function User({ authenticate }) {
 	};
 
 	return (
-		<Container className="pattern-diagonal-lines-md">
+		<Container >
 			<Inner>
 				<h1 className="profile-title">My Profile</h1>
 					<p className="user-details">
@@ -63,7 +63,8 @@ function User({ authenticate }) {
 				{stories &&
 					stories.map((story, i) => (
 						<div key={i} className="story-box">
-							<Link to={`/stories/${story.id}`}>
+							<Link to={`/stories/${story.id}`} className="story-t">
+								<p className="story-num">0{i + 1}</p>
 								{story.title}
 							</Link>
 							
@@ -172,6 +173,18 @@ const Stories = styled.div`
 
 		.story-box:hover {
 			box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+		}
+
+		.story-t {
+			font-family: "Open Sans", sans-serif;
+			font-size: 25px;
+		}
+
+		.story-num {
+			font-family: "Open Sans", sans-serif;
+			font-size: 40px;
+			font-weight: 800;
+			margin: 0;
 		}
 	}
 `;
