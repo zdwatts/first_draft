@@ -190,7 +190,7 @@ const Stories = styled.div`
 
 		.delete-button {
 			margin-bottom:  50px;
-			border: 1px solid black;
+			border: 1px solid #fec017;
 			width: 100%;
 			border-radius: 5px;
 			padding: 10px 40px;
