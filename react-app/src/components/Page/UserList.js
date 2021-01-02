@@ -33,6 +33,11 @@ function UsersList() {
 }
 
 const Container = styled.div`
+
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
@@ -55,12 +60,13 @@ const Container = styled.div`
 		display: flex;
 		font-family: nunito sans;
 		text-decoration: none;
-		font-weight: 500;
+		font-weight: 800;
 		font-size: 18px;
 		letter-spacing: 0.05em;
 		padding: 0.5em;
 		color: grey;
-		border-bottom: 1px solid rgb(219, 224, 230);
+		border-left: 3px solid rgb(219, 224, 230);
+		font-family: "Open Sans", sans-serif;
 	}
 
 	.master {
