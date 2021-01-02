@@ -22,6 +22,12 @@
 		rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
+.card-author {
+	font-family: "Open Sans", sans-serif;
+	font-weight: 800;
+	font-size: 12px;
+	color: #55585C;
+}
 .most-recent-div {
 	background-image: url(./images/waves.png) !important;
 	background-repeat: no-repeat;
@@ -32,7 +38,7 @@
 	align-items: center;
 	align-content: center;
 	width: 100%;
-	margin-bottom: 0;
+	padding-bottom: 40px;
 }
 
 .card-number {
@@ -57,7 +63,7 @@
 	margin-left: 10%;
 	margin-top: 40px;
 	font-family: "Open Sans", sans-serif;
-	font-weight: 300;
+	font-weight: 800;
 	width: 60%;
 	text-align: center;
 }

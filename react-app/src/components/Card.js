@@ -10,8 +10,8 @@ const Card = ({ story, idx }) => {
         <a className="card-title" href={`/stories/${story.id}`}>
           {story.title}
         </a>
+      <p className="card-author">Written By - {story.author_name}</p>
       </h2>
-      <p>Written By: {story.author_name}</p>
     </div>
   );
 };

@@ -74,7 +74,10 @@ function App() {
 						className="header"
 					/>
 					<GettingStarted authenticated={authenticated} />
-					<MostRecent />
+					{authenticated ?
+						<MostRecent />
+						: ""
+					}
 					<Footer />
 				</Route>
 				<Route path="/stories/:id">
