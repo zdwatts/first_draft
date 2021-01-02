@@ -45,17 +45,16 @@ function User({ authenticate }) {
 		<Container>
 			<Inner>
 				<h1 className="profile-title">My Profile</h1>
-					<li className="user-details">
-						<strong>Username :</strong>{" "}
+					<p className="user-details">
+						Logged in as -
 						<span> {user.username} </span>
-					</li>
-					<li>
-						<strong>Email :</strong> <span>{user.email}</span>
-					</li>
+					</p>
 			</Inner>
 			<Stories>
+				<div className="main-div">
+
 				{stories.length === 0 ? (
-					<h1 style={{ fontFamily: "Satisfy, cursive" }}>
+					<h1 className="pun" style={{ fontFamily: "Satisfy, cursive" ,textAlign: "center"}}>
 						Such emptiness!
 					</h1>
 				) : (
@@ -71,20 +70,21 @@ function User({ authenticate }) {
 								<div>
 									<button
 										onClick={() => deleteStory(story.id)}
-									>
+										>
 										Eradicate
 									</button>
 									<UpdateStory
 										id={story.id}
 										title={story.title}
 										body={story.body}
-									/>
+										/>
 								</div>
 							) : (
 								""
-							)}
+								)}
 						</div>
 					))}
+					</div>
 			</Stories>
 			<Link to="/users">All users</Link>
 		</Container>
@@ -134,7 +134,7 @@ const Stories = styled.div`
 	display: flex;
 	flex-direction: column;
 	//   border: 1px solid yellow;
-	div {
+	.main-div {
 		overflow: auto;
 		box-sizing: border-box;
 		border-radius: 1em;
@@ -142,12 +142,14 @@ const Stories = styled.div`
 		padding-left: 2em;
 		width: 44em;
 		margin: 1em 0em;
-		background-color: #f5f0f9;
+		background-color: white;
+		box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
 		Link {
 			font-family: nunito;
 			font-size: 18px;
 			padding-bottom: 0.5em;
+			text-align: center;
 		}
 		p {
 			font-family: nunito;
