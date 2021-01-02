@@ -70,7 +70,7 @@ function User({ authenticate }) {
 							
 							{story.author_id === currentLoggedUser ? (
 								<div>
-									<button
+									<button className="delete-button"
 										onClick={() => deleteStory(story.id)}
 										>
 										Eradicate
@@ -185,6 +185,11 @@ const Stories = styled.div`
 			font-size: 40px;
 			font-weight: 800;
 			margin: 0;
+		}
+
+
+		.delete-button {
+			margin-bottom:  50px;
 		}
 	}
 `;
