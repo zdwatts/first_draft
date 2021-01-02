@@ -44,7 +44,7 @@ function UpdateForm({ id, title, body }) {
 				onEditorChange={handleEditorChange}
 				className="animate__animated animate__hinge"
 			/>
-			<button type="submit" className="story-submit" >Update Story</button>
+			<button type="submit" className="story-submit" >Confirm Changes</button>
 		</form>
 	);
 }

@@ -46,8 +46,8 @@ function User({ authenticate }) {
 			<Inner>
 				<h1 className="profile-title">My Profile</h1>
 					<p className="user-details">
-						Logged in as -
-						<span> {user.username} </span>
+						Welcome Back,
+						<span> {user.username}! </span>
 					</p>
 			</Inner>
 			<Stories>
