@@ -21,6 +21,7 @@ const MostRecent = () => {
 				<h1 className="stories-header animate__animated animate__slideInLeft">
 					Most Recent Stories
 				</h1>
+				<p>Check out the latest stories from our </p>
 			</div>
 			<div className="most-recent-div animate__animated animate__slideInRight">
 				{stories.map((story, idx) => {

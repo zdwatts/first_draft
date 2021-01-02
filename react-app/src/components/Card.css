@@ -66,12 +66,13 @@
 	font-weight: 800;
 	width: 60%;
 	text-align: center;
+	color: #55585C !important;
 }
 
 .cards-wrapper {
-	background-color: white;
 	width: 100%;
 	margin: 0;
+	color: #e4e4e4
 }
 
 .title-wrapper {
@@ -79,6 +80,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-direction: column;
 }
 
 @media only screen and (min-width: 1000px) {
