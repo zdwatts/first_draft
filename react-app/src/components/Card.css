@@ -1,5 +1,5 @@
 .card {
-	background: white;
+	background: #e6e6e6;
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 200px;
@@ -7,8 +7,8 @@
 	margin: 5px;
 	border-top: 7px solid #000000;
 	border-bottom: 7px solid #000000;
-	border-right: 2px solid #080808;
-	border-left: 2px solid #000000;
+	border-right: 7px solid #080808;
+	border-left: 7px solid #000000;
 	border-radius: 10px;
 	padding: 5px;
 	padding-left: 15px;
@@ -25,7 +25,7 @@
 	font-family: "Open Sans", sans-serif;
 	font-weight: 800;
 	font-size: 12px;
-	color: #55585C;
+	color: #000000;
 }
 .most-recent-div {
 	background-repeat: no-repeat;
@@ -40,7 +40,7 @@
 }
 
 .card-number {
-	color: #e6e6e6;
+	color: #000000;
 	font-family: "Open Sans", sans-serif;
 }
 
