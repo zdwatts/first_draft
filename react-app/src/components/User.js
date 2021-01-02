@@ -44,6 +44,7 @@ function User({ authenticate }) {
 	return (
 		<Container>
 			<Inner>
+				<h1 className="profile-title">My Profile</h1>
 				<ul>
 					<li>
 						<strong>Username :</strong>{" "}
@@ -107,6 +108,15 @@ const Inner = styled.div`
 	align-items: center;
 	justify-content: center;
 	width: 44em;
+
+	@import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+
+	.profile-title {
+		font-size: 50px;
+		font-family: "Open Sans", sans-serif;
+	}
 
 	li {
 		width: 18em;
