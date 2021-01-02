@@ -99,11 +99,16 @@
 	font-weight: 300;
 	width: 100%;
 	text-align: center;
+	margin-bottom: 80px;
+	text-decoration: underline;
+	text-decoration-color: #fec017;
 }
 
 .feature-title {
 	font-family: "Open Sans", sans-serif;
 	font-size: 20px;
+	text-decoration: underline;
+	text-decoration-color: #fec017;
 }
 
 .feature-text {
