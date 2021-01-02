@@ -60,7 +60,7 @@ const Container = styled.div`
 		letter-spacing: 0.05em;
 		padding: 0.5em;
 		color: grey;
-		// border: 1px solid red;
+		border-bottom: 1px solid rgb(219, 224, 230);
 	}
 
 	.master {
@@ -80,7 +80,6 @@ const Container = styled.div`
 		border-radius: 10px;
 		margin-top: 5em;
 		margin-bottom: 10em;
-		padding-left: 5em;
 		padding-bottom: 5em;
 		height: auto;
 		width: 60%;
