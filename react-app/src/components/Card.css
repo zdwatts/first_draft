@@ -5,10 +5,10 @@
 	height: 200px;
 	width: 250px;
 	margin: 5px;
-	border-top: 7px solid #fec017;
-	border-bottom: 7px solid #e6e6e6;
-	border-right: 1px solid #ffffff;
-	border-right: 1px solid #ffffff;
+	border-top: 7px solid #000000;
+	border-bottom: 7px solid #000000;
+	border-right: 2px solid #080808;
+	border-left: 2px solid #000000;
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
 	padding: 5px;
@@ -29,7 +29,6 @@
 	color: #55585C;
 }
 .most-recent-div {
-	background-image: url(./images/waves.png) !important;
 	background-repeat: no-repeat;
 	background-size: cover;
 	display: flex;
@@ -67,12 +66,16 @@
 	width: 60%;
 	text-align: center;
 	color: #000000 !important;
+	margin-bottom: 40px;
+	background-color: #ffcb3a;
+	border: 1px solid black;
 }
 
 .cards-wrapper {
 	width: 100%;
 	margin: 0;
-	color: #f5f5f5
+	color: #000000;
+	background-color: #ffcb3a !important;
 }
 
 .title-wrapper {
