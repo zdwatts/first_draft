@@ -3,9 +3,10 @@ import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import styled from "styled-components";
 
-function User() {
+function User({ authenticate }) {
 	const [user, setUser] = useState({});
 	const [stories, setStories] = useState([]);
+	const [currentLoggedUser, setCurrentLoggedUser] = useState("");
 
 	const { userId } = useParams();
 
@@ -23,6 +24,10 @@ function User() {
 			const getStories = await axios.get(`/api/user/${id}`);
 			const userStories = getStories.data.stories;
 			setStories(userStories);
+
+			const loggedUserRes = await authenticate();
+			const loggedUserId = loggedUserRes.id;
+			setCurrentLoggedUser(loggedUserId);
 		})();
 	}, [userId]);
 
@@ -30,13 +35,15 @@ function User() {
 		return null;
 	}
 
+	const deleteStory = async (toBeDeletedId) => {
+		await axios.delete(`/api/stories/${toBeDeletedId}`);
+		window.location.reload(false);
+	};
+
 	return (
 		<Container>
 			<Inner>
 				<ul>
-					{/* <li>
-            <strong>User Id :</strong> <span>{userId}</span>
-          </li> */}
 					<li>
 						<strong>Username :</strong>{" "}
 						<span> {user.username} </span>
@@ -53,7 +60,18 @@ function User() {
 							<Link to={`/stories/${story.id}`}>
 								{story.title}
 							</Link>
-							{/* <p>{parse(story.body)}</p> */}
+							<h2>{story.id}</h2>
+							{story.author_id === currentLoggedUser ? (
+								<div>
+									<button
+										onClick={() => deleteStory(story.id)}
+									>
+										DELETE STORY
+									</button>
+								</div>
+							) : (
+								""
+							)}
 						</div>
 					))}
 			</Stories>
