@@ -68,6 +68,10 @@ const Container = styled.div`
 		color: red;
 		background-color: #fec017;
 		margin-top: -3em;
+		align-items: center;
+		justify-content: center;
+		display:flex;
+
 	}
 
 	.user_container {
@@ -79,7 +83,7 @@ const Container = styled.div`
 		padding-left: 5em;
 		padding-bottom: 5em;
 		height: auto;
-		width: 80%;
+		width: 60%;
 		background-color: white;
 		box-shadow: 0 50px 100px -20px rgba(50, 50, 93, 0.25),
 			0 30px 60px -30px rgba(0, 0, 0, 0.3),
