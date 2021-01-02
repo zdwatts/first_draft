@@ -66,6 +66,7 @@ function User({ authenticate }) {
 							<Link to={`/stories/${story.id}`}>
 								{story.title}
 							</Link>
+							
 							{story.author_id === currentLoggedUser ? (
 								<div>
 									<button
@@ -158,12 +159,13 @@ const Stories = styled.div`
 		}
 
 		.story-box {
-			padding: 20px 40px;
+			padding: 80px 40px;
 			width: 80%;
-			border-bottom: 1px solid black;
+			border: 1px solid black;
 			margin-bottom: 40px !important;
 			background-color: white;
 			border-radius: 5px;
+			box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 		}
 
 		.story-box:hover {
