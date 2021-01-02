@@ -72,7 +72,7 @@ const Container = styled.div`
 
 	.master {
 		width: 100%;
-		color: red;
+		color: black;
 		background-color: #fec017;
 		margin-top: -3em;
 		align-items: center;
