@@ -88,7 +88,7 @@ function User({ authenticate }) {
 					))}
 					</div>
 			</Stories>
-			<Link to="/users">All users</Link>
+			<Link to="/users"><p className="user-lists" style={{fontSize: "30px"}}>View all users</p></Link>
 		</Container>
 	);
 }
@@ -190,9 +190,10 @@ const Stories = styled.div`
 
 
 		.delete-button {
+			color: white;
 			cursor: pointer;
 			margin-bottom:  50px;
-			border: 1px solid #fec017;
+			border: none;
 			width: 100%;
 			border-radius: 5px;
 			padding: 10px 40px;
@@ -203,13 +204,18 @@ const Stories = styled.div`
 		}
 
 		.delete-button:hover {
-			background-color: black;
+			background-color: #ffbd09;
 			color: white;
 			box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 		}
 
 		.button-div {
-			width: 400px;
+			width: 500px;
+		}
+
+		.user-lists {
+			font-family: "Open Sans", sans-serif;
+			font-size: 40px !important;
 		}
 	}
 `;

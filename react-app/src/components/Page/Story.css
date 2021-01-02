@@ -204,7 +204,7 @@
 .update-button {
 	cursor: pointer;
 			margin-bottom:  50px;
-			border: 1px solid #000000;
+			border: none;
 			width: 100%;
 			color: white;
 			border-radius: 5px;
@@ -216,7 +216,7 @@
 		}
 
 		.update-button:hover {
-			background-color: #fec017;
+			background-color: #3a3a3a;
 			color: white;
 			box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 		}
