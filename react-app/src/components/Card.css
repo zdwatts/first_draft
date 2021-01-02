@@ -44,7 +44,7 @@
 	color: #000000;
 	font-family: "Open Sans", sans-serif;
 	font-weight: 300;
-	border-bottom: 7px solid #000000;
+	border-bottom: 8px solid #ffcb3a;
 	width: 45px;
 	font-size: 40px;
 }
@@ -52,7 +52,7 @@
 .card-title {
 	font-size: 30px;
 	font-family: "Open Sans", sans-serif;
-	font-weight: 700;
+	font-weight: 600;
 }
 
 .card-title:hover {
