@@ -66,7 +66,7 @@ function App() {
 					exact={true}
 					authenticated={authenticated}
 				>
-					<User />
+					<User authenticate={authenticate} />
 				</ProtectedRoute>
 				<Route path="/" exact={true}>
 					<DefaultHeader
@@ -95,7 +95,6 @@ function App() {
 					)}
 				</Route>
 				<Route path="/users" component={UsersList} />
-				<Route path="/users/:id" component={User} />
 			</Switch>
 		</BrowserRouter>
 	);
