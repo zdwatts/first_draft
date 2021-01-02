@@ -67,6 +67,7 @@ function App() {
 					authenticated={authenticated}
 				>
 					<User authenticate={authenticate} />
+					<Footer />
 				</ProtectedRoute>
 				<Route path="/" exact={true}>
 					<DefaultHeader

@@ -69,7 +69,7 @@ function User({ authenticate }) {
 							</Link>
 							
 							{story.author_id === currentLoggedUser ? (
-								<div>
+								<div className="button-div">
 									<button className="delete-button"
 										onClick={() => deleteStory(story.id)}
 										>
@@ -169,6 +169,7 @@ const Stories = styled.div`
 			background-color: white;
 			border-radius: 5px;
 			box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+			
 		}
 
 		.story-box:hover {
@@ -205,6 +206,10 @@ const Stories = styled.div`
 			background-color: black;
 			color: white;
 			box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+		}
+
+		.button-div {
+			width: 400px;
 		}
 	}
 `;
