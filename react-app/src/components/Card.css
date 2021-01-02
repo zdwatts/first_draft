@@ -44,7 +44,8 @@
 	color: #959595;
 	font-family: "Open Sans", sans-serif;
 	font-weight: 800;
-	text-decoration: underline;
+	border-bottom: 7px solid #959595;
+	width: 38px;
 }
 
 .card-title {
