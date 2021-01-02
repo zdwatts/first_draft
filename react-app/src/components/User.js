@@ -45,15 +45,13 @@ function User({ authenticate }) {
 		<Container>
 			<Inner>
 				<h1 className="profile-title">My Profile</h1>
-				<ul>
-					<li>
+					<li className="user-details">
 						<strong>Username :</strong>{" "}
 						<span> {user.username} </span>
 					</li>
 					<li>
 						<strong>Email :</strong> <span>{user.email}</span>
 					</li>
-				</ul>
 			</Inner>
 			<Stories>
 				{stories.length === 0 ? (
@@ -116,6 +114,11 @@ const Inner = styled.div`
 	.profile-title {
 		font-size: 50px;
 		font-family: "Open Sans", sans-serif;
+	}
+
+	.user-details {
+		padding-left: none !important;
+		text-align: left;
 	}
 
 	li {
