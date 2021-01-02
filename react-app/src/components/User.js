@@ -62,7 +62,7 @@ function User({ authenticate }) {
 				)}
 				{stories &&
 					stories.map((story, i) => (
-						<div key={i}>
+						<div key={i} className="story-box">
 							<Link to={`/stories/${story.id}`}>
 								{story.title}
 							</Link>
@@ -97,7 +97,7 @@ const Container = styled.div`
 	align-items: center;
 	padding-top: 1.5em;
 	padding-bottom: 8em;
-	width: 100%;
+	width: 100vw;
 `;
 
 const Inner = styled.div`
@@ -105,7 +105,7 @@ const Inner = styled.div`
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	width: 44em;
+	width: 100vw;
 
 	@import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap");
 
@@ -132,6 +132,7 @@ const Inner = styled.div`
 
 const Stories = styled.div`
 	display: flex;
+	width: 80vw;
 	flex-direction: column;
 	//   border: 1px solid yellow;
 	.main-div {
@@ -143,7 +144,7 @@ const Stories = styled.div`
 		width: 44em;
 		margin: 1em 0em;
 		background-color: white;
-		box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+		width: 100%;
 
 		Link {
 			font-family: nunito;
@@ -154,6 +155,11 @@ const Stories = styled.div`
 		p {
 			font-family: nunito;
 			font-size: 15px;
+		}
+
+		.story-box {
+			box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+			padding: 20px 40px;
 		}
 	}
 `;
