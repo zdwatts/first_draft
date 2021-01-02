@@ -19,10 +19,10 @@ function UsersList() {
 		<Container>
 			<div className="master pattern-cross-dots-md">
 				<div className="user_container animate__animated animate__fadeInDown">
-					<div>
+					<div className="text-div">
 						<h1 className="user-title">All Users</h1>
 						{/* <ul>{userComponents}</ul> */}
-						<ul>
+						<ul className="user-name-list">
 							<Users users={users} />
 						</ul>
 					</div>
@@ -45,14 +45,27 @@ const Container = styled.div`
 	//   border: 1px solid blue;
 	height:100%;
 
+	.user-name-list {
+		width: 100%;
+	}
+
 	.user-title {
 		font-family: monserrat;
 		color: black;
 		font-size: 40px;
 		font-family: "Open Sans", sans-serif;
 		text-align: center;
+		border-bottom: 7px solid #fec017;
+		text-align: center;
+		width: 50%;
 	}
 
+	.text-div {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 	ul {
 		list-style: none;
 	}
