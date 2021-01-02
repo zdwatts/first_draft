@@ -159,6 +159,8 @@ const Stories = styled.div`
 		}
 
 		.story-box {
+			display: flex;
+			justify-content: space-between;
 			padding: 80px 40px;
 			width: 80%;
 			border: 1px solid black;
