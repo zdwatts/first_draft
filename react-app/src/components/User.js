@@ -60,7 +60,6 @@ function User({ authenticate }) {
 							<Link to={`/stories/${story.id}`}>
 								{story.title}
 							</Link>
-							<h2>{story.id}</h2>
 							{story.author_id === currentLoggedUser ? (
 								<div>
 									<button
