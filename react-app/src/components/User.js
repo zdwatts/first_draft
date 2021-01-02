@@ -54,6 +54,15 @@ function User({ authenticate }) {
 				</ul>
 			</Inner>
 			<Stories>
+				<div>
+					{stories.length === 0 ? (
+						<h1 style={{ fontFamily: "Satisfy, cursive" }}>
+							Such emptiness!
+						</h1>
+					) : (
+						""
+					)}
+				</div>
 				{stories &&
 					stories.map((story, i) => (
 						<div key={i}>
