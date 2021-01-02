@@ -29,7 +29,7 @@ function User({ authenticate }) {
 			const loggedUserId = loggedUserRes.id;
 			setCurrentLoggedUser(loggedUserId);
 		})();
-	}, [userId]);
+	}, [userId, authenticate]);
 
 	if (!user) {
 		return null;
