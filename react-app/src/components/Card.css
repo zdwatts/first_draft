@@ -7,8 +7,8 @@
 	margin: 5px;
 	border-top: 7px solid #000000;
 	border-bottom: 7px solid #000000;
-	border-right: 7px solid #080808;
-	border-left: 7px solid #000000;
+	border-right: 3px solid #080808;
+	border-left: 3px solid #000000;
 	border-radius: 10px;
 	padding: 5px;
 	padding-left: 15px;
@@ -24,7 +24,7 @@
 
 .card-author {
 	font-family: "Open Sans", sans-serif;
-	font-weight: 800;
+	font-weight: 300;
 	font-size: 13px;
 	color: #000000;
 }
@@ -41,10 +41,10 @@
 }
 
 .card-number {
-	color: #959595;
+	color: #000000;
 	font-family: "Open Sans", sans-serif;
 	font-weight: 800;
-	border-bottom: 7px solid #959595;
+	border-bottom: 7px solid #000000;
 	width: 38px;
 }
 
