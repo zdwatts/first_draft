@@ -1,5 +1,5 @@
 .card {
-	background: #e6e6e6;
+	background: #ffffff;
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 200px;
@@ -14,6 +14,7 @@
 	padding-left: 15px;
 	box-shadow: rgba(0, 0, 0, 0.445) 0px 20px 30px -10px;
 	margin-bottom: 30px;
+	overflow: scroll;
 }
 
 .card:hover {
@@ -24,7 +25,7 @@
 .card-author {
 	font-family: "Open Sans", sans-serif;
 	font-weight: 800;
-	font-size: 12px;
+	font-size: 13px;
 	color: #000000;
 }
 .most-recent-div {
@@ -40,18 +41,20 @@
 }
 
 .card-number {
-	color: #000000;
+	color: #959595;
 	font-family: "Open Sans", sans-serif;
+	font-weight: 800;
+	text-decoration: underline;
 }
 
 .card-title {
-	font-size: 18px;
+	font-size: 30px;
 	font-family: "Open Sans", sans-serif;
 	font-weight: 700;
 }
 
 .card-title:hover {
-	font-size: 18px;
+	font-size: 30px !important;
 	text-shadow: none;
 }
 
