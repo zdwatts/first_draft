@@ -73,7 +73,7 @@ function User({ authenticate }) {
 									<button className="delete-button"
 										onClick={() => deleteStory(story.id)}
 										>
-										Eradicate
+										Delete Story
 									</button>
 									<UpdateStory
 										id={story.id}
@@ -190,6 +190,13 @@ const Stories = styled.div`
 
 		.delete-button {
 			margin-bottom:  50px;
+			border: 1px solid black;
+			width: 100%;
+			border-radius: 5px;
+			padding: 10px 40px;
+			background-color: #fec017;
+			font-family: "Open Sans", sans-serif;
+			font-weight: 800;
 		}
 	}
 `;
