@@ -124,6 +124,7 @@ function Story({ authenticate }) {
 const Container = styled.div`
 	display: flex;
 	justify-content: center;
+	height: 100%;
 `;
 
 const Inner = styled.div`

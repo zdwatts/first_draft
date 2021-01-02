@@ -7,13 +7,14 @@
     padding-top:50px;
     padding-bottom:50px;
     background-color: #fec017;
+    padding-bottom: 50px;
 }
 
 .create-story-div {
     margin-right: 15%;
     margin-left: 15%;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    padding: 80px 40px;
+    padding: 100px 40px;
     border-radius: 5px;
     background-color: white;
     height: auto;
