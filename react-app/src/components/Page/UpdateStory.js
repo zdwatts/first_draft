@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { Editor } from "@tinymce/tinymce-react";
 import "./Story.css"
+import "./stories.css"
 
 function UpdateStory({ id, title, body }) {
 	const [showForm, setShowForm] = useState(false);
@@ -35,7 +36,7 @@ function UpdateForm({ id, title, body }) {
 
 	return (
 		<form onSubmit={handleSubmit}>
-			<input type="text" value={newTitle} onChange={handleChange} />
+			<input type="text" value={newTitle} onChange={handleChange} className="title-input"/>
 			<Editor
 				value={newBody}
 				apiKey={apiKey}
@@ -43,7 +44,7 @@ function UpdateForm({ id, title, body }) {
 				onEditorChange={handleEditorChange}
 				className="animate__animated animate__hinge"
 			/>
-			<button type="submit">Update Story</button>
+			<button type="submit" className="story-submit" >Update Story</button>
 		</form>
 	);
 }

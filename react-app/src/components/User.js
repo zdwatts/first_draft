@@ -189,6 +189,7 @@ const Stories = styled.div`
 
 
 		.delete-button {
+			cursor: pointer;
 			margin-bottom:  50px;
 			border: 1px solid #fec017;
 			width: 100%;
