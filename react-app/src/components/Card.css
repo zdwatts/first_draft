@@ -5,10 +5,10 @@
 	height: 200px;
 	width: 250px;
 	margin: 5px;
-	border-top: 7px solid #000000;
-	border-bottom: 7px solid #000000;
-	border-right: 7px solid #080808;
-	border-left: 7px solid #000000;
+	border-top: 1px solid #000000;
+	border-bottom: 1px solid #000000;
+	border-right: 1px solid #080808;
+	border-left: 1px solid #000000;
 	border-radius: 10px;
 	padding: 5px;
 	padding-left: 15px;
@@ -24,7 +24,7 @@
 
 .card-author {
 	font-family: "Open Sans", sans-serif;
-	font-weight: 800;
+	font-weight: 300;
 	font-size: 13px;
 	color: #000000;
 }
@@ -41,17 +41,18 @@
 }
 
 .card-number {
-	color: #959595;
+	color: #000000;
 	font-family: "Open Sans", sans-serif;
-	font-weight: 800;
-	border-bottom: 7px solid #959595;
-	width: 38px;
+	font-weight: 300;
+	border-bottom: 8px solid #ffcb3a;
+	width: 45px;
+	font-size: 40px;
 }
 
 .card-title {
 	font-size: 30px;
 	font-family: "Open Sans", sans-serif;
-	font-weight: 700;
+	font-weight: 600;
 }
 
 .card-title:hover {
