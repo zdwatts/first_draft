@@ -75,15 +75,15 @@ function User({ authenticate }) {
 									>
 										⚠️ Eradicate ⚠️
 									</button>
+									<UpdateStory
+										id={story.id}
+										title={story.title}
+										body={story.body}
+									/>
 								</div>
 							) : (
 								""
 							)}
-							<UpdateStory
-								id={story.id}
-								title={story.title}
-								body={story.body}
-							/>
 						</div>
 					))}
 			</Stories>
