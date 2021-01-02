@@ -74,9 +74,11 @@ function Story({ authenticate }) {
 					</span>
 				</p>
 				{/* <div>{story.body}</div> */}
-				<div className="story-body">
+				{/* <div className="story-body"> */}
+				<div style={{ all: "unset" }}>
 					{story.body && parse(story.body)}
 				</div>
+				{/* </div> */}
 				<div className="like-wrapper">
 					<div>
 						<i

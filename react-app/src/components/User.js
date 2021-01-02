@@ -1,5 +1,6 @@
-import axios from "axios";
 import React, { useState, useEffect } from "react";
+import UpdateStory from "./Page/UpdateStory";
+import axios from "axios";
 import { Link, useParams } from "react-router-dom";
 import styled from "styled-components";
 
@@ -54,20 +55,31 @@ function User({ authenticate }) {
 				</ul>
 			</Inner>
 			<Stories>
+				{stories.length === 0 ? (
+					<h1 style={{ fontFamily: "Satisfy, cursive" }}>
+						Such emptiness!
+					</h1>
+				) : (
+					""
+				)}
 				{stories &&
 					stories.map((story, i) => (
 						<div key={i}>
 							<Link to={`/stories/${story.id}`}>
 								{story.title}
 							</Link>
-							<h2>{story.id}</h2>
 							{story.author_id === currentLoggedUser ? (
 								<div>
 									<button
 										onClick={() => deleteStory(story.id)}
 									>
-										DELETE STORY
+										Eradicate
 									</button>
+									<UpdateStory
+										id={story.id}
+										title={story.title}
+										body={story.body}
+									/>
 								</div>
 							) : (
 								""
