@@ -14,7 +14,7 @@ const GettingStarted = ({ authenticated }) => {
 				<div className="card-1">
 					<div>
 						<h1 className="feature-title">Create an account.</h1>
-						<p>
+						<p className="feature-text">
 							Sign up to gain access to all of the features
 							first_draft has to offer.
 						</p>
@@ -32,7 +32,7 @@ const GettingStarted = ({ authenticated }) => {
 						<h1 className="feature-title">
 							Begin sharing your stories.
 						</h1>
-						<p>Registered users can create stories.</p>
+							<p className="feature-text">Registered users can create stories.</p>
 					</div>
 					<div className="pattern-diagonal-lines-sm gray-lighter bg-dots">
 						<img
@@ -45,7 +45,7 @@ const GettingStarted = ({ authenticated }) => {
 				<div className="card-3">
 					<div>
 						<h1 className="feature-title">Share your thoughts.</h1>
-						<p>
+							<p className="feature-text">
 							Registered users have the ability to leave comments
 							on stories.
 						</p>
