@@ -117,8 +117,7 @@ const Inner = styled.div`
 	}
 
 	.user-details {
-		padding-left: none !important;
-		text-align: left;
+		font-family: "Open Sans", sans-serif;
 	}
 
 	li {
