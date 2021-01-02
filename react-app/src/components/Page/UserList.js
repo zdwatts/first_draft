@@ -20,7 +20,7 @@ function UsersList() {
 			<div className="master pattern-cross-dots-md">
 				<div className="user_container animate__animated animate__fadeInDown">
 					<div>
-						<h1>User List: </h1>
+						<h1>All Users</h1>
 						{/* <ul>{userComponents}</ul> */}
 						<ul>
 							<Users users={users} />
@@ -79,7 +79,7 @@ const Container = styled.div`
 		padding-left: 5em;
 		padding-bottom: 5em;
 		height: auto;
-		width: 100%;
+		width: 80%;
 		background-color: white;
 		box-shadow: 0 50px 100px -20px rgba(50, 50, 93, 0.25),
 			0 30px 60px -30px rgba(0, 0, 0, 0.3),
