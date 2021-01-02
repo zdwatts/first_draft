@@ -197,6 +197,13 @@ const Stories = styled.div`
 			background-color: #fec017;
 			font-family: "Open Sans", sans-serif;
 			font-weight: 800;
+			box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+		}
+
+		.delete-button:hover {
+			background-color: black;
+			color: white;
+			box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 		}
 	}
 `;
