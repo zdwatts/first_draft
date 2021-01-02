@@ -51,8 +51,8 @@ def add_story():
 @login_required
 def update_story(id):
     story = Story.query.get(id)
-    if current_user.get_id() != story.author_id:
-        return jsonify('not authorized!')
+    # if current_user.get_id() != story.author_id:
+    #     return jsonify('not authorized!')
     new_title = request.json['title']
     new_body = request.json['body']
     story.title = new_title
@@ -69,8 +69,6 @@ def delete_story(id):
     story = Story.query.get(id)
     if not story:
         return jsonify('story not found')
-    # if current_user.get_id() != story.author_id:
-    #     return jsonify('not authorized!')
     db.session.delete(story)
     db.session.commit()
     return jsonify('deleted')

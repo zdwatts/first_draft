@@ -1,5 +1,6 @@
-import axios from "axios";
 import React, { useState, useEffect } from "react";
+import UpdateStory from "./Page/UpdateStory";
+import axios from "axios";
 import { Link, useParams } from "react-router-dom";
 import styled from "styled-components";
 
@@ -78,6 +79,11 @@ function User({ authenticate }) {
 							) : (
 								""
 							)}
+							<UpdateStory
+								id={story.id}
+								title={story.title}
+								body={story.body}
+							/>
 						</div>
 					))}
 			</Stories>
