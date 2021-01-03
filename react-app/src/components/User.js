@@ -65,6 +65,7 @@ function User({ authenticate }) {
 							style={{
 								fontFamily: "Satisfy, cursive",
 								textAlign: "center",
+								color: "#fec017",
 							}}
 						>
 							Such emptiness!
@@ -107,7 +108,10 @@ function User({ authenticate }) {
 				</div>
 			</Stories>
 			<Link to="/users">
-				<p className="user-lists" style={{ fontSize: "30px" }}>
+				<p
+					className="user-lists"
+					style={{ fontSize: "30px", color: "#ced4da" }}
+				>
 					View all Authors
 				</p>
 			</Link>
@@ -116,6 +120,7 @@ function User({ authenticate }) {
 }
 
 const Container = styled(motion.div)`
+	background-color: #343a40;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -147,6 +152,7 @@ const Inner = styled.div`
 	li {
 		width: 18em;
 		// border: 1px solid blue;
+		color: #ced4da;
 		display: flex;
 		justify-content: space-between;
 		font-family: nunito;
