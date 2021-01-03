@@ -3,6 +3,8 @@ import UpdateStory from "./Page/UpdateStory";
 import axios from "axios";
 import { Link, useParams } from "react-router-dom";
 import styled from "styled-components";
+import { motion } from "framer-motion";
+import PageTransition from "./Page/PageTransition";
 
 function User({ authenticate }) {
 	const [user, setUser] = useState({});
@@ -42,7 +44,7 @@ function User({ authenticate }) {
 	};
 
 	return (
-		<Container>
+		<Container variants={PageTransition} initial="hidden" animate="show">
 			<Inner>
 				<ul>
 					<li>
@@ -113,7 +115,7 @@ function User({ authenticate }) {
 	);
 }
 
-const Container = styled.div`
+const Container = styled(motion.div)`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
