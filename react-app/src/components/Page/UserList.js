@@ -21,7 +21,6 @@ function UsersList() {
 				<div className="user_container animate__animated animate__fadeInDown">
 					<div className="text-div">
 						<h1 className="user-title">Authors</h1>
-						{/* <ul>{userComponents}</ul> */}
 						<ul className="user-name-list">
 							<Users users={users} />
 						</ul>

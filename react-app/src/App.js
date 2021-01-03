@@ -75,10 +75,7 @@ function App() {
 						className="header"
 					/>
 					<GettingStarted authenticated={authenticated} />
-					{authenticated ?
-						<MostRecent />
-						: ""
-					}
+					{authenticated ? <MostRecent /> : ""}
 					<Footer />
 				</Route>
 				<Route path="/stories/:id">
@@ -98,7 +95,10 @@ function App() {
 						/>
 					)}
 				</Route>
-				<Route path="/users"><UsersList /><Footer /></Route>
+				<Route path="/users">
+					<UsersList />
+					<Footer />
+				</Route>
 			</Switch>
 		</BrowserRouter>
 	);
