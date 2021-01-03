@@ -42,53 +42,73 @@ function User({ authenticate }) {
 	};
 
 	return (
-		<Container >
+		<Container>
 			<Inner>
-				<h1 className="profile-title">My Profile</h1>
-					<p className="user-details">
-						Welcome Back,
-						<span> {user.username}! </span>
-					</p>
+				<ul>
+					<li>
+						<strong>Author Name :</strong>{" "}
+						<span> {user.username} </span>
+					</li>
+					<li>
+						<strong>Author Email :</strong>{" "}
+						<span>{user.email}</span>
+					</li>
+				</ul>
 			</Inner>
 			<Stories>
 				<div className="main-div ">
+					{stories.length === 0 ? (
+						<h1
+							className="pun"
+							style={{
+								fontFamily: "Satisfy, cursive",
+								textAlign: "center",
+							}}
+						>
+							Such emptiness!
+						</h1>
+					) : (
+						""
+					)}
+					{stories &&
+						stories.map((story, i) => (
+							<div key={i} className="story-box">
+								<Link
+									to={`/stories/${story.id}`}
+									className="story-t"
+								>
+									<p className="story-num">0{i + 1}</p>
+									{story.title}
+								</Link>
 
-				{stories.length === 0 ? (
-					<h1 className="pun" style={{ fontFamily: "Satisfy, cursive" ,textAlign: "center"}}>
-						Such emptiness!
-					</h1>
-				) : (
-					""
-				)}
-				{stories &&
-					stories.map((story, i) => (
-						<div key={i} className="story-box">
-							<Link to={`/stories/${story.id}`} className="story-t">
-								<p className="story-num">0{i + 1}</p>
-								{story.title}
-							</Link>
-							
-							{story.author_id === currentLoggedUser ? (
-								<div className="button-div">
-									<button className="delete-button"
-										onClick={() => deleteStory(story.id)}
+								{story.author_id === currentLoggedUser ? (
+									<div className="button-div">
+										<button
+											className="delete-button"
+											onClick={() =>
+												deleteStory(story.id)
+											}
 										>
-										Delete Story
-									</button>
-									<UpdateStory
-										id={story.id}
-										title={story.title}
-										body={story.body}
+											Delete Story
+										</button>
+										<UpdateStory
+											id={story.id}
+											title={story.title}
+											body={story.body}
 										/>
-								</div>
-							) : (
-								""
+									</div>
+								) : (
+									""
 								)}
-						</div>
-					))}
-					</div>
+							</div>
+						))}
+				</div>
 			</Stories>
-			<Link to="/users"><p className="user-lists" style={{fontSize: "30px"}}>View all users</p></Link>
+			<Link to="/users">
+				<p className="user-lists" style={{ fontSize: "30px" }}>
+					View all Authors
+				</p>
+			</Link>
 		</Container>
 	);
 }
@@ -111,7 +131,7 @@ const Inner = styled.div`
 
 	@import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap");
 
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+	@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
 
 	.profile-title {
 		font-size: 50px;
@@ -169,7 +189,6 @@ const Stories = styled.div`
 			background-color: white;
 			border-radius: 5px;
 			box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-			
 		}
 
 		.story-box:hover {
@@ -188,11 +207,10 @@ const Stories = styled.div`
 			margin: 0;
 		}
 
-
 		.delete-button {
 			color: white;
 			cursor: pointer;
-			margin-bottom:  50px;
+			margin-bottom: 50px;
 			border: none;
 			width: 100%;
 			border-radius: 5px;
@@ -200,13 +218,15 @@ const Stories = styled.div`
 			background-color: #fec017;
 			font-family: "Open Sans", sans-serif;
 			font-weight: 800;
-			box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+			box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+				rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 		}
 
 		.delete-button:hover {
 			background-color: #ffbd09;
 			color: white;
-			box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+			box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+				rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 		}
 
 		.button-div {
