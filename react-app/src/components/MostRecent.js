@@ -16,7 +16,7 @@ const MostRecent = () => {
 	// console.log(stories);
 
 	return (
-		<div className="cards-wrapper pattern-diagonal-lines-md">
+		<div className="cards-wrapper">
 			<div className="title-wrapper">
 				<h1 className="stories-header animate__animated animate__slideInLeft">
 					Most Recent Stories

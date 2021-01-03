@@ -64,7 +64,7 @@ function Story({ authenticate }) {
 	};
 
 	return (
-		<Container className="story-container pattern-diagonal-lines-md">
+		<Container className="story-container">
 			<Inner className="story-div animate__animated animate__backInDown">
 				<h1 className="story-page-title">{story.title}</h1>
 				<p className="story-page-author">
@@ -136,7 +136,7 @@ const Inner = styled.div`
 	justify-content: center;
 
 	box-sizing: border-box;
-	width: 44em;
+	/* width: 44em; */
 
 	div {
 		padding: 1em;

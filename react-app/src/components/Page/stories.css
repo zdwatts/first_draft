@@ -3,75 +3,73 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
 
 .content-wrapper {
-    height: 100%;
-    padding-top:50px;
-    padding-bottom:50px;
-    background-color: #fec017;
-    padding-bottom: 50px;
+	height: 100%;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	padding-bottom: 50px;
 }
 
 .create-story-div {
-    margin-right: 15%;
-    margin-left: 15%;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    padding: 100px 40px;
-    border-radius: 5px;
-    background-color: white;
-    height: auto;
+	margin-right: 15%;
+	margin-left: 15%;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	padding: 100px 40px;
+	border-radius: 5px;
+	background-color: white;
+	height: auto;
 }
 
 .story-title {
-    font-family: "Open Sans", sans-serif;
-    font-size: 75px;
-    margin: 0;
+	font-family: "Open Sans", sans-serif;
+	font-size: 75px;
+	margin: 0;
 }
 
 .input-div {
-    display: flex;
+	display: flex;
 	flex-direction: column;
 	margin-bottom: 15px;
-    width: 100%;
-    
+	width: 100%;
 }
 
 .title-input {
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    font-size: 25px;
-    border-bottom: 1px solid #fec017;
-    margin-bottom: 15px;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	font-size: 25px;
+	border-bottom: 1px solid #fec017;
+	margin-bottom: 15px;
 }
 
 ::placeholder {
-    color:lightgray;
+	color: lightgray;
 }
 
 .title-input:focus {
-    outline: none;
-    border-bottom: 2px solid black;
+	outline: none;
+	border-bottom: 2px solid black;
 }
 
 .story-title-label {
-    font-family: "Open Sans", sans-serif;
-    font-weight: 800;
-    font-size: 25px;
-    margin-bottom: 10px;
+	font-family: "Open Sans", sans-serif;
+	font-weight: 800;
+	font-size: 25px;
+	margin-bottom: 10px;
 }
 
 .story-submit {
-    color: white;
-    background-color: #fec017;
+	color: white;
+	background-color: #fec017;
 	padding-left: 20px;
 	padding-right: 20px;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	border-radius: 4px;
 	width: 100%;
-    border: none;
-    margin-top: 20px;
-    font-weight: 800;
-    font-size: 15px;
+	border: none;
+	margin-top: 20px;
+	font-weight: 800;
+	font-size: 15px;
 }
 
 .story-submit:hover {
