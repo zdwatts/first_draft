@@ -17,7 +17,7 @@ function UsersList() {
 
 	return (
 		<Container>
-			<div className="master pattern-cross-dots-md">
+			<div className="master">
 				<div className="user_container animate__animated animate__fadeInDown">
 					<div className="text-div">
 						<h1 className="user-title">Authors</h1>
@@ -84,7 +84,6 @@ const Container = styled.div`
 	.master {
 		width: 100%;
 		color: black;
-		background-color: #fec017;
 		margin-top: -3em;
 		align-items: center;
 		justify-content: center;
