@@ -66,7 +66,7 @@ function App() {
 					exact={true}
 					authenticated={authenticated}
 				>
-					<User />
+					<User authenticate={authenticate} />
 				</ProtectedRoute>
 				<Route path="/" exact={true}>
 					<DefaultHeader
@@ -74,7 +74,7 @@ function App() {
 						className="header"
 					/>
 					<GettingStarted authenticated={authenticated} />
-					<MostRecent />
+					{authenticated ? <MostRecent /> : ""}
 					<Footer />
 				</Route>
 				<Route path="/stories/:id">
@@ -94,8 +94,9 @@ function App() {
 						/>
 					)}
 				</Route>
-				<Route path="/users" component={UsersList} />
-				<Route path="/users/:id" component={User} />
+				<Route path="/users">
+					<UsersList />
+				</Route>
 			</Switch>
 		</BrowserRouter>
 	);

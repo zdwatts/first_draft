@@ -6,10 +6,10 @@ class Like(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
-    story_id = db.Column(db.Integer, db.ForeignKey('stories.id'), nullable=False)
+    story_id = db.Column(db.Integer, db.ForeignKey('stories.id'), nullable=False, )
     count = db.Column(db.Integer)
     
-    story = db.relationship('Story', back_populates='likes')
+    story = db.relationship('Story', back_populates="likes", )
     
     def __init__(self, user_id, story_id, count):
         self.user_id = user_id

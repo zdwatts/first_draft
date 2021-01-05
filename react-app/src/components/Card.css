@@ -1,20 +1,19 @@
 .card {
-	background: white;
+	background: #ffffff;
 	background-repeat: no-repeat;
-background-size: cover;
+	background-size: cover;
 	height: 200px;
 	width: 250px;
 	margin: 5px;
-	border-top: 7px solid #fec017;
-	border-bottom: 1px solid #e6e6e6;
-	border-left: 1px solid #e6e6e6;
-	border-right: 1px solid #e6e6e6;
-	border-bottom-left-radius: 10px;
-	border-bottom-right-radius: 10px;
+	border-top: 1px solid #000000;
+	border-bottom: 1px solid #000000;
+	border-right: 1px solid #080808;
+	border-left: 1px solid #000000;
 	padding: 5px;
 	padding-left: 15px;
-	box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+	box-shadow: rgba(0, 0, 0, 0.445) 0px 20px 30px -10px;
 	margin-bottom: 30px;
+	overflow-y: scroll;
 }
 
 .card:hover {
@@ -22,32 +21,41 @@ background-size: cover;
 		rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
+.card-author {
+	font-family: "Open Sans", sans-serif;
+	font-weight: 300;
+	font-size: 13px;
+	color: #000000;
+}
 .most-recent-div {
-	background-image: url("/waves.png") !important;
 	background-repeat: no-repeat;
-background-size: cover;
+	background-size: cover;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
 	align-content: center;
 	width: 100%;
-	margin-bottom: 0;
+	padding-bottom: 40px;
 }
 
 .card-number {
-	color: #e6e6e6;
+	color: #000000;
 	font-family: "Open Sans", sans-serif;
+	font-weight: 300;
+	border-bottom: 8px solid #ffcb3a;
+	width: 45px;
+	font-size: 40px;
 }
 
 .card-title {
-	font-size: 18px;
+	font-size: 30px;
 	font-family: "Open Sans", sans-serif;
-	font-weight: 700;
+	font-weight: 600;
 }
 
 .card-title:hover {
-	font-size: 18px;
+	font-size: 30px !important;
 	text-shadow: none;
 }
 
@@ -57,15 +65,20 @@ background-size: cover;
 	margin-left: 10%;
 	margin-top: 40px;
 	font-family: "Open Sans", sans-serif;
-	font-weight: 300;
+	font-weight: 800;
 	width: 60%;
 	text-align: center;
+	color: #000000 !important;
+	margin-bottom: 40px;
+	background-color: #ffcb3a;
+	border: 1px solid black;
 }
 
 .cards-wrapper {
-	background-color: white;
 	width: 100%;
 	margin: 0;
+	color: #000000;
+	background-color: #dee2e6 !important;
 }
 
 .title-wrapper {
@@ -73,6 +86,7 @@ background-size: cover;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-direction: column;
 }
 
 @media only screen and (min-width: 1000px) {

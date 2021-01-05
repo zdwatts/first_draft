@@ -41,7 +41,7 @@ function Comment({ storyId, setComments, currentUser }) {
           onChange={(e) => setComment(e.target.value)}
           value={comment}
         ></textarea>
-        <button className="form-submit-button" type="submit">Submit</button>
+        <button className="form-submit-button" type="submit">Submit Comment</button>
       </form>
     </div>
   );

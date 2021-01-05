@@ -13,10 +13,12 @@
     "@testing-library/user-event": "^7.1.2",
     "@tinymce/tinymce-react": "^3.8.4",
     "axios": "^0.21.1",
+    "framer-motion": "^3.1.1",
     "html-react-parser": "^1.1.1",
     "http-proxy-middleware": "^1.0.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-modal": "^3.12.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^3.4.4",
     "styled-components": "^5.2.1"
