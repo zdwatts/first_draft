@@ -15,13 +15,11 @@ const MostRecent = () => {
 	}, []);
 
 	return (
-		<div className="cards-wrapper">
+		<div className="cards-wrapper  animate__animated animate__slideInDown">
 			<div className="title-wrapper">
-				<h1 className="stories-header animate__animated animate__slideInLeft">
-					Most Recent Stories
-				</h1>
+				<h1 className="stories-header">Most Recent Stories</h1>
 			</div>
-			<div className="most-recent-div animate__animated animate__slideInRight">
+			<div className="most-recent-div">
 				{stories.map((story, idx) => {
 					return <Card key={story.id} story={story} idx={idx} />;
 				})}
