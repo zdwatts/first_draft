@@ -124,8 +124,7 @@ const Container = styled(motion.div)`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding-top: 1.5em;
-	padding-bottom: 8em;
+	padding: 1rem 0;
 	width: 100vw;
 `;
 

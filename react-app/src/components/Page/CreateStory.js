@@ -68,9 +68,14 @@ function CreateStory({ authenticate }) {
 					</div>
 					<Editor
 						apiKey={apiKey}
-						plugins="wordcount wordcount fullscreen emoticons image insertdatetime preview"
+						init={{
+							height: "40vh",
+							plugins: [
+								"wordcount wordcount fullscreen emoticons image insertdatetime preview",
+							],
+						}}
 						onEditorChange={handleEditorChange}
-						className="animate__animated animate__hinge"
+						className="tiny-mce-resize animate__animated animate__hinge"
 					/>
 					<button className="story-submit" type="submit">
 						Submit Story
