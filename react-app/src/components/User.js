@@ -101,7 +101,7 @@ function User({ authenticate }) {
 				</div>
 			</Stories>
 			<Link to="/users">
-				<p className="user-lists" style={{ fontSize: "30px" }}>
+				<p className="user-lists" style={{ fontSize: "30px", border: '2px solid red', marginBottom: '4em' }}>
 					View all Authors
 				</p>
 			</Link>
@@ -114,7 +114,6 @@ const Container = styled(motion.div)`
 	flex-direction: column;
 	align-items: center;
 	padding: 1rem 0;
-	/* width: 100vw; */
 `;
 
 const Inner = styled.div`
