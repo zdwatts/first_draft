@@ -85,7 +85,7 @@ function Story({ authenticate }) {
 							className="fas fa-sign-language fa-2x clap-icon"
 							onClick={handleLike}
 						></i>
-						<span className="like-text">Claps </span>
+						<span className="like-text">Claps</span>
 						<span className="total-text">{totalLikes}</span>
 						<i
 							className="fas fa-comments fa-2x comment-icon"

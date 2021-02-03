@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="documentation/Screen Shot 2020-12-31 at 11.23.31 AM.png" alt="firstdraftlogo" width="300">
+  <img src="react-app/src/components/images/Screenshot 2021-02-03 173423.jpg" alt="firstdraftlogo" width="300">
   <br>
   Documentation
 </h1>
@@ -20,17 +20,17 @@ first_draft is a web app that allows user to create an account to create stories
 ---
 
 <h1 align="center" >
- <img src="documentation/Screen Shot 2020-12-31 at 1.13.58 PM.png" alt="firstdraft-home"">
+ <img src="react-app/src/components/images/Screen Shot 2020-12-31 at 1.13.58 PM.png" alt="firstdraft-home">
 </h1>
 
 <h4 align="center">'first_draft' is a web app inspired by 'Medium' that allows users to share thoughts, stories, and experience. A logged in users have the ability to create stories, giving comments, likes, & follows.
-<pFirst_draft is built with React, Flask, Python and PostgreSQL, SQLAlchemy</h4>
+<pFirst_draft is built with React, Flask, Python and PostgreSQL, SQLAlchemy/></h4>
 
 ---
 
 <h1>Database Schema</h1>
 
- <img src="documentation/database-schema.png" alt="firstdraftlogo">
+ <img src="react-app/src/components/images/database-schema.png" alt="firstdraftlogo">
 
 ---
 
@@ -60,14 +60,14 @@ first_draft is a web app that allows user to create an account to create stories
 
 <h3 align='left'>'/'</h3>
 
-<img src="documentation/Screenshot 2020-12-31 190326.jpg" alt="home">
+<img src="react-app/src/components/images/Screenshot 2020-12-31 190326.jpg" alt="home">
 
 ---
 
 <h3>Login</h3>
 <h3 align='left'>'/login'</h3>
 
-<img src="documentation/Screenshot 2020-12-31 192059.jpg" alt="home">
+<img src="react-app/src/components/images/Screenshot 2020-12-31 192059.jpg" alt="home">
 
 <h4 align='left'>
 
@@ -97,14 +97,14 @@ def login():
 
 <h3 align='left'>'/signup'</h3>
 
-<img src="documentation/Screenshot 2020-12-31 192120.jpg" alt="home">
+<img src="react-app/src/components/images/Screenshot 2020-12-31 192120.jpg" alt="home">
 
 ---
 
 <h3>Story</h3>
 <h3 align='left'>'/stories'</h3>
 
-<img src="documentation/Screenshot 2020-12-31 151046.jpg" alt="home">
+<img src="react-app/src/components/images/Screenshot 2020-12-31 151046.jpg" alt="home">
 
 <h4 align='left'>
 
@@ -129,14 +129,14 @@ useEffect(() => {
 
 <h3 align='left'>'/stories/<:id>'</h3>
 
-<img src="documentation/Screenshot 2020-12-31 151709.jpg" alt="home">
+<img src="react-app/src/components/images/Screenshot 2020-12-31 151709.jpg" alt="home">
 
 ---
 
 <h3>Comment</h3>
 <h3 align='left'>'/stories/<:id>' for comments toggle</h3>
 
-<img src="documentation/Screenshot 2020-12-31 151401.jpg" alt="home">
+<img src="react-app/src/components/images/Screenshot 2020-12-31 151401.jpg" alt="home">
 
 <h4 align='left'>
 
@@ -203,13 +203,13 @@ def post_like(id):
 
 <h3 align='left'>'/users'</h3>
 
-<img src="documentation/Screenshot 2020-12-31 151447.jpg" alt="home">
+<img src="react-app/src/components/images/Screenshot 2020-12-31 151447.jpg" alt="home">
 
 ---
 
 <h3 align='left'>'/users/<:id>'</h3>
 
-<img src="documentation/Screenshot 2020-12-31 192746.jpg" alt="home">
+<img src="react-app/src/components/images/Screenshot 2020-12-31 192746.jpg" alt="home">
 
 ---
 
@@ -217,10 +217,9 @@ def post_like(id):
 
 <h3 align='left'>'/' for most recent stories</h3>
 
-<img src="documentation/Screenshot 2020-12-31 192920.jpg" alt="home">
+<img src="react-app/src/components/images/Screenshot 2020-12-31 192920.jpg" alt="home">
 
 ---
-
 
 # Flask React Project
 
@@ -230,15 +229,15 @@ This is the backend for the Flask React project.
 
 1. Clone this repository (only this branch)
 
-    ```bash
-    git clone https://github.com/appacademy-starters/python-project-starter.git
-    ```
+   ```bash
+   git clone https://github.com/appacademy-starters/python-project-starter.git
+   ```
 
 2. Install dependencies
 
-    ```bash
-    pipenv install --dev -r dev-requirements.txt && pipenv install -r requirements.txt
-    ```
+   ```bash
+   pipenv install --dev -r dev-requirements.txt && pipenv install -r requirements.txt
+   ```
 
 3. Create a **.env** file based on the example with proper settings for your
    development environment
@@ -246,21 +245,21 @@ This is the backend for the Flask React project.
 
 5. Get into your pipenv, migrate your database, seed your database, and run your flask app
 
-    ```bash
-    pipenv shell
-    ```
+   ```bash
+   pipenv shell
+   ```
 
-    ```bash
-    flask db upgrade
-    ```
+   ```bash
+   flask db upgrade
+   ```
 
-    ```bash
-    flask seed all
-    ```
+   ```bash
+   flask seed all
+   ```
 
-    ```bash
-    flask run
-    ```
+   ```bash
+   flask run
+   ```
 
 6. To run the React App in development, checkout the [README](./react-app/README.md) inside the `react-app` directory.
 
@@ -287,37 +286,37 @@ There is a layer in the Dockerfile that will install psycopg2 (not binary) for u
 3. Install the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-command-line)
 4. Run
 
-    ```bash
-    heroku login
-    ```
+   ```bash
+   heroku login
+   ```
 
 5. Login to the heroku container registry
 
-    ```bash
-    heroku container:login
-    ```
+   ```bash
+   heroku container:login
+   ```
 
 6. Update the `REACT_APP_BASE_URL` variable in the Dockerfile.
    This should be the full URL of your Heroku app: i.e. "https://flask-react-aa.herokuapp.com"
 7. Push your docker container to heroku from the root directory of your project.
    This will build the dockerfile and push the image to your heroku container registry
 
-    ```bash
-    heroku container:push web -a my-firstdraft
-    ```
+   ```bash
+   heroku container:push web -a my-firstdraft
+   ```
 
 8. Release your docker container to heroku
 
-    ```bash
-    heroku container:release web -a my-firstdraft
-    ```
+   ```bash
+   heroku container:release web -a my-firstdraft
+   ```
 
 9. set up your database:
 
-    ```bash
-    heroku run -a my-firstdraft flask db upgrade
-    heroku run -a my-firstdraft flask seed all
-    ```
+   ```bash
+   heroku run -a my-firstdraft flask db upgrade
+   heroku run -a my-firstdraft flask seed all
+   ```
 
 10. Under Settings find "Config Vars" and add any additional/secret .env variables.
 
