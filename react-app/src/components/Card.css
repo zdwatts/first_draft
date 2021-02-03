@@ -16,12 +16,11 @@
 
 	/* text-overflow: ellipsis;
 	white-space: nowrap; */
-	overflow: hidden; 
+	overflow: hidden;
 }
 
 .card:hover {
-	box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
-		rgba(0, 0, 0, 0.23) 0px 6px 6px;
+	box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 .card-author {
@@ -30,6 +29,7 @@
 	font-size: 13px;
 	color: #000000;
 }
+
 .most-recent-div {
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -39,7 +39,7 @@
 	align-items: center;
 	align-content: center;
 	width: 100%;
-	padding-bottom: 40px;
+	padding-bottom: 10rem;
 }
 
 .card-number {
@@ -85,7 +85,6 @@
 	width: 100%;
 	margin: 0;
 	color: #000000;
-	background-color: #dee2e6 !important;
 }
 
 .title-wrapper {
