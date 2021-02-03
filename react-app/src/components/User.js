@@ -48,10 +48,12 @@ function User({ authenticate }) {
 			<Inner>
 				<ul>
 					<li>
-						<strong>Author Name :</strong> <span> {user.username} </span>
+						<strong>Author Name :</strong>{" "}
+						<span> {user.username} </span>
 					</li>
 					<li>
-						<strong>Author Email :</strong> <span>{user.email}</span>
+						<strong>Author Email :</strong>{" "}
+						<span>{user.email}</span>
 					</li>
 				</ul>
 			</Inner>
@@ -74,7 +76,10 @@ function User({ authenticate }) {
 					{stories &&
 						stories.map((story, i) => (
 							<div key={i} className="story-box">
-								<Link to={`/stories/${story.id}`} className="story-t">
+								<Link
+									to={`/stories/${story.id}`}
+									className="story-t"
+								>
 									<p className="story-num">0{i + 1}</p>
 									{story.title}
 								</Link>
@@ -83,7 +88,9 @@ function User({ authenticate }) {
 									<div className="button-div">
 										<button
 											className="delete-button"
-											onClick={() => deleteStory(story.id)}
+											onClick={() =>
+												deleteStory(story.id)
+											}
 										>
 											Delete Story
 										</button>
@@ -101,7 +108,10 @@ function User({ authenticate }) {
 				</div>
 			</Stories>
 			<Link to="/users">
-				<p className="user-lists" style={{ fontSize: "30px", border: '2px solid red', marginBottom: '4em' }}>
+				<p
+					className="user-lists"
+					style={{ fontSize: "30px", marginBottom: "4em" }}
+				>
 					View all Authors
 				</p>
 			</Link>

@@ -203,6 +203,7 @@
 
 .update-button {
 	cursor: pointer;
+	width: 100%;
 	margin-bottom: 50px;
 	border: none;
 	color: white;
