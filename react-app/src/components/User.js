@@ -124,9 +124,8 @@ const Container = styled(motion.div)`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding-top: 1.5em;
-	padding-bottom: 8em;
-	width: 100vw;
+	padding: 1rem 0;
+	/* width: 100vw; */
 `;
 
 const Inner = styled.div`
@@ -134,7 +133,7 @@ const Inner = styled.div`
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	width: 100vw;
+	/* width: 100vw; */
 
 	@import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap");
 

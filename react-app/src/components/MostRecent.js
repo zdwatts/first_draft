@@ -13,7 +13,6 @@ const MostRecent = () => {
 			setStories(storyInfo);
 		})();
 	}, []);
-	// console.log(stories);
 
 	return (
 		<div className="cards-wrapper">

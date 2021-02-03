@@ -75,17 +75,14 @@ function App() {
 					/>
 					<GettingStarted authenticated={authenticated} />
 					{authenticated ? <MostRecent /> : ""}
-					<Footer />
 				</Route>
 				<Route path="/stories/:id">
 					<Story authenticate={authenticate} />
-					<Footer />
 				</Route>
 				<Route path="/stories">
 					{authenticated ? (
 						<div>
 							<CreateStory authenticate={authenticate} />
-							<Footer />
 						</div>
 					) : (
 						<LoginForm
@@ -98,6 +95,7 @@ function App() {
 					<UsersList />
 				</Route>
 			</Switch>
+			<Footer />
 		</BrowserRouter>
 	);
 }
