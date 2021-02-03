@@ -19,7 +19,7 @@ const Footer = () => {
 						<FontAwesomeIcon
 							icon={faLinkedin}
 							size="2x"
-							style={{ color: "white" }}
+							style={{ color: "#15114A" }}
 						/>
 					</a>
 					<p>Zac Watts</p>
@@ -31,7 +31,7 @@ const Footer = () => {
 						<FontAwesomeIcon
 							icon={faGithub}
 							size="2x"
-							style={{ color: "white" }}
+							style={{ color: "#15114A" }}
 						/>
 					</a>
 				</li>
@@ -44,7 +44,7 @@ const Footer = () => {
 						<FontAwesomeIcon
 							icon={faLinkedin}
 							size="2x"
-							style={{ color: "white" }}
+							style={{ color: "#15114A" }}
 						/>
 					</a>
 					<p>Miguel Coria</p>
@@ -56,7 +56,7 @@ const Footer = () => {
 						<FontAwesomeIcon
 							icon={faGithub}
 							size="2x"
-							style={{ color: "white" }}
+							style={{ color: "#15114A" }}
 						/>
 					</a>
 				</li>
@@ -69,7 +69,7 @@ const Footer = () => {
 						<FontAwesomeIcon
 							icon={faLinkedin}
 							size="2x"
-							style={{ color: "white" }}
+							style={{ color: "#15114A" }}
 						/>
 					</a>
 					<p>Ronald Regan Palisuan</p>
@@ -81,7 +81,7 @@ const Footer = () => {
 						<FontAwesomeIcon
 							icon={faGithub}
 							size="2x"
-							style={{ color: "white" }}
+							style={{ color: "#15114A" }}
 						/>
 					</a>
 				</li>
@@ -94,7 +94,7 @@ const Footer = () => {
 						<FontAwesomeIcon
 							icon={faLinkedin}
 							size="2x"
-							style={{ color: "white" }}
+							style={{ color: "#15114A" }}
 						/>
 					</a>
 					<p>Saad Shaikh</p>
@@ -106,7 +106,7 @@ const Footer = () => {
 						<FontAwesomeIcon
 							icon={faGithub}
 							size="2x"
-							style={{ color: "white" }}
+							style={{ color: "#15114A" }}
 						/>
 					</a>
 				</li>

@@ -34,8 +34,7 @@
 }
 
 .login-form-div {
-	height: 100vh;
-	width: 100vw;
+	padding: 100px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -44,7 +43,7 @@
 }
 
 .bg-yellow {
-	background-color: #fec017;
+	/* background-color: #fec017; */
 }
 
 .input-wrapper {
