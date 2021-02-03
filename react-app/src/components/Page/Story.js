@@ -75,9 +75,7 @@ function Story({ authenticate }) {
 				</p>
 				{/* <div>{story.body}</div> */}
 				{/* <div className="story-body"> */}
-				<div style={{ all: "unset" }}>
-					{story.body && parse(story.body)}
-				</div>
+				<div style={{ all: "unset" }}>{story.body && parse(story.body)}</div>
 				{/* </div> */}
 				<div className="like-wrapper">
 					<div>
@@ -91,25 +89,16 @@ function Story({ authenticate }) {
 							className="fas fa-comments fa-2x comment-icon"
 							onClick={toggleComment}
 						></i>{" "}
-						<span className="total-text">
-							Replies {comments.length}
-						</span>
+						<span className="total-text">Replies {comments.length}</span>
 					</div>
 				</div>
-				<span
-					onClick={toggleComment}
-					className="like-text"
-					id="comment-cta"
-				>
+				<span onClick={toggleComment} className="like-text" id="comment-cta">
 					Leave a comment . . .
 				</span>
 
 				{showComments && (
-					<div className="animate__animated animate__zoomIn comment-box">
-						<Comment
-							comments={comments}
-							currentUser={currentUser}
-						/>
+					<div>
+						<Comment comments={comments} currentUser={currentUser} />
 						<CreateComment
 							author={author}
 							storyId={id}

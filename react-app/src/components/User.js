@@ -48,12 +48,10 @@ function User({ authenticate }) {
 			<Inner>
 				<ul>
 					<li>
-						<strong>Author Name :</strong>{" "}
-						<span> {user.username} </span>
+						<strong>Author Name :</strong> <span> {user.username} </span>
 					</li>
 					<li>
-						<strong>Author Email :</strong>{" "}
-						<span>{user.email}</span>
+						<strong>Author Email :</strong> <span>{user.email}</span>
 					</li>
 				</ul>
 			</Inner>
@@ -76,10 +74,7 @@ function User({ authenticate }) {
 					{stories &&
 						stories.map((story, i) => (
 							<div key={i} className="story-box">
-								<Link
-									to={`/stories/${story.id}`}
-									className="story-t"
-								>
+								<Link to={`/stories/${story.id}`} className="story-t">
 									<p className="story-num">0{i + 1}</p>
 									{story.title}
 								</Link>
@@ -88,9 +83,7 @@ function User({ authenticate }) {
 									<div className="button-div">
 										<button
 											className="delete-button"
-											onClick={() =>
-												deleteStory(story.id)
-											}
+											onClick={() => deleteStory(story.id)}
 										>
 											Delete Story
 										</button>
@@ -108,10 +101,7 @@ function User({ authenticate }) {
 				</div>
 			</Stories>
 			<Link to="/users">
-				<p
-					className="user-lists"
-					style={{ fontSize: "30px", color: "#ced4da" }}
-				>
+				<p className="user-lists" style={{ fontSize: "30px" }}>
 					View all Authors
 				</p>
 			</Link>
@@ -120,13 +110,11 @@ function User({ authenticate }) {
 }
 
 const Container = styled(motion.div)`
-	background-color: #343a40;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding-top: 1.5em;
-	padding-bottom: 8em;
-	width: 100vw;
+	padding: 1rem 0;
+	/* width: 100vw; */
 `;
 
 const Inner = styled.div`
@@ -134,7 +122,7 @@ const Inner = styled.div`
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	width: 100vw;
+	/* width: 100vw; */
 
 	@import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap");
 
@@ -152,7 +140,6 @@ const Inner = styled.div`
 	li {
 		width: 18em;
 		// border: 1px solid blue;
-		color: #ced4da;
 		display: flex;
 		justify-content: space-between;
 		font-family: nunito;
@@ -185,6 +172,7 @@ const Stories = styled.div`
 		p {
 			font-family: nunito;
 			font-size: 15px;
+			color: black;
 		}
 
 		.story-box {
@@ -244,6 +232,7 @@ const Stories = styled.div`
 		.user-lists {
 			font-family: "Open Sans", sans-serif;
 			font-size: 40px !important;
+			color: black;
 		}
 	}
 `;

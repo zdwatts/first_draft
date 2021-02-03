@@ -2,32 +2,104 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 // import LogoutButton from "./auth/LogoutButton";
 // import DemoButton from "./auth/DemoButton";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import "./Footer.css";
 
 const Footer = () => {
 	return (
 		<footer className="footer">
-			<div className="main-logo-footer">
-				<h1 className="logo-text">first_draft</h1>
-			</div>
 			<ul className="nav_links">
 				<li>
-					<NavLink
-						className="navlink"
-						to="/"
-						exact={true}
-						activeclassname="active"
+					<p
+						style={{
+							fontSize: "1.5rem",
+						}}
 					>
-						<i className="fas fa-home"></i> Home
-					</NavLink>
+						Zac Watts
+					</p>
 					<a
-						className="navlink"
-						href="https://github.com/zdwatts/first_draft"
+						href="https://www.linkedin.com/in/zac-watts-b27450106/"
 						target="_blank"
 						rel="noopener noreferrer"
-						activeclassname="active"
 					>
-						<i className="fab fa-github footer-icon fa-md"></i> GitHub
+						<FontAwesomeIcon icon={faLinkedin} style={{ color: "#15114A" }} />
+					</a>
+					<a
+						href="https://github.com/zdwatts"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<FontAwesomeIcon icon={faGithub} style={{ color: "#15114A" }} />
+					</a>
+				</li>
+				<li>
+					<p
+						style={{
+							fontSize: "1.5rem",
+						}}
+					>
+						Miguel Coria
+					</p>
+					<a
+						href="https://www.linkedin.com/in/miguel-coria-273888130/"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<FontAwesomeIcon icon={faLinkedin} style={{ color: "#15114A" }} />
+					</a>
+					<a
+						href="https://github.com/miguelcoria94"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<FontAwesomeIcon icon={faGithub} style={{ color: "#15114A" }} />
+					</a>
+				</li>
+				<li>
+					<p
+						style={{
+							fontSize: "1.5rem",
+						}}
+					>
+						Ronald Regan Palisuan
+					</p>
+					<a
+						href="https://www.linkedin.com/in/ronald-regan-palisuan-833451163/"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<FontAwesomeIcon icon={faLinkedin} style={{ color: "#15114A" }} />
+					</a>
+					<a
+						href="https://github.com/zolvo"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<FontAwesomeIcon icon={faGithub} style={{ color: "#15114A" }} />
+					</a>
+				</li>
+				<li>
+					<p
+						style={{
+							fontSize: "1.5rem",
+						}}
+					>
+						Saad Shaikh
+					</p>
+					<a
+						href="https://www.linkedin.com/in/saadshaikh18/"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<FontAwesomeIcon icon={faLinkedin} style={{ color: "#15114A" }} />
+					</a>
+					<a
+						href="https://github.com/saadjs"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<FontAwesomeIcon icon={faGithub} style={{ color: "#15114A" }} />
 					</a>
 				</li>
 			</ul>

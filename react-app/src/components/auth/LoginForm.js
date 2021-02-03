@@ -35,7 +35,7 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
 	}
 
 	return (
-		<div className="login-form-div h-100vh pattern-cross-dots-xl yellow-light bg-yellow flex justify-center items-center bg-fixed">
+		<div className="login-form-div h-100vh pattern-cross-dots-xl flex justify-center items-center bg-fixed">
 			<form
 				onSubmit={onLogin}
 				className="login-form animate__animated animate__bounceInUp"
