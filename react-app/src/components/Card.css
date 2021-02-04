@@ -13,9 +13,6 @@
 	padding-left: 15px;
 	box-shadow: rgba(0, 0, 0, 0.445) 0px 20px 30px -10px;
 	margin-bottom: 30px;
-
-	/* text-overflow: ellipsis;
-	white-space: nowrap; */
 	overflow: hidden;
 }
 
@@ -95,7 +92,7 @@
 	flex-direction: column;
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1450px) {
 	.card {
 		height: 150px;
 		width: 250px;
@@ -119,7 +116,7 @@
 	}
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1450px) {
 	.card {
 		height: 250px;
 		width: 450px;
