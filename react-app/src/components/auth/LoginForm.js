@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Redirect } from "react-router-dom";
 import { login } from "../../services/auth";
+import DemoButton from "./DemoButton";
 import "./LoginForm.css";
 
 const LoginForm = ({ authenticated, setAuthenticated }) => {
@@ -72,6 +73,13 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
 				<button type="submit" className="login-button">
 					Login
 				</button>
+				<div className="demo-button-wrapper">
+					<DemoButton
+						authenticated={authenticated}
+						setAuthenticated={setAuthenticated}
+						className="login-button"
+					/>
+				</div>
 				<p className="cta-p">
 					Not a member?
 					<a className="cta-a" href="/sign-up">
