@@ -320,4 +320,4 @@ There is a layer in the Dockerfile that will install psycopg2 (not binary) for u
 
 10. Under Settings find "Config Vars" and add any additional/secret .env variables.
 
-11. profit
+11. profit.
