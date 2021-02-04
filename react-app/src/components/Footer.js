@@ -1,7 +1,4 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
-// import LogoutButton from "./auth/LogoutButton";
-// import DemoButton from "./auth/DemoButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import "./Footer.css";
