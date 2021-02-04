@@ -74,11 +74,12 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
 					Login
 				</button>
 				<div className="demo-button-wrapper">
-					<DemoButton
-						authenticated={authenticated}
-						setAuthenticated={setAuthenticated}
-						className="login-button"
-					/>
+					<button className="demo-login-button">
+						<DemoButton
+							authenticated={authenticated}
+							setAuthenticated={setAuthenticated}
+						/>
+					</button>
 				</div>
 				<p className="cta-p">
 					Not a member?

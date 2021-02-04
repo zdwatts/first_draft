@@ -66,13 +66,20 @@ label {
 	padding-top: 10px;
 	padding-bottom: 10px;
 	border-radius: 4px;
-	width: 80%;
+	width: 43%;
 	border: none;
 }
 
 .demo-button-wrapper {
-	border: 3px solid red;
+	/* border: 3px solid red; */
 	width: 80%;
+}
+
+.demo-login-button {
+	width: 100%;
+	background-color: white;
+	border: none;
+	margin-top: 5px;
 }
 
 .login-button:hover {
