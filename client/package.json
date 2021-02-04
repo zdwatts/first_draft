@@ -30,7 +30,7 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "client"
   },
   "browserslist": {
     "production": [
