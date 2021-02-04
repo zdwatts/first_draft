@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="react-app/src/components/images/logo.jpg" alt="firstdraftlogo" width="300">
+  <img src="client/src/components/images/logo.jpg" alt="firstdraftlogo" width="300">
   <br>
   Documentation
 </h1>
@@ -20,7 +20,7 @@ first_draft is a web app that allows user to create an account to create stories
 ---
 
 <h1 align="center" >
- <img src="react-app/src/components/images/home.png" alt="firstdraft-home">
+ <img src="client/src/components/images/home.png" alt="firstdraft-home">
 </h1>
 
 <h4 align="center">'first_draft' is a web app inspired by 'Medium' that allows users to share thoughts, stories, and experience. A logged in users have the ability to create stories, giving comments, likes, & follows.
@@ -30,7 +30,7 @@ first_draft is a web app that allows user to create an account to create stories
 
 <h1>Database Schema</h1>
 
- <img src="react-app/src/components/images/database-schema.png" alt="firstdraftlogo">
+ <img src="client/src/components/images/database-schema.png" alt="firstdraftlogo">
 
 ---
 
@@ -60,14 +60,14 @@ first_draft is a web app that allows user to create an account to create stories
 
 <h3 align='left'>'/'</h3>
 
-<img src="react-app/src/components/images/main.jpg" alt="home">
+<img src="client/src/components/images/main.jpg" alt="home">
 
 ---
 
 <h3>Login</h3>
 <h3 align='left'>'/login'</h3>
 
-<img src="react-app/src/components/images/login.jpg" alt="login">
+<img src="client/src/components/images/login.jpg" alt="login">
 
 <h4 align='left'>
 
@@ -97,31 +97,31 @@ def login():
 
 <h3 align='left'>'/signup'</h3>
 
-<img src="react-app/src/components/images/signup.jpg" alt="signup">
+<img src="client/src/components/images/signup.jpg" alt="signup">
 
 ---
 
 <h3>Story</h3>
 <h3 align='left'>'/stories'</h3>
 
-<img src="react-app/src/components/images/create_a_story.jpg" alt="stories">
+<img src="client/src/components/images/create_a_story.jpg" alt="stories">
 
 <h4 align='left'>
 
 ```js
 useEffect(() => {
-  document.title = "first_draft: Story";
-  (async () => {
-    const data = await axios.get(`/api/stories/${id}`);
-    data.data.story.length > 0 && setStory(data.data.story[0]);
-    data.data.story.length > 0 && setAuthor(data.data.author[0].username);
-    data.data.comments.length > 0 && setComments(data.data.comments);
+	document.title = "first_draft: Story";
+	(async () => {
+		const data = await axios.get(`/api/stories/${id}`);
+		data.data.story.length > 0 && setStory(data.data.story[0]);
+		data.data.story.length > 0 && setAuthor(data.data.author[0].username);
+		data.data.comments.length > 0 && setComments(data.data.comments);
 
-    const response = await authenticate();
-    const loggedUser = response.username;
-    setCurrentUser(loggedUser);
-    setTotalLikes(data.data.total_likes);
-  })();
+		const response = await authenticate();
+		const loggedUser = response.username;
+		setCurrentUser(loggedUser);
+		setTotalLikes(data.data.total_likes);
+	})();
 }, [authenticate, id]);
 ```
 
@@ -129,14 +129,14 @@ useEffect(() => {
 
 <h3 align='left'>'/stories/<:id>'</h3>
 
-<img src="react-app/src/components/images/stories_id.jpg" alt="stories_id">
+<img src="client/src/components/images/stories_id.jpg" alt="stories_id">
 
 ---
 
 <h3>Comment</h3>
 <h3 align='left'>'/stories/<:id>' for comments toggle</h3>
 
-<img src="react-app/src/components/images/stories_id_comment.jpg" alt="stories_comment">
+<img src="client/src/components/images/stories_id_comment.jpg" alt="stories_comment">
 
 <h4 align='left'>
 
@@ -203,13 +203,13 @@ def post_like(id):
 
 <h3 align='left'>'/users'</h3>
 
-<img src="react-app/src/components/images/users.jpg" alt="users">
+<img src="client/src/components/images/users.jpg" alt="users">
 
 ---
 
 <h3 align='left'>'/users/<:id>'</h3>
 
-<img src="react-app/src/components/images/user_id.jpg" alt="user_id">
+<img src="client/src/components/images/user_id.jpg" alt="user_id">
 
 ---
 
@@ -217,4 +217,5 @@ def post_like(id):
 
 <h3 align='left'>'/' for most recent stories</h3>
 
-<img src="react-app/src/components/images/most_recent_stories.jpg" alt="home">
+
+<img src="client/src/components/images/most_recent_stories.jpg" alt="home">
