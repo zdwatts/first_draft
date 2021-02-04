@@ -7,6 +7,7 @@
 	background-color: #fec017;
 	justify-content: space-around;
 	border-bottom: 1px solid black;
+	min-height: 10vh;
 }
 
 .loggedin {
@@ -16,6 +17,8 @@
 	justify-content: space-around;
 	border: none;
 	border-bottom: 1px solid black;
+	min-height: 10vh;
+
 }
 
 .logo_text {
@@ -36,8 +39,16 @@
 	padding: 0;
 }
 
+li > a {
+	font-size: 1.3rem;
+}
+
 li {
 	margin: 10px;
+}
+
+.active {
+	color: rgb(64, 64, 235);
 }
 
 a {
@@ -48,13 +59,13 @@ a {
 	color: black;
 }
 
-a:hover {
+/* a:hover {
 	font-size: 17px;
 	  padding
 
 	text-decoration: underline;
 	text-decoration-color: black;
-}
+} */
 
 .logout_button {
 	color: white;

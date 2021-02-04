@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="react-app/src/components/images/Screenshot 2021-02-03 173423.jpg" alt="firstdraftlogo" width="300">
+  <img src="react-app/src/components/images/logo.jpg" alt="firstdraftlogo" width="300">
   <br>
   Documentation
 </h1>
@@ -20,7 +20,7 @@ first_draft is a web app that allows user to create an account to create stories
 ---
 
 <h1 align="center" >
- <img src="react-app/src/components/images/Screen Shot 2020-12-31 at 1.13.58 PM.png" alt="firstdraft-home">
+ <img src="react-app/src/components/images/home.png" alt="firstdraft-home">
 </h1>
 
 <h4 align="center">'first_draft' is a web app inspired by 'Medium' that allows users to share thoughts, stories, and experience. A logged in users have the ability to create stories, giving comments, likes, & follows.
@@ -60,14 +60,14 @@ first_draft is a web app that allows user to create an account to create stories
 
 <h3 align='left'>'/'</h3>
 
-<img src="react-app/src/components/images/Screenshot 2020-12-31 190326.jpg" alt="home">
+<img src="react-app/src/components/images/main.jpg" alt="home">
 
 ---
 
 <h3>Login</h3>
 <h3 align='left'>'/login'</h3>
 
-<img src="react-app/src/components/images/Screenshot 2020-12-31 192059.jpg" alt="home">
+<img src="react-app/src/components/images/login.jpg" alt="login">
 
 <h4 align='left'>
 
@@ -97,14 +97,14 @@ def login():
 
 <h3 align='left'>'/signup'</h3>
 
-<img src="react-app/src/components/images/Screenshot 2020-12-31 192120.jpg" alt="home">
+<img src="react-app/src/components/images/signup.jpg" alt="signup">
 
 ---
 
 <h3>Story</h3>
 <h3 align='left'>'/stories'</h3>
 
-<img src="react-app/src/components/images/Screenshot 2020-12-31 151046.jpg" alt="home">
+<img src="react-app/src/components/images/create_a_story.jpg" alt="stories">
 
 <h4 align='left'>
 
@@ -129,14 +129,14 @@ useEffect(() => {
 
 <h3 align='left'>'/stories/<:id>'</h3>
 
-<img src="react-app/src/components/images/Screenshot 2020-12-31 151709.jpg" alt="home">
+<img src="react-app/src/components/images/stories_id.jpg" alt="stories_id">
 
 ---
 
 <h3>Comment</h3>
 <h3 align='left'>'/stories/<:id>' for comments toggle</h3>
 
-<img src="react-app/src/components/images/Screenshot 2020-12-31 151401.jpg" alt="home">
+<img src="react-app/src/components/images/stories_id_comment.jpg" alt="stories_comment">
 
 <h4 align='left'>
 
@@ -203,13 +203,13 @@ def post_like(id):
 
 <h3 align='left'>'/users'</h3>
 
-<img src="react-app/src/components/images/Screenshot 2020-12-31 151447.jpg" alt="home">
+<img src="react-app/src/components/images/users.jpg" alt="users">
 
 ---
 
 <h3 align='left'>'/users/<:id>'</h3>
 
-<img src="react-app/src/components/images/Screenshot 2020-12-31 192746.jpg" alt="home">
+<img src="react-app/src/components/images/user_id.jpg" alt="user_id">
 
 ---
 
@@ -217,7 +217,7 @@ def post_like(id):
 
 <h3 align='left'>'/' for most recent stories</h3>
 
-<img src="react-app/src/components/images/Screenshot 2020-12-31 192920.jpg" alt="home">
+<img src="react-app/src/components/images/most_recent_stories.jpg" alt="home">
 
 ---
 

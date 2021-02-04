@@ -44,7 +44,7 @@ const SignUpForm = ({ authenticated, setAuthenticated }) => {
 	}
 
 	return (
-		<div className="signup-form-div h-100vh pattern-cross-dots-xl yellow-light bg-yellow flex justify-center items-center bg-fixed">
+		<div className="signup-form-div h-100vh pattern-cross-dots-xl flex justify-center items-center bg-fixed">
 			<form
 				onSubmit={onSignUp}
 				className="signup-form animate__animated animate__bounceInUp"

@@ -17,6 +17,7 @@
 	justify-content: space-around;
 	padding-left: 15%;
 	padding-right: 15%;
+	position: relative;
 }
 
 .header_image {
@@ -160,5 +161,5 @@
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 40px;
+	margin-bottom: 10rem;
 }

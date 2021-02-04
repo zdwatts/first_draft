@@ -51,37 +51,39 @@ function CreateStory({ authenticate }) {
     }
   };
 
-  return (
-    <div className="content-wrapper pattern-cross-dots-xl bg-white flex justify-center items-center bg-fixed">
-      <div className="create-story-div animate__animated animate__zoomInRight">
-        <h1 className="story-title">Create A Story</h1>
-        <form onSubmit={handleSubmit}>
-          <div className="input-div">
-            <label className="story-title-label">Story Title</label>
-            <input
-              className="title-input"
-              type="text"
-              required
-              onChange={titleChange}
-              placeholder='"A really awesome title"'
-            />
-          </div>
-          <Editor
-            apiKey={apiKey}
-            plugins="wordcount wordcount fullscreen emoticons image insertdatetime preview"
-            onEditorChange={handleEditorChange}
-            className="animate__animated animate__hinge"
-            toolbar="undo redo | formatselect | bold italic backcolor | \
-             alignleft aligncenter alignright alignjustify | \
-             bullist numlist outdent indent | removeformat | help"
-          />
-          <button className="story-submit" type="submit">
-            Submit Story
-          </button>
-        </form>
-      </div>
-    </div>
-  );
+	return (
+		<div className="content-wrapper pattern-cross-dots-xl bg-white flex justify-center items-center bg-fixed">
+			<div className="create-story-div animate__animated animate__zoomInRight">
+				<h1 className="story-title">Create A Story</h1>
+				<form onSubmit={handleSubmit}>
+					<div className="input-div">
+						<label className="story-title-label">Story Title</label>
+						<input
+							className="title-input"
+							type="text"
+							required
+							onChange={titleChange}
+							placeholder='"A really awesome title"'
+						/>
+					</div>
+					<Editor
+						apiKey={apiKey}
+						init={{
+							height: "40vh",
+							plugins: [
+								"wordcount wordcount fullscreen emoticons image insertdatetime preview",
+							],
+						}}
+						onEditorChange={handleEditorChange}
+						className="tiny-mce-resize animate__animated animate__hinge"
+					/>
+					<button className="story-submit" type="submit">
+						Submit Story
+					</button>
+				</form>
+			</div>
+		</div>
+	);
 }
 
 export default CreateStory;

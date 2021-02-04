@@ -4,9 +4,9 @@
 
 .story-container {
 	background-color: #dee2e6;
-	height: 100%;
+	min-height: 80vh;
 	margin: 0;
-	padding-bottom: 25vh;
+	padding-bottom: 5rem;
 }
 
 .story-div {
@@ -29,7 +29,6 @@
 	font-weight: 800;
 	font-size: 50px;
 	text-align: left;
-	width: 100%;
 }
 
 .story-page-author {
@@ -37,7 +36,6 @@
 	font-family: "Open Sans", sans-serif;
 	font-weight: 200;
 	text-align: left;
-	width: 100%;
 	color: rgba(117, 117, 117, 1);
 	font-weight: 800;
 }
@@ -48,12 +46,10 @@
 
 .main-body-div {
 	background-color: blue;
-	width: 100%;
 }
 
 .story-body {
 	/* background-color: green; */
-	width: 100%;
 	margin: 0;
 	font-family: "Open Sans", sans-serif;
 	font-size: 14px !important;
@@ -77,8 +73,7 @@
 	background-color: white;
 	box-shadow: rgba(184, 127, 6, 0.25) 0px 54px 55px,
 		rgba(200, 141, 14, 0.12) 0px -12px 30px,
-		rgba(211, 129, 36, 0.12) 0px 4px 6px,
-		rgba(214, 147, 23, 0.17) 0px 12px 13px,
+		rgba(211, 129, 36, 0.12) 0px 4px 6px, rgba(214, 147, 23, 0.17) 0px 12px 13px,
 		rgba(221, 160, 18, 0.09) 0px -3px 5px;
 }
 
@@ -125,13 +120,13 @@
 
 .comment-box {
 	border-bottom: 1px solid #efefef;
-	width: 100%;
 }
 
 .comment-icon:hover {
 	cursor: pointer;
 	color: #e0e0e0;
 }
+
 .like-text {
 	margin: 0;
 	font-family: "Open Sans", sans-serif;
@@ -153,13 +148,11 @@
 }
 
 .submit-comment {
-	width: 100%;
 	display: flex;
 	flex-direction: column;
 }
 
 .submit-comment-form {
-	width: 100%;
 	display: flex;
 	flex-direction: column;
 }
@@ -172,7 +165,6 @@
 	border: none;
 	background-color: rgb(0, 0, 0);
 	margin-top: 20px;
-	width: 100%;
 	border-radius: 5px;
 	box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
 		rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
@@ -187,7 +179,6 @@
 	padding: 15px 30px;
 	background-color: #fec017;
 	margin-top: 20px;
-	width: 100%;
 	border-radius: 5px;
 }
 
@@ -212,9 +203,9 @@
 
 .update-button {
 	cursor: pointer;
+	width: 100%;
 	margin-bottom: 50px;
 	border: none;
-	width: 100%;
 	color: white;
 	border-radius: 5px;
 	padding: 10px 40px;
