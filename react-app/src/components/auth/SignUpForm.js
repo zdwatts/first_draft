@@ -8,6 +8,7 @@ const SignUpForm = ({ authenticated, setAuthenticated }) => {
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 	const [repeatPassword, setRepeatPassword] = useState("");
+	
 	useEffect(() => {
 		document.title = "first_draft: Sign Up";
 	});

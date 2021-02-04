@@ -4,52 +4,52 @@ import { Editor } from "@tinymce/tinymce-react";
 import "./stories.css";
 
 function CreateStory({ authenticate }) {
-	const [title, setTitle] = useState("");
-	const [body, setBody] = useState("");
-	const [author, setAuthor] = useState("");
-	const history = useHistory();
+  const [title, setTitle] = useState("");
+  const [body, setBody] = useState("");
+  const [author, setAuthor] = useState("");
+  const history = useHistory();
 
-	const apiKey = process.env.REACT_APP_TINY_MCE;
+  const apiKey = process.env.REACT_APP_TINY_MCE;
 
-	useEffect(() => {
-		document.title = "first_draft: Create Story";
+  useEffect(() => {
+    document.title = "first_draft: Create Story";
 
-		(async () => {
-			const response = await authenticate();
-			const username = response.username;
-			setAuthor(username);
-		})();
-	}, [author, authenticate]);
+    (async () => {
+      const response = await authenticate();
+      const username = response.username;
+      setAuthor(username);
+    })();
+  }, [author, authenticate]);
 
-	const titleChange = (e) => {
-		setTitle(e.target.value);
-	};
+  const titleChange = (e) => {
+    setTitle(e.target.value);
+  };
 
-	const handleEditorChange = (content, editor) => {
-		setBody(content);
-	};
+  const handleEditorChange = (content, editor) => {
+    setBody(content);
+  };
 
-	const handleSubmit = async (e) => {
-		e.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-		const response = await fetch("/api/stories", {
-			method: "POST",
-			headers: {
-				"Content-Type": "application/json",
-			},
-			body: JSON.stringify({
-				title,
-				body,
-				author,
-			}),
-		});
+    const response = await fetch("/api/stories", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        title,
+        body,
+        author,
+      }),
+    });
 
-		if (response.ok) {
-			const data = await response.json();
-			const storyId = data.id;
-			history.push(`/stories/${storyId}`);
-		}
-	};
+    if (response.ok) {
+      const data = await response.json();
+      const storyId = data.id;
+      history.push(`/stories/${storyId}`);
+    }
+  };
 
 	return (
 		<div className="content-wrapper pattern-cross-dots-xl bg-white flex justify-center items-center bg-fixed">
